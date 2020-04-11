@@ -1,0 +1,6 @@
+.next
+*.svg
+.env
+.env.dist
+.gitignore
+.prettierignore

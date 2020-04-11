@@ -1,5 +1,6 @@
-import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -25,6 +26,10 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           ></link>
           <link rel="icon" href="/logo-small.svg"></link>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          ></meta>
           {this.props.styleTags}
         </Head>
         <body>
