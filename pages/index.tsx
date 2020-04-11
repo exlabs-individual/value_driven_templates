@@ -1,8 +1,10 @@
+import { LayoutProvider } from "../layout/layout.provider";
+
 const Home = () => {
   return (
-    <div className="home-container">
-      <h1>Hello, World!</h1>
-    </div>
+    <LayoutProvider>
+      <h1>Content</h1>
+    </LayoutProvider>
   );
 };
 
