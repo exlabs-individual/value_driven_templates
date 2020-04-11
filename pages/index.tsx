@@ -1,4 +1,5 @@
-import { LayoutProvider } from "../layout/layout.provider";
+import React from 'react';
+import { LayoutProvider } from '../layout/layout.provider';
 
 const Home = () => {
   return (

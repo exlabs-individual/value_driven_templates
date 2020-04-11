@@ -1,5 +1,5 @@
-import window from "global";
-import React from "react";
+import window from 'global';
+import React from 'react';
 
 interface DeviceDetectData {
   isMobile: boolean;
@@ -7,7 +7,7 @@ interface DeviceDetectData {
 }
 
 export const useDeviceDetect = () => {
-  const isClient = typeof window === "object";
+  const isClient = typeof window === 'object';
 
   function getSize() {
     return {
@@ -22,18 +22,22 @@ export const useDeviceDetect = () => {
     isMobile: false,
   });
 
-  React.useEffect(() => {
-    if (!isClient) {
-      return;
-    }
+  React.useEffect(
+    () => {
+      if (!isClient) {
+        return;
+      }
 
-    function handleResize() {
-      setWindowSize(getSize());
-    }
+      function handleResize() {
+        setWindowSize(getSize());
+      }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   React.useEffect(() => {
     if (windowSize.width <= 768) {
