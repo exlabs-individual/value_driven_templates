@@ -2,16 +2,66 @@
   "scripts": {
     "start": "next start",
     "build": "next build",
-    "dev": "next"
+    "dev": "next",
+    "format": "prettier --write \"**/*\"",
+    "lint": "eslint './**/*.{ts,tsx}' && echo 'lint success'",
+    "lint:fix": "eslint --fix './**/*.{ts,tsx}' && echo 'lint success'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,md}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
+    "global": "4.4.0",
     "next": "9.3.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "styled-components": "5.1.0"
   },
   "devDependencies": {
     "@types/node": "13.11.1",
     "@types/react": "16.9.34",
+    "@typescript-eslint/eslint-plugin": "2.27.0",
+    "@typescript-eslint/parser": "2.27.0",
+    "babel-plugin-styled-components": "1.10.7",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.1",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-plugin-flowtype": "4.7.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "3.0.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.1.3",
+    "prettier": "2.0.4",
     "typescript": "3.8.3"
   }
 }
