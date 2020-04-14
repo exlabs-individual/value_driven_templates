@@ -16,5 +16,6 @@ export const AuthorContainer = styled.div`
   & > .author__name {
     margin-left: 10px;
     font-weight: 500;
+    font-size: 14px;
   }
 `;
