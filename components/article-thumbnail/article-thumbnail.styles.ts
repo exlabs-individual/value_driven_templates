@@ -5,6 +5,7 @@ export const StyledArticleThumbnail = styled.article`
   flex-direction: column;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  max-width: 400px;
 `;
 
 export const ThumbnailContent = styled.div`
