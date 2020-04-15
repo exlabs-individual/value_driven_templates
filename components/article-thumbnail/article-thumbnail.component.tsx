@@ -9,7 +9,7 @@ import {
 import { Author } from '../author/author.component';
 import Link from 'next/link';
 
-interface ArticleThumbnailProps {
+export interface ArticleThumbnailProps {
   imageUrl: string;
   title: string;
   category: string;
@@ -27,7 +27,7 @@ export const ArticleThumbnail = ({
   authorImgUrl,
 }: ArticleThumbnailProps) => {
   return (
-    <StyledArticleThumbnail>
+    <StyledArticleThumbnail className="article-thumbnail">
       <ThumbnailImage
         style={{
           backgroundImage: `url("${imageUrl}")`,

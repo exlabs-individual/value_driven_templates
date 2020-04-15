@@ -7,6 +7,10 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 999;
 `;
 
 export const LogoContainer = styled.div`
