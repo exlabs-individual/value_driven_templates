@@ -5,7 +5,7 @@ export const StyledArticleThumbnail = styled.article`
   flex-direction: column;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  max-width: 400px;
+  max-width: 450px;
 `;
 
 export const ThumbnailContent = styled.div`
@@ -59,7 +59,7 @@ export const ThumbnailFooter = styled.div`
 `;
 
 export const ThumbnailButton = styled.button`
-  border: 1px solid red;
+  border: none;
   background-color: #ff3e5b;
   color: #ffffff;
   padding: 7px 30px;

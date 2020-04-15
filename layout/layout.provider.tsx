@@ -14,9 +14,16 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
         {`
           html,
           body {
+            -webkit-overflow-scrolling: touch;
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            height: 100%;
+            overflow: scroll;
           }
         `}
       </style>

@@ -16,7 +16,7 @@ export default {
 export const Default = () => (
   <ArticleThumbnail
     title={text('title', 'Architecture Decision Record')}
-    category="Development"
+    category={text('category', 'Development')}
     description={text(
       'description',
       'Learn how to document important architectural decisions in your development team.'
