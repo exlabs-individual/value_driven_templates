@@ -489,13 +489,13 @@ const Header = () => {
       columnNumber: 11
     }
   }, "We deliver high-level consultancy & flexible, complex data-driven software solutions for the companies of the future.")), isDesktop && __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_2__["HeaderImage"], {
-    src: "/header-img.svg",
+    src: "".concat("", "/header-img.svg"),
     alt: "Header",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 23
+      lineNumber: 47,
+      columnNumber: 11
     }
   })));
 };
@@ -584,7 +584,7 @@ const Logo = () => {
     }
   }, __jsx("img", {
     className: "logo-img",
-    src: "/logo-small.svg",
+    src: "".concat("", "/logo-small.svg"),
     alt: "Logo",
     __self: undefined,
     __source: {
@@ -597,7 +597,7 @@ const Logo = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 12,
       columnNumber: 7
     }
   }), __jsx("h1", {
@@ -605,7 +605,7 @@ const Logo = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, "value reader."));
@@ -9466,7 +9466,7 @@ var MobileMenuStateProvider = function MobileMenuStateProvider(_ref) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************************************/
@@ -9489,5 +9489,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
