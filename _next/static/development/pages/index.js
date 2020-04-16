@@ -750,70 +750,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hooks_use_mobile_menu_use_mobile_menu_hook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../hooks/use-mobile-menu/use-mobile-menu.hook */ "./hooks/use-mobile-menu/use-mobile-menu.hook.ts");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _context_mobile_menu_mobile_menu_action_creators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../context/mobile-menu/mobile-menu.action-creators */ "./context/mobile-menu/mobile-menu.action-creators.ts");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/components/mobile/menu/menu.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+
 const Menu = () => {
   const {
+    dispatch,
     state: {
       isVisible
     }
   } = Object(_hooks_use_mobile_menu_use_mobile_menu_hook__WEBPACK_IMPORTED_MODULE_2__["useMobileMenuState"])();
+
+  const onMenuItemClick = () => {
+    dispatch(Object(_context_mobile_menu_mobile_menu_action_creators__WEBPACK_IMPORTED_MODULE_4__["toggleMenu"])());
+  };
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 18,
       columnNumber: 5
     }
   }, isVisible && __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledNav"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 20,
       columnNumber: 9
     }
   }, __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledList"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 21,
       columnNumber: 11
     }
   }, __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledListItem"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 13
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "#",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 15
-    }
-  }, "Home")), __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledListItem"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 13
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "#",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 15
-    }
-  }, "About the project")), __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledListItem"], {
+    onClick: onMenuItemClick,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -826,6 +805,38 @@ const Menu = () => {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23,
+      columnNumber: 15
+    }
+  }, "Home")), __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledListItem"], {
+    onClick: onMenuItemClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 13
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/#",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 15
+    }
+  }, "About the project")), __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["StyledListItem"], {
+    onClick: onMenuItemClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 13
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "#",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
       columnNumber: 15
     }
   }, "How to contribute?")))));
@@ -854,11 +865,11 @@ const StyledNav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav.
 const StyledList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "menustyles__StyledList",
   componentId: "sc-7l2oho-1"
-})([""]);
+})(["list-style:none;padding:10px 20px;& > li:last-child{margin-bottom:0;}"]);
 const StyledListItem = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li.withConfig({
   displayName: "menustyles__StyledListItem",
   componentId: "sc-7l2oho-2"
-})([""]);
+})(["border-bottom:1px solid #ffffff;margin-bottom:30px;font-size:19px;padding-bottom:10px;& > a{color:#ffffff;text-decoration:none;}"]);
 
 /***/ }),
 
@@ -9455,7 +9466,7 @@ var MobileMenuStateProvider = function MobileMenuStateProvider(_ref) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************************************/
@@ -9478,5 +9489,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
