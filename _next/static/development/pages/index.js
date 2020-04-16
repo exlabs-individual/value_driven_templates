@@ -696,7 +696,7 @@ const Header = () => {
       columnNumber: 9
     }
   }, __jsx("img", {
-    src: isMenuVisible ? '/close.svg' : '/hamburger.svg',
+    src: isMenuVisible ? "".concat("", "/close.svg") : "".concat("", "/hamburger.svg"),
     alt: "Hamburger menu",
     className: "hamburger-icon",
     __self: undefined,
