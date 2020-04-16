@@ -43,7 +43,12 @@ export const Header = () => {
             software solutions for the companies of the future.
           </div>
         </TitleContainer>
-        {isDesktop && <HeaderImage src="/header-img.svg" alt="Header" />}
+        {isDesktop && (
+          <HeaderImage
+            src={`${process.env.ASSET_PREFIX}/header-img.svg`}
+            alt="Header"
+          />
+        )}
       </HeaderContent>
     </StyledHeader>
   );
