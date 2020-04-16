@@ -4,6 +4,7 @@ import React from 'react';
 interface DeviceDetectData {
   isMobile: boolean;
   isDesktop: boolean;
+  isTablet: boolean;
 }
 
 export const useDeviceDetect = () => {
@@ -20,6 +21,7 @@ export const useDeviceDetect = () => {
   const [deviceData, setDeviceData] = React.useState<DeviceDetectData>({
     isDesktop: true,
     isMobile: false,
+    isTablet: false,
   });
 
   React.useEffect(
@@ -44,11 +46,19 @@ export const useDeviceDetect = () => {
       setDeviceData({
         isMobile: true,
         isDesktop: false,
+        isTablet: false,
+      });
+    } else if (windowSize.width >= 768 && windowSize.width <= 1100) {
+      setDeviceData({
+        isMobile: false,
+        isDesktop: false,
+        isTablet: true,
       });
     } else {
       setDeviceData({
         isMobile: false,
         isDesktop: true,
+        isTablet: false,
       });
     }
   }, [windowSize.width]);

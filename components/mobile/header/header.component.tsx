@@ -1,7 +1,8 @@
 import React from 'react';
-import { HeaderContainer, LogoContainer, MenuContainer } from './header.styles';
+import { HeaderContainer, MenuContainer } from './header.styles';
 import { useMobileMenuState } from '../../../hooks/use-mobile-menu/use-mobile-menu.hook';
 import { toggleMenu } from '../../../context/mobile-menu/mobile-menu.action-creators';
+import { Logo } from '../../logo/logo.component';
 
 export const Header = () => {
   const {
@@ -13,11 +14,7 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      <LogoContainer>
-        <img className="logo-img" src="/logo-small.svg" alt="Logo" />
-        <span className="logo-separator"></span>
-        <h1 className="logo-text">value reader.</h1>
-      </LogoContainer>
+      <Logo />
       <MenuContainer>
         <button className="menu-btn" onClick={onMenuClick}>
           <img

@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const Layout = styled.div`
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const LayoutBody = styled.div.attrs(
@@ -9,6 +12,5 @@ export const LayoutBody = styled.div.attrs(
     isMobile,
   })
 )`
-  height: calc(100% - 62px);
-  padding: ${(props) => (props.isMobile ? '20px' : '20px 40px')};
+  padding: ${(props) => (props.isMobile ? '20px 10px' : '20px 40px')};
 `;
