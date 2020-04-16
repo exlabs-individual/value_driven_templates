@@ -18,7 +18,11 @@ export const Header = () => {
       <MenuContainer>
         <button className="menu-btn" onClick={onMenuClick}>
           <img
-            src={isMenuVisible ? '/close.svg' : '/hamburger.svg'}
+            src={
+              isMenuVisible
+                ? `${process.env.ASSET_PREFIX}/close.svg`
+                : `${process.env.ASSET_PREFIX}/hamburger.svg`
+            }
             alt="Hamburger menu"
             className="hamburger-icon"
           />
