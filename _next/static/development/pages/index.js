@@ -7411,7 +7411,7 @@ const MobileList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div
 const DesktopList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "article-liststyles__DesktopList",
   componentId: "sc-17o4md0-1"
-})(["display:flex;justify-content:space-between;flex-wrap:wrap;& > .article-thumbnail{min-width:45%;max-width:48%;margin-bottom:2%;}"]);
+})(["display:flex;justify-content:space-between;flex-wrap:wrap;& > .article-thumbnail{min-width:49%;max-width:49%;margin-bottom:2%;}"]);
 
 /***/ }),
 
@@ -7564,7 +7564,9 @@ const ThumbnailContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default
 const ThumbnailImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "article-thumbnailstyles__ThumbnailImage",
   componentId: "sc-16swbc2-2"
-})(["background-size:cover;background-position:center;width:100%;min-height:200px;max-height:40%;border-top-left-radius:4px;border-top-right-radius:4px;position:relative;& > .category{position:absolute;left:50%;transform:translateX(-50%);bottom:-15px;background-color:rgba(4,74,175,0.9);color:#ffffff;padding:5px 20px;border-radius:4px;font-size:16px;}"]);
+})(["background-size:cover;background-position:center;width:100%;min-height:200px;max-height:40%;border-top-left-radius:4px;border-top-right-radius:4px;position:relative;& > .category{position:absolute;left:50%;transform:translateX(-50%);bottom:-15px;background-color:rgba(4,74,175,0.9);color:", ";padding:5px 20px;border-radius:4px;font-size:16px;}"], ({
+  theme
+}) => theme.color.white);
 const ThumbnailFooter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "article-thumbnailstyles__ThumbnailFooter",
   componentId: "sc-16swbc2-3"
@@ -7572,7 +7574,11 @@ const ThumbnailFooter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"
 const ThumbnailButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
   displayName: "article-thumbnailstyles__ThumbnailButton",
   componentId: "sc-16swbc2-4"
-})(["border:none;background-color:#ff3e5b;color:#ffffff;padding:7px 30px;font-size:14px;font-weight:500;border-radius:4px;box-shadow:0px 3px 6px rgba(0,0,0,0.2);outline:none;"]);
+})(["border:none;background-color:", ";color:", ";padding:7px 30px;font-size:14px;font-weight:500;border-radius:4px;box-shadow:0px 3px 6px rgba(0,0,0,0.2);outline:none;"], ({
+  theme
+}) => theme.color.red, ({
+  theme
+}) => theme.color.white);
 
 /***/ }),
 
@@ -7595,17 +7601,17 @@ __webpack_require__.r(__webpack_exports__);
 const useDeviceDetect = () => {
   const isClient = true;
 
-  function getSize() {
+  const getSize = () => {
     return {
       width: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth : undefined,
       height: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerHeight : undefined
     };
-  }
+  };
 
   const [windowSize, setWindowSize] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(getSize);
   const [deviceData, setDeviceData] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
-    isDesktop: true,
     isMobile: false,
+    isDesktop: false,
     isTablet: false
   });
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
@@ -7647,6 +7653,34 @@ const useDeviceDetect = () => {
 
 /***/ }),
 
+/***/ "./src/layout/layout.styles.ts":
+/*!*************************************!*\
+  !*** ./src/layout/layout.styles.ts ***!
+  \*************************************/
+/*! exports provided: Layout, LayoutBody */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return Layout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutBody", function() { return LayoutBody; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const Layout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "layoutstyles__Layout",
+  componentId: "j1hzp4-0"
+})(["width:100%;height:100%;display:flex;flex-direction:column;"]);
+const LayoutBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
+  isMobile = false
+}) => ({
+  isMobile
+})).withConfig({
+  displayName: "layoutstyles__LayoutBody",
+  componentId: "j1hzp4-1"
+})(["padding:", ";"], props => props.isMobile ? '20px 10px' : '20px 40px');
+
+/***/ }),
+
 /***/ "./src/pages/index.tsx":
 /*!*****************************!*\
   !*** ./src/pages/index.tsx ***!
@@ -7659,7 +7693,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
-/* harmony import */ var _ui_layout_layout_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/layout/layout.styles */ "./src/ui/layout/layout.styles.ts");
+/* harmony import */ var _layout_layout_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layout/layout.styles */ "./src/layout/layout.styles.ts");
 /* harmony import */ var _app_home_article_list_article_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../app/home/article-list/article-list.component */ "./src/app/home/article-list/article-list.component.tsx");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -7680,7 +7714,7 @@ const Home = () => {
   const {
     isMobile
   } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__["useDeviceDetect"])();
-  return __jsx(_ui_layout_layout_styles__WEBPACK_IMPORTED_MODULE_2__["LayoutBody"], {
+  return __jsx(_layout_layout_styles__WEBPACK_IMPORTED_MODULE_2__["LayoutBody"], {
     isMobile: isMobile,
     __self: undefined,
     __source: {
@@ -7769,39 +7803,13 @@ __webpack_require__.r(__webpack_exports__);
 const AuthorContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "authorstyles__AuthorContainer",
   componentId: "sc-1f30oc4-0"
-})(["display:flex;align-items:center;& > .author__img{width:30px;height:30px;background-position:center;background-size:cover;border-radius:50%;background-color:#044aaf4d;}& > .author__name{margin-left:10px;font-weight:500;font-size:14px;}"]);
+})(["display:flex;align-items:center;& > .author__img{width:30px;height:30px;background-position:center;background-size:cover;border-radius:50%;background-color:", ";}& > .author__name{margin-left:10px;font-weight:500;font-size:14px;}"], ({
+  theme
+}) => theme.color.primary);
 
 /***/ }),
 
-/***/ "./src/ui/layout/layout.styles.ts":
-/*!****************************************!*\
-  !*** ./src/ui/layout/layout.styles.ts ***!
-  \****************************************/
-/*! exports provided: Layout, LayoutBody */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return Layout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutBody", function() { return LayoutBody; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-const Layout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "layoutstyles__Layout",
-  componentId: "qw0hi7-0"
-})(["width:100%;height:100%;display:flex;flex-direction:column;"]);
-const LayoutBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
-  isMobile = false
-}) => ({
-  isMobile
-})).withConfig({
-  displayName: "layoutstyles__LayoutBody",
-  componentId: "qw0hi7-1"
-})(["padding:", ";"], props => props.isMobile ? '20px 10px' : '20px 40px');
-
-/***/ }),
-
-/***/ 2:
+/***/ 1:
 /*!**********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx ***!
   \**********************************************************************************************************************************************************************/
@@ -7824,5 +7832,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

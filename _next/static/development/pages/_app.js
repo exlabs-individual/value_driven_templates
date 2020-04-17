@@ -8958,7 +8958,7 @@ const Header = () => {
 /*!******************************************************!*\
   !*** ./src/app/home/desktop-header/header.styles.ts ***!
   \******************************************************/
-/*! exports provided: StyledHeader, Background, StyledNav, HeaderTopbar, HeaderContent, TitleContainer, ImageContainer, HeaderImage */
+/*! exports provided: StyledHeader, Background, StyledNav, HeaderTopbar, HeaderContent, TitleContainer, HeaderImage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8969,26 +8969,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderTopbar", function() { return HeaderTopbar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderContent", function() { return HeaderContent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TitleContainer", function() { return TitleContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageContainer", function() { return ImageContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderImage", function() { return HeaderImage; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
   displayName: "headerstyles__StyledHeader",
   componentId: "ggkv62-0"
-})(["display:flex;flex-direction:column;position:relative;padding:20px 60px 40px;color:#ffffff;"]);
+})(["display:flex;flex-direction:column;position:relative;padding:20px 60px 40px;color:", ";"], ({
+  theme
+}) => theme.color.white);
 const Background = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyles__Background",
   componentId: "ggkv62-1"
-})(["background:linear-gradient(90deg,#044aaf,#022558);position:absolute;top:0;left:0;width:100%;z-index:-1;"]);
+})(["background:linear-gradient(90deg,#044aaf,#022558);position:absolute;top:0;left:0;width:100%;z-index:0;"]);
 const StyledNav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav.withConfig({
   displayName: "headerstyles__StyledNav",
   componentId: "ggkv62-2"
-})(["& > .nav-list{list-style:none;display:flex;align-items:center;& > .nav-item{margin-left:30px;font-weight:700;font-size:14px;cursor:pointer;& > a{color:#ccc;text-decoration:none;transition:color 0.2s ease;&:hover{color:#ffffff;}}&--primary{background-color:#ff3e5b;padding:10px 30px;border-radius:4px;transition:background-color 0.2s ease;box-shadow:0px 3px 6px rgba(0,0,0,0.2);& > a{color:#ffffff;}&:hover{background-color:#ee2d4a;}}}& > .nav-item:first-child{margin-left:0px;}}"]);
+})(["& > .nav-list{list-style:none;display:flex;align-items:center;& > .nav-item{z-index:2;margin-left:30px;font-weight:700;font-size:14px;cursor:pointer;& > a{color:#ccc;text-decoration:none;transition:color 0.2s ease;&:hover{color:", ";}}&--primary{background-color:", ";padding:10px 30px;border-radius:4px;transition:background-color 0.2s ease;box-shadow:0px 3px 6px rgba(0,0,0,0.2);& > a{color:", ";}&:hover{background-color:", ";}}}& > .nav-item:first-child{margin-left:0px;}}"], ({
+  theme
+}) => theme.color.white, ({
+  theme
+}) => theme.color.red, ({
+  theme
+}) => theme.color.white, ({
+  theme
+}) => theme.color['dark-red']);
 const HeaderTopbar = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyles__HeaderTopbar",
   componentId: "ggkv62-3"
-})(["display:flex;justify-content:space-between;& > .logo-container{& > .logo-img{width:35px;height:35px;}& > .logo-separator{height:37px;}& > .logo-text{font-size:24px;}}"]);
+})(["display:flex;justify-content:space-between;& > .logo-container{z-index:2;& > .logo-img{width:35px;height:35px;}& > .logo-separator{height:37px;}& > .logo-text{font-size:24px;}}"]);
 const HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyles__HeaderContent",
   componentId: "ggkv62-4"
@@ -8996,14 +9005,12 @@ const HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const TitleContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyles__TitleContainer",
   componentId: "ggkv62-5"
-})(["& > .title{font-size:37px;margin:0;}& > .sub-title{margin:0;font-size:21px;font-weight:500;margin-top:10px;}& > .about-company{margin-top:50px;max-width:70%;font-size:19px;display:flex;align-items:flex-start;padding:0;&::before{content:'';width:70px;height:2px;background-color:#ffffff;display:block;margin:7px 10px 0 0;}}"]);
-const ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "headerstyles__ImageContainer",
-  componentId: "ggkv62-6"
-})(["flex:1;border:1px solid red;"]);
+})(["& > .title{font-size:37px;margin:0;}& > .sub-title{margin:0;font-size:21px;font-weight:500;margin-top:10px;}& > .about-company{margin-top:50px;max-width:90%;font-size:19px;display:flex;align-items:flex-start;padding:0;&::before{content:'';width:70px;height:2px;background-color:", ";display:block;margin:7px 10px 0 0;}}"], ({
+  theme
+}) => theme.color.white);
 const HeaderImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
   displayName: "headerstyles__HeaderImage",
-  componentId: "ggkv62-7"
+  componentId: "ggkv62-6"
 })(["width:40%;"]);
 
 /***/ }),
@@ -9203,17 +9210,17 @@ __webpack_require__.r(__webpack_exports__);
 const useDeviceDetect = () => {
   const isClient = true;
 
-  function getSize() {
+  const getSize = () => {
     return {
       width: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth : undefined,
       height: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerHeight : undefined
     };
-  }
+  };
 
   const [windowSize, setWindowSize] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(getSize);
   const [deviceData, setDeviceData] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
-    isDesktop: true,
     isMobile: false,
+    isDesktop: false,
     isTablet: false
   });
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
@@ -9282,6 +9289,161 @@ const useMobileMenuState = () => {
 
 /***/ }),
 
+/***/ "./src/layout/layout.provider.tsx":
+/*!****************************************!*\
+  !*** ./src/layout/layout.provider.tsx ***!
+  \****************************************/
+/*! exports provided: LayoutProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutProvider", function() { return LayoutProvider; });
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _layout_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout.styles */ "./src/layout/layout.styles.ts");
+/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
+/* harmony import */ var _app_home_mobile_header_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../app/home/mobile-header/header.component */ "./src/app/home/mobile-header/header.component.tsx");
+/* harmony import */ var _ui_mobile_menu_menu_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ui/mobile-menu/menu.component */ "./src/ui/mobile-menu/menu.component.tsx");
+/* harmony import */ var _app_home_desktop_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../app/home/desktop-header/header.component */ "./src/app/home/desktop-header/header.component.tsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _theme_theme_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../theme/theme.config */ "./src/theme/theme.config.ts");
+/* harmony import */ var _hooks_use_mobile_menu_use_mobile_menu_hook__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../hooks/use-mobile-menu/use-mobile-menu.hook */ "./src/hooks/use-mobile-menu/use-mobile-menu.hook.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/layout/layout.provider.tsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+
+
+
+
+const LayoutProvider = ({
+  children
+}) => {
+  const {
+    isMobile
+  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_3__["useDeviceDetect"])();
+  const {
+    state: {
+      isVisible
+    }
+  } = Object(_hooks_use_mobile_menu_use_mobile_menu_hook__WEBPACK_IMPORTED_MODULE_9__["useMobileMenuState"])();
+  return __jsx(_layout_styles__WEBPACK_IMPORTED_MODULE_2__["Layout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 5
+    }
+  }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "2400830014",
+    __self: undefined
+  }, "html,body{margin:0;padding:0;font-family:'Montserrat','Open Sans',sans-serif;background-color:#f9f9f9;-webkit-overflow-scrolling:touch;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWtvbGFqd2FyZ293c2tpL0RvY3VtZW50cy9wcm9qZWN0cy92YWx1ZV9kcml2ZW5fdGVtcGxhdGVzL3NyYy9sYXlvdXQvbGF5b3V0LnByb3ZpZGVyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQlMsQUFJc0IsU0FDQyxVQUN3QyxnREFDekIseUJBQ1EsaUNBQ25DIiwiZmlsZSI6Ii9Vc2Vycy9taWtvbGFqd2FyZ293c2tpL0RvY3VtZW50cy9wcm9qZWN0cy92YWx1ZV9kcml2ZW5fdGVtcGxhdGVzL3NyYy9sYXlvdXQvbGF5b3V0LnByb3ZpZGVyLnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBMYXlvdXQgfSBmcm9tICcuL2xheW91dC5zdHlsZXMnO1xuaW1wb3J0IHsgdXNlRGV2aWNlRGV0ZWN0IH0gZnJvbSAnLi4vaG9va3MvdXNlLWRldmljZS1kZXRlY3QvdXNlLWRldmljZS1kZXRlY3QuaG9vayc7XG5pbXBvcnQgeyBIZWFkZXIgYXMgTW9iaWxlSGVhZGVyIH0gZnJvbSAnLi4vYXBwL2hvbWUvbW9iaWxlLWhlYWRlci9oZWFkZXIuY29tcG9uZW50JztcbmltcG9ydCB7IE1lbnUgfSBmcm9tICcuLi91aS9tb2JpbGUtbWVudS9tZW51LmNvbXBvbmVudCc7XG5pbXBvcnQgeyBIZWFkZXIgYXMgRGVza3RvcEhlYWRlciB9IGZyb20gJy4uL2FwcC9ob21lL2Rlc2t0b3AtaGVhZGVyL2hlYWRlci5jb21wb25lbnQnO1xuaW1wb3J0IHsgVGhlbWVQcm92aWRlciB9IGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJztcbmltcG9ydCB7IHRoZW1lIH0gZnJvbSAnLi4vdGhlbWUvdGhlbWUuY29uZmlnJztcbmltcG9ydCB7IHVzZU1vYmlsZU1lbnVTdGF0ZSB9IGZyb20gJy4uL2hvb2tzL3VzZS1tb2JpbGUtbWVudS91c2UtbW9iaWxlLW1lbnUuaG9vayc7XG5cbmV4cG9ydCBjb25zdCBMYXlvdXRQcm92aWRlciA9ICh7IGNoaWxkcmVuIH06IHsgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZSB9KSA9PiB7XG4gIGNvbnN0IHsgaXNNb2JpbGUgfSA9IHVzZURldmljZURldGVjdCgpO1xuICBjb25zdCB7XG4gICAgc3RhdGU6IHsgaXNWaXNpYmxlIH0sXG4gIH0gPSB1c2VNb2JpbGVNZW51U3RhdGUoKTtcblxuICByZXR1cm4gKFxuICAgIDxMYXlvdXQ+XG4gICAgICA8c3R5bGUganN4IGdsb2JhbD5cbiAgICAgICAge2BcbiAgICAgICAgICBodG1sLFxuICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCcsICdPcGVuIFNhbnMnLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y5ZjlmOTtcbiAgICAgICAgICAgIC13ZWJraXQtb3ZlcmZsb3ctc2Nyb2xsaW5nOiB0b3VjaDtcbiAgICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgICAgPFRoZW1lUHJvdmlkZXIgdGhlbWU9e3RoZW1lfT5cbiAgICAgICAgPFJlYWN0LkZyYWdtZW50PlxuICAgICAgICAgIHtpc01vYmlsZSA/IChcbiAgICAgICAgICAgIDxSZWFjdC5GcmFnbWVudD5cbiAgICAgICAgICAgICAgPE1vYmlsZUhlYWRlciAvPlxuICAgICAgICAgICAgICB7aXNWaXNpYmxlICYmIDxNZW51IC8+fVxuICAgICAgICAgICAgICA8ZGl2PntjaGlsZHJlbn08L2Rpdj5cbiAgICAgICAgICAgIDwvUmVhY3QuRnJhZ21lbnQ+XG4gICAgICAgICAgKSA6IChcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgIDxEZXNrdG9wSGVhZGVyIC8+XG4gICAgICAgICAgICAgIDxkaXY+e2NoaWxkcmVufTwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgKX1cbiAgICAgICAgPC9SZWFjdC5GcmFnbWVudD5cbiAgICAgIDwvVGhlbWVQcm92aWRlcj5cbiAgICA8L0xheW91dD5cbiAgKTtcbn07XG4iXX0= */\n/*@ sourceURL=/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/layout/layout.provider.tsx */"), __jsx(styled_components__WEBPACK_IMPORTED_MODULE_7__["ThemeProvider"], {
+    theme: _theme_theme_config__WEBPACK_IMPORTED_MODULE_8__["theme"],
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 7
+    }
+  }, __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 9
+    }
+  }, isMobile ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 13
+    }
+  }, __jsx(_app_home_mobile_header_header_component__WEBPACK_IMPORTED_MODULE_4__["Header"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 15
+    }
+  }), isVisible && __jsx(_ui_mobile_menu_menu_component__WEBPACK_IMPORTED_MODULE_5__["Menu"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 29
+    }
+  }), __jsx("div", {
+    className: "jsx-2400830014",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 15
+    }
+  }, children)) : __jsx("div", {
+    className: "jsx-2400830014",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 13
+    }
+  }, __jsx(_app_home_desktop_header_header_component__WEBPACK_IMPORTED_MODULE_6__["Header"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 15
+    }
+  }), __jsx("div", {
+    className: "jsx-2400830014",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 15
+    }
+  }, children)))));
+};
+
+/***/ }),
+
+/***/ "./src/layout/layout.styles.ts":
+/*!*************************************!*\
+  !*** ./src/layout/layout.styles.ts ***!
+  \*************************************/
+/*! exports provided: Layout, LayoutBody */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return Layout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutBody", function() { return LayoutBody; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const Layout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "layoutstyles__Layout",
+  componentId: "j1hzp4-0"
+})(["width:100%;height:100%;display:flex;flex-direction:column;"]);
+const LayoutBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
+  isMobile = false
+}) => ({
+  isMobile
+})).withConfig({
+  displayName: "layoutstyles__LayoutBody",
+  componentId: "j1hzp4-1"
+})(["padding:", ";"], props => props.isMobile ? '20px 10px' : '20px 40px');
+
+/***/ }),
+
 /***/ "./src/pages/_app.js":
 /*!***************************!*\
   !*** ./src/pages/_app.js ***!
@@ -9299,10 +9461,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _ui_layout_layout_provider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/layout/layout.provider */ "./src/ui/layout/layout.provider.tsx");
+/* harmony import */ var _layout_layout_provider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/layout.provider */ "./src/layout/layout.provider.tsx");
+/* harmony import */ var _providers_mobile_menu_provider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../providers/mobile-menu.provider */ "./src/providers/mobile-menu.provider.tsx");
 
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -9325,31 +9489,38 @@ class App extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 9
       }
     }, __jsx("title", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 11
       }
-    }, "Exlabs | Value Driven Engineering")), __jsx(_ui_layout_layout_provider__WEBPACK_IMPORTED_MODULE_4__["LayoutProvider"], {
+    }, "Exlabs | Value Driven Engineering")), __jsx(_providers_mobile_menu_provider__WEBPACK_IMPORTED_MODULE_5__["MobileMenuStateProvider"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 9
+      }
+    }, __jsx(_layout_layout_provider__WEBPACK_IMPORTED_MODULE_4__["LayoutProvider"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 11
       }
     }, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 11
+        lineNumber: 26,
+        columnNumber: 13
       }
-    }))));
+    })))));
   }
 
 }
@@ -9395,148 +9566,28 @@ const MobileMenuStateProvider = ({
 
 /***/ }),
 
-/***/ "./src/ui/layout/layout.provider.tsx":
-/*!*******************************************!*\
-  !*** ./src/ui/layout/layout.provider.tsx ***!
-  \*******************************************/
-/*! exports provided: LayoutProvider */
+/***/ "./src/theme/theme.config.ts":
+/*!***********************************!*\
+  !*** ./src/theme/theme.config.ts ***!
+  \***********************************/
+/*! exports provided: theme */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutProvider", function() { return LayoutProvider; });
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _layout_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout.styles */ "./src/ui/layout/layout.styles.ts");
-/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
-/* harmony import */ var _app_home_mobile_header_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../app/home/mobile-header/header.component */ "./src/app/home/mobile-header/header.component.tsx");
-/* harmony import */ var _providers_mobile_menu_provider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../providers/mobile-menu.provider */ "./src/providers/mobile-menu.provider.tsx");
-/* harmony import */ var _mobile_menu_menu_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../mobile-menu/menu.component */ "./src/ui/mobile-menu/menu.component.tsx");
-/* harmony import */ var _app_home_desktop_header_header_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../app/home/desktop-header/header.component */ "./src/app/home/desktop-header/header.component.tsx");
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/ui/layout/layout.provider.tsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-
-
-
-const LayoutProvider = ({
-  children
-}) => {
-  const {
-    isMobile
-  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_3__["useDeviceDetect"])();
-  return __jsx(_layout_styles__WEBPACK_IMPORTED_MODULE_2__["Layout"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 5
-    }
-  }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "1160521229",
-    __self: undefined
-  }, "html,body{margin:0;padding:0;font-family:'Montserrat',sans-serif;background-color:#f9f9f9;position:fixed;width:100%;top:0px;min-height:100%;height:100%;overflow:scroll;-webkit-overflow-scrolling:touch;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taWtvbGFqd2FyZ293c2tpL0RvY3VtZW50cy9wcm9qZWN0cy92YWx1ZV9kcml2ZW5fdGVtcGxhdGVzL3NyYy91aS9sYXlvdXQvbGF5b3V0LnByb3ZpZGVyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFjUyxBQUlzQixTQUNDLFVBQzJCLG9DQUNaLHlCQUNWLGVBQ0osV0FDSCxRQUNRLGdCQUNKLFlBQ0ksZ0JBQ2lCLGlDQUNuQyIsImZpbGUiOiIvVXNlcnMvbWlrb2xhandhcmdvd3NraS9Eb2N1bWVudHMvcHJvamVjdHMvdmFsdWVfZHJpdmVuX3RlbXBsYXRlcy9zcmMvdWkvbGF5b3V0L2xheW91dC5wcm92aWRlci50c3giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgTGF5b3V0IH0gZnJvbSAnLi9sYXlvdXQuc3R5bGVzJztcbmltcG9ydCB7IHVzZURldmljZURldGVjdCB9IGZyb20gJy4uLy4uL2hvb2tzL3VzZS1kZXZpY2UtZGV0ZWN0L3VzZS1kZXZpY2UtZGV0ZWN0Lmhvb2snO1xuaW1wb3J0IHsgSGVhZGVyIGFzIE1vYmlsZUhlYWRlciB9IGZyb20gJy4uLy4uL2FwcC9ob21lL21vYmlsZS1oZWFkZXIvaGVhZGVyLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBNb2JpbGVNZW51U3RhdGVQcm92aWRlciB9IGZyb20gJy4uLy4uL3Byb3ZpZGVycy9tb2JpbGUtbWVudS5wcm92aWRlcic7XG5pbXBvcnQgeyBNZW51IH0gZnJvbSAnLi4vbW9iaWxlLW1lbnUvbWVudS5jb21wb25lbnQnO1xuaW1wb3J0IHsgSGVhZGVyIGFzIERlc2t0b3BIZWFkZXIgfSBmcm9tICcuLi8uLi9hcHAvaG9tZS9kZXNrdG9wLWhlYWRlci9oZWFkZXIuY29tcG9uZW50JztcblxuZXhwb3J0IGNvbnN0IExheW91dFByb3ZpZGVyID0gKHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pID0+IHtcbiAgY29uc3QgeyBpc01vYmlsZSB9ID0gdXNlRGV2aWNlRGV0ZWN0KCk7XG5cbiAgcmV0dXJuIChcbiAgICA8TGF5b3V0PlxuICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+XG4gICAgICAgIHtgXG4gICAgICAgICAgaHRtbCxcbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgICBmb250LWZhbWlseTogJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y5ZjlmOTtcbiAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgdG9wOiAwcHg7XG4gICAgICAgICAgICBtaW4taGVpZ2h0OiAxMDAlO1xuICAgICAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAgICAgb3ZlcmZsb3c6IHNjcm9sbDtcbiAgICAgICAgICAgIC13ZWJraXQtb3ZlcmZsb3ctc2Nyb2xsaW5nOiB0b3VjaDtcbiAgICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuXG4gICAgICA8UmVhY3QuRnJhZ21lbnQ+XG4gICAgICAgIHtpc01vYmlsZSA/IChcbiAgICAgICAgICA8TW9iaWxlTWVudVN0YXRlUHJvdmlkZXI+XG4gICAgICAgICAgICA8UmVhY3QuRnJhZ21lbnQ+XG4gICAgICAgICAgICAgIDxNb2JpbGVIZWFkZXIgLz5cbiAgICAgICAgICAgICAgPE1lbnUgLz5cbiAgICAgICAgICAgICAgPGRpdj57Y2hpbGRyZW59PC9kaXY+XG4gICAgICAgICAgICA8L1JlYWN0LkZyYWdtZW50PlxuICAgICAgICAgIDwvTW9iaWxlTWVudVN0YXRlUHJvdmlkZXI+XG4gICAgICAgICkgOiAoXG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxEZXNrdG9wSGVhZGVyIC8+XG4gICAgICAgICAgICA8ZGl2PntjaGlsZHJlbn08L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKX1cbiAgICAgIDwvUmVhY3QuRnJhZ21lbnQ+XG4gICAgPC9MYXlvdXQ+XG4gICk7XG59O1xuIl19 */\n/*@ sourceURL=/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/ui/layout/layout.provider.tsx */"), __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 7
-    }
-  }, isMobile ? __jsx(_providers_mobile_menu_provider__WEBPACK_IMPORTED_MODULE_5__["MobileMenuStateProvider"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 11
-    }
-  }, __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 13
-    }
-  }, __jsx(_app_home_mobile_header_header_component__WEBPACK_IMPORTED_MODULE_4__["Header"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 15
-    }
-  }), __jsx(_mobile_menu_menu_component__WEBPACK_IMPORTED_MODULE_6__["Menu"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 15
-    }
-  }), __jsx("div", {
-    className: "jsx-1160521229",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 15
-    }
-  }, children))) : __jsx("div", {
-    className: "jsx-1160521229",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 11
-    }
-  }, __jsx(_app_home_desktop_header_header_component__WEBPACK_IMPORTED_MODULE_7__["Header"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
-    className: "jsx-1160521229",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 13
-    }
-  }, children))));
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
+const theme = {
+  color: {
+    primary: '#044aaf',
+    red: '#ff3e5b',
+    white: '#ffffff',
+    'dark-red': '#ee2d4a'
+  },
+  fontFamily: {
+    primary: 'Montserrat',
+    secondary: 'Open Sans'
+  }
 };
-
-/***/ }),
-
-/***/ "./src/ui/layout/layout.styles.ts":
-/*!****************************************!*\
-  !*** ./src/ui/layout/layout.styles.ts ***!
-  \****************************************/
-/*! exports provided: Layout, LayoutBody */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return Layout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutBody", function() { return LayoutBody; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-const Layout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "layoutstyles__Layout",
-  componentId: "qw0hi7-0"
-})(["width:100%;height:100%;display:flex;flex-direction:column;"]);
-const LayoutBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
-  isMobile = false
-}) => ({
-  isMobile
-})).withConfig({
-  displayName: "layoutstyles__LayoutBody",
-  componentId: "qw0hi7-1"
-})(["padding:", ";"], props => props.isMobile ? '20px 10px' : '20px 40px');
 
 /***/ }),
 
@@ -9612,7 +9663,11 @@ __webpack_require__.r(__webpack_exports__);
 const LogoContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "logostyles__LogoContainer",
   componentId: "ui1tly-0"
-})(["display:flex;align-items:center;& > .logo-img{width:30px;height:30px;}& > .logo-separator{width:2px;height:32px;background-color:#ffffff;margin:0 10px;}& > .logo-text{font-size:21px;margin:0;color:#ffffff;font-weight:700;}"]);
+})(["display:flex;align-items:center;& > .logo-img{width:30px;height:30px;}& > .logo-separator{width:2px;height:32px;background-color:", ";margin:0 10px;}& > .logo-text{font-size:21px;margin:0;color:", ";font-weight:700;}"], ({
+  theme
+}) => theme.color.white, ({
+  theme
+}) => theme.color.white);
 
 /***/ }),
 
@@ -9743,7 +9798,9 @@ __webpack_require__.r(__webpack_exports__);
 const StyledNav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav.withConfig({
   displayName: "menustyles__StyledNav",
   componentId: "sc-1amfo06-0"
-})(["width:100%;height:calc(100vh - 63px);border-top:1px solid #ededed;background-color:#044aaf;position:sticky;position:-webkit-sticky;top:62px;z-index:999;overflow:hidden;"]);
+})(["width:100%;height:calc(100vh - 63px);border-top:1px solid #ededed;background-color:", ";position:sticky;position:-webkit-sticky;top:62px;z-index:999;overflow:hidden;"], ({
+  theme
+}) => theme.color.primary);
 const StyledList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "menustyles__StyledList",
   componentId: "sc-1amfo06-1"
@@ -9751,7 +9808,9 @@ const StyledList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.
 const StyledListItem = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li.withConfig({
   displayName: "menustyles__StyledListItem",
   componentId: "sc-1amfo06-2"
-})(["border-bottom:1px solid #ffffff;margin-bottom:30px;font-size:19px;padding-bottom:10px;& > a{color:#ffffff;text-decoration:none;}"]);
+})(["border-bottom:1px solid #ffffff;margin-bottom:30px;font-size:19px;padding-bottom:10px;& > a{color:", ";text-decoration:none;}"], ({
+  theme
+}) => theme.color.white);
 
 /***/ }),
 
