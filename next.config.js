@@ -7,6 +7,8 @@ const assetPrefix = isProd ? '/value_driven_templates' : '';
 module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
+    about: { page: '/about' },
+    'how-to-contribute': { page: '/how-to-contribute' },
   }),
   assetPrefix: assetPrefix,
   webpack: (config) => {

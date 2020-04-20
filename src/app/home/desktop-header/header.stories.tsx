@@ -15,4 +15,4 @@ export default {
   ],
 };
 
-export const Default = () => <Header />;
+export const Default = () => <Header image="header-img" />;
