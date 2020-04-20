@@ -1,11 +1,11 @@
 import React from 'react';
-import { Header } from './header.component';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../../theme/theme.config';
+import { theme } from '../../theme/theme.config';
+import { Footer } from './footer';
 
 export default {
-  title: 'Desktop Header',
-  component: Header,
+  title: 'Footer',
+  component: Footer,
   decorators: [
     (story) => (
       <ThemeProvider theme={theme}>
@@ -15,4 +15,4 @@ export default {
   ],
 };
 
-export const Default = () => <Header />;
+export const Default = () => <Footer />;

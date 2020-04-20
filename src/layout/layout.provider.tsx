@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from './layout.styles';
+import { Layout, BodyContainer } from './layout.styles';
 import { useDeviceDetect } from '../hooks/use-device-detect/use-device-detect.hook';
 import { Header as MobileHeader } from '../app/home/mobile-header/header.component';
 import { Menu } from '../ui/mobile-menu/menu.component';
@@ -7,6 +7,7 @@ import { Header as DesktopHeader } from '../app/home/desktop-header/header.compo
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../theme/theme.config';
 import { useMobileMenuState } from '../hooks/use-mobile-menu/use-mobile-menu.hook';
+import { Footer } from '../ui/footer/footer';
 
 export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const { isMobile } = useDeviceDetect();
@@ -30,18 +31,21 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
       </style>
       <ThemeProvider theme={theme}>
         <React.Fragment>
-          {isMobile ? (
-            <React.Fragment>
-              <MobileHeader />
-              {isVisible && <Menu />}
-              <div>{children}</div>
-            </React.Fragment>
-          ) : (
-            <div>
-              <DesktopHeader />
-              <div>{children}</div>
-            </div>
-          )}
+          <BodyContainer>
+            {isMobile ? (
+              <React.Fragment>
+                <MobileHeader />
+                {isVisible && <Menu />}
+                <div>{children}</div>
+              </React.Fragment>
+            ) : (
+              <div>
+                <DesktopHeader />
+                <div>{children}</div>
+              </div>
+            )}
+          </BodyContainer>
+          <Footer />
         </React.Fragment>
       </ThemeProvider>
     </Layout>

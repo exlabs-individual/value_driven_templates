@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArticleList } from './article-list.component';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../../../theme/theme.config';
 
 const testArticle = {
   title: 'Architecture Decision Record',
@@ -20,7 +22,9 @@ export default {
   component: ArticleList,
   decorators: [
     (story) => (
-      <div style={{ fontFamily: "'Montserrat', sans-serif" }}>{story()}</div>
+      <ThemeProvider theme={theme}>
+        <div style={{ fontFamily: "'Montserrat', sans-serif" }}>{story()}</div>
+      </ThemeProvider>
     ),
   ],
 };
