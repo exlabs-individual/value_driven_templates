@@ -12,7 +12,11 @@ import {
 import { Logo } from '../../../ui/logo/logo.component';
 import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
 
-export const Header = () => {
+interface HeaderProps {
+  image: 'header-img' | 'about' | 'how-to-contribute';
+}
+
+export const Header = ({ image }: HeaderProps) => {
   const { isDesktop } = useDeviceDetect();
 
   return (
@@ -37,7 +41,7 @@ export const Header = () => {
       <HeaderContent>
         <TitleContainer>
           <h2 className="title">Value Driven Engineering</h2>
-          <h4 className="sub-title">Powered by Exlabs</h4>
+          <h3 className="sub-title">Powered by Exlabs</h3>
           <div className="about-company">
             We deliver high-level consultancy & flexible, complex data-driven
             software solutions for the companies of the future.
@@ -45,7 +49,7 @@ export const Header = () => {
         </TitleContainer>
         {isDesktop && (
           <HeaderImage
-            src={`${process.env.ASSET_PREFIX}/header-img.svg`}
+            src={`${process.env.ASSET_PREFIX}/${image}.svg`}
             alt="Header"
           />
         )}
