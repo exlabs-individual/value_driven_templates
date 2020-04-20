@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArticleThumbnail } from './article-thumbnail.component';
 import { withKnobs, text } from '@storybook/addon-knobs';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../../../theme/theme.config';
 
 export default {
   title: 'Article thumbnail',
@@ -8,7 +10,9 @@ export default {
   decorators: [
     withKnobs,
     (story) => (
-      <div style={{ fontFamily: "'Montserrat', sans-serif" }}>{story()}</div>
+      <ThemeProvider theme={theme}>
+        <div style={{ fontFamily: "'Montserrat', sans-serif" }}>{story()}</div>
+      </ThemeProvider>
     ),
   ],
 };
