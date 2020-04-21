@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './header.component';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../../theme/theme.config';
+import { theme } from '../../theme/theme.config';
 
 export default {
   title: 'Desktop Header',

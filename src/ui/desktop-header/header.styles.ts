@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ThemeProps } from '../../../theme/theme.config';
+import { ThemeProps } from '../../theme/theme.config';
 
 export const StyledHeader = styled.header`
   display: flex;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { HeaderContainer, MenuContainer } from './header.styles';
-import { useMobileMenuState } from '../../../hooks/use-mobile-menu/use-mobile-menu.hook';
-import { toggleMenu } from '../../../context/mobile-menu/mobile-menu.action-creators';
-import { Logo } from '../../../ui/logo/logo.component';
+import { useMobileMenuState } from '../../hooks/use-mobile-menu/use-mobile-menu.hook';
+import { toggleMenu } from '../../context/mobile-menu/mobile-menu.action-creators';
+import { Logo } from '../logo/logo.component';
 
 export const Header = () => {
   const {

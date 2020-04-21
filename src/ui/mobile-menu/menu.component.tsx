@@ -1,8 +1,14 @@
 import React from 'react';
-import { StyledNav, StyledListItem, StyledList } from './menu.styles';
+import {
+  StyledNav,
+  StyledListItem,
+  StyledList,
+  SpecialListItem,
+} from './menu.styles';
 import { useMobileMenuState } from '../../hooks/use-mobile-menu/use-mobile-menu.hook';
 import Link from 'next/link';
 import { toggleMenu } from '../../context/mobile-menu/mobile-menu.action-creators';
+import { navigationData } from '../../routing/app-routes';
 
 export const Menu = () => {
   const {
@@ -19,15 +25,27 @@ export const Menu = () => {
       {isVisible && (
         <StyledNav>
           <StyledList>
-            <StyledListItem onClick={onMenuItemClick}>
-              <Link href="#">Home</Link>
-            </StyledListItem>
-            <StyledListItem onClick={onMenuItemClick}>
-              <Link href="/#">About the project</Link>
-            </StyledListItem>
-            <StyledListItem onClick={onMenuItemClick}>
-              <Link href="#">How to contribute?</Link>
-            </StyledListItem>
+            {navigationData.map((navigationItem) => (
+              <StyledListItem
+                onClick={onMenuItemClick}
+                key={navigationItem.link}
+              >
+                <Link href={navigationItem.link}>
+                  <a href={navigationItem.link}>{navigationItem.label}</a>
+                </Link>
+              </StyledListItem>
+            ))}
+            <SpecialListItem onClick={onMenuItemClick}>
+              <Link href="https://exlabs.com">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://exlabs.com"
+                >
+                  Get in touch
+                </a>
+              </Link>
+            </SpecialListItem>
           </StyledList>
         </StyledNav>
       )}
