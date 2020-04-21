@@ -68,7 +68,7 @@ export const HeaderTopbar = styled.div`
   display: flex;
   justify-content: space-between;
 
-  & > .logo-container {
+  & > .logo-link {
     z-index: 2;
     & > .logo-img {
       width: 35px;
