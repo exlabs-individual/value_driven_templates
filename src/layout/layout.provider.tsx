@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, BodyContainer } from './layout.styles';
 import { useDeviceDetect } from '../hooks/use-device-detect/use-device-detect.hook';
-import { Header as MobileHeader } from '../app/home/mobile-header/header.component';
+import { Header as MobileHeader } from '../ui/mobile-header/header.component';
 import { Menu } from '../ui/mobile-menu/menu.component';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../theme/theme.config';

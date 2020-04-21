@@ -33,3 +33,22 @@ export const StyledListItem = styled.li`
     text-decoration: none;
   }
 `;
+
+export const SpecialListItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > a {
+    padding: 10px 20px;
+    background-color: ${({ theme }: ThemeProps) => theme.color.red};
+    color: ${({ theme }: ThemeProps) => theme.color.white};
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: ${({ theme }: ThemeProps) => theme.color['dark-red']};
+    }
+  }
+`;

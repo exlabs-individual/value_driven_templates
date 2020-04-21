@@ -9,8 +9,9 @@ import {
   HeaderImage,
   Background,
 } from './header.styles';
-import { Logo } from '../../../ui/logo/logo.component';
-import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
+import { Logo } from '../logo/logo.component';
+import { useDeviceDetect } from '../../hooks/use-device-detect/use-device-detect.hook';
+import { AppRoute } from '../../routing/app-routes';
 
 interface HeaderProps {
   image: 'header-img' | 'about' | 'how-to-contribute';
@@ -27,13 +28,25 @@ export const Header = ({ image }: HeaderProps) => {
         <StyledNav>
           <ul className="nav-list">
             <li className="nav-item">
-              <Link href="#">About</Link>
+              <Link href={AppRoute.ABOUT}>
+                <a href={AppRoute.ABOUT}>About</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link href="#">How to contribute?</Link>
+              <Link href={AppRoute.HOW_TO_CONTRIBUTE}>
+                <a href={AppRoute.HOW_TO_CONTRIBUTE}>How to contribute?</a>
+              </Link>
             </li>
             <li className="nav-item nav-item--primary">
-              <Link href="#">Get in touch</Link>
+              <Link href="https://exlabs.com">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://exlabs.com"
+                >
+                  Get in touch
+                </a>
+              </Link>
             </li>
           </ul>
         </StyledNav>

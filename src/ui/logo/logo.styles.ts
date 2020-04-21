@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { ThemeProps } from '../../theme/theme.config';
 
-export const LogoContainer = styled.div`
+export const LogoLink = styled.a`
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   & > .logo-img {
     width: 30px;

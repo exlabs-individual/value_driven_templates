@@ -2,7 +2,7 @@ import React from 'react';
 import { useDeviceDetect } from '../hooks/use-device-detect/use-device-detect.hook';
 import { LayoutBody } from '../layout/layout.styles';
 import { ArticleList } from '../app/home/article-list/article-list.component';
-import { Header as DesktopHeader } from '../app/home/desktop-header/header.component';
+import { Header as DesktopHeader } from '../ui/desktop-header/header.component';
 
 const dummyArticle = {
   title: 'Architecture Decision Record',

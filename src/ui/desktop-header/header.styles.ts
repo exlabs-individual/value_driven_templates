@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ThemeProps } from '../../../theme/theme.config';
+import { ThemeProps } from '../../theme/theme.config';
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -68,7 +68,7 @@ export const HeaderTopbar = styled.div`
   display: flex;
   justify-content: space-between;
 
-  & > .logo-container {
+  & > .logo-link {
     z-index: 2;
     & > .logo-img {
       width: 35px;
