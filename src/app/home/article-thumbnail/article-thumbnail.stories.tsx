@@ -30,9 +30,7 @@ export const Default = () => (
       'imageUrl',
       'https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80'
     )}
-    authorImgUrl={text(
-      'authorImageUrl',
-      'https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-    )}
+    author="john.doe"
+    url="#"
   />
 );

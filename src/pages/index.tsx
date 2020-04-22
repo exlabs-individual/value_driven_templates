@@ -3,27 +3,32 @@ import { useDeviceDetect } from '../hooks/use-device-detect/use-device-detect.ho
 import { LayoutBody } from '../layout/layout.styles';
 import { ArticleList } from '../app/home/article-list/article-list.component';
 import { Header as DesktopHeader } from '../ui/desktop-header/header.component';
-
-const dummyArticle = {
-  title: 'Architecture Decision Record',
-  category: 'Development',
-  description:
-    'Learn how to document important architectural decisions in your development team.',
-  publishDate: new Date(),
-  imageUrl:
-    'https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80',
-  authorImgUrl:
-    'https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-};
+import articles from '../content/articles.json';
+import { ArticleThumbnailProps } from '../app/home/article-thumbnail/article-thumbnail.component';
 
 const Home = () => {
   const { isMobile } = useDeviceDetect();
+
+  const allArticles = React.useMemo<ArticleThumbnailProps[]>(
+    () =>
+      articles
+        .sort(
+          (a, b) =>
+            Number(new Date(b.updatedAt)) - Number(new Date(a.updatedAt))
+        )
+        .map(({ updatedAt, fileName, ...data }) => ({
+          ...data,
+          publishDate: new Date(updatedAt),
+          url: `/articles/${fileName}`,
+        })),
+    []
+  );
 
   return (
     <>
       {!isMobile && <DesktopHeader image={`header-img`} />}
       <LayoutBody isMobile={isMobile}>
-        <ArticleList articles={[...new Array(7).fill(dummyArticle)]} />
+        <ArticleList articles={allArticles} />
       </LayoutBody>
     </>
   );

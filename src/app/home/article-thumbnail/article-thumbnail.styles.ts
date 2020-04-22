@@ -59,14 +59,13 @@ export const ThumbnailFooter = styled.div`
   align-items: center;
 `;
 
-export const ThumbnailButton = styled.button`
-  border: none;
+export const ThumbnailButton = styled.a`
   background-color: ${({ theme }: ThemeProps) => theme.color.red};
   color: ${({ theme }: ThemeProps) => theme.color.white};
+  text-decoration: none;
   padding: 7px 30px;
   font-size: 14px;
   font-weight: 500;
   border-radius: 4px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  outline: none;
 `;
