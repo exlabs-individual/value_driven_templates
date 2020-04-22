@@ -12,13 +12,19 @@ import { SpecialLink } from '../special-link/special-link.component';
 
 interface DesktopNavigationProps {
   theme?: ThemeType;
+  isSticky?: boolean;
 }
 
 export const DesktopNavigation = ({
   theme = 'primary',
+  isSticky = false,
 }: DesktopNavigationProps) => {
   return (
-    <NavigationContainer className="navigation" themeType={theme}>
+    <NavigationContainer
+      className="navigation"
+      themeType={theme}
+      isSticky={isSticky}
+    >
       <Logo theme={theme} />
       <StyledNav>
         <StyledList themeType={theme}>
