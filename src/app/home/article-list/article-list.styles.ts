@@ -20,12 +20,11 @@ export const MobileList = styled.div`
 
 export const DesktopList = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   & > .article-thumbnail {
-    min-width: 49%;
-    max-width: 49%;
-    margin-bottom: 2%;
+    min-width: 32%;
+    max-width: 32%;
+    margin: 0 1% 1%;
   }
 `;

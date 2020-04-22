@@ -8,24 +8,22 @@ import {
 } from './article-thumbnail.styles';
 import Link from 'next/link';
 import { Author } from '../../../ui/author/author.component';
+import authors from '../../../content/authors.json';
 
 export interface ArticleThumbnailProps {
-  imageUrl: string;
   title: string;
-  category: string;
   description: string;
+  category: string;
+  imageUrl: string;
+  author: string;
   publishDate: Date;
-  authorImgUrl: string;
+  url: string;
 }
 
-export const ArticleThumbnail = ({
-  title,
-  description,
-  category,
-  publishDate,
-  imageUrl,
-  authorImgUrl,
-}: ArticleThumbnailProps) => {
+export const ArticleThumbnail = (article: ArticleThumbnailProps) => {
+  const author = authors.find((author) => author.username === article.author);
+  const { title, description, category, imageUrl, publishDate, url } = article;
+
   return (
     <StyledArticleThumbnail className="article-thumbnail">
       <ThumbnailImage
@@ -40,9 +38,9 @@ export const ArticleThumbnail = ({
         <div className="article-date">{publishDate.toDateString()}</div>
         <p className="article-description">{description}</p>
         <ThumbnailFooter>
-          <Author imageUrl={authorImgUrl} />
-          <Link href="#">
-            <ThumbnailButton>See details</ThumbnailButton>
+          <Author {...author} />
+          <Link href={url}>
+            <ThumbnailButton href={url}>See details</ThumbnailButton>
           </Link>
         </ThumbnailFooter>
       </ThumbnailContent>

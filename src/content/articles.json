@@ -1,0 +1,12 @@
+[
+  {
+    "fileName": "architecture-decision-record",
+    "title": "Architecture Decision Record",
+    "description": "Learn how to document important architectural decisions in your development team.",
+    "category": "Architecture",
+    "imageUrl": "/articles/architecture-decision-record/adr-img.jpeg",
+    "author": "john.doe",
+    "createdAt": "2020-04-21T06:59:40.101Z",
+    "updatedAt": "2020-04-21T06:59:40.101Z"
+  }
+]
