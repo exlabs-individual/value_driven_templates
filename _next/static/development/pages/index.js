@@ -8264,7 +8264,7 @@ const ArticleThumbnail = article => {
       columnNumber: 11
     }
   }, __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailButton"], {
-    href: "".concat("", "/").concat(url),
+    href: "".concat("").concat(url),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
