@@ -5,11 +5,6 @@ const isProd = (process.env.NODE_ENV || 'production') === 'production';
 const assetPrefix = isProd ? '/value_driven_templates' : '';
 
 module.exports = {
-  exportPathMap: () => ({
-    '/': { page: '/' },
-    about: { page: '/about' },
-    'how-to-contribute': { page: '/how-to-contribute' },
-  }),
   assetPrefix: assetPrefix,
   webpack: (config) => {
     config.plugins.push(
