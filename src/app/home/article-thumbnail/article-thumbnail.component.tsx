@@ -39,8 +39,10 @@ export const ArticleThumbnail = (article: ArticleThumbnailProps) => {
         <p className="article-description">{description}</p>
         <ThumbnailFooter>
           <Author {...author} />
-          <Link href={url}>
-            <ThumbnailButton href={url}>See details</ThumbnailButton>
+          <Link href={`${process.env.ASSET_PREFIX}${url}`}>
+            <ThumbnailButton href={`${process.env.ASSET_PREFIX}${url}`}>
+              See details
+            </ThumbnailButton>
           </Link>
         </ThumbnailFooter>
       </ThumbnailContent>
