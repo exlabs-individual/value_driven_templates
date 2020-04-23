@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ThemeType, ThemedProps } from '../../../types';
 import { ThemeProps } from '../../theme/theme.config';
 
-export const NavigationContainer = styled.div.attrs(
+export const NavigationContainer = styled.header.attrs(
   ({
     themeType = 'primary',
     isSticky = false,

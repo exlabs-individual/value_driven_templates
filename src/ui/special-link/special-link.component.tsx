@@ -19,12 +19,13 @@ export const SpecialLink = ({
     <Link href={href}>
       <>
         {target === 'self' && (
-          <StyledLink color={color} href={href}>
+          <StyledLink className="special-link" color={color} href={href}>
             {label}
           </StyledLink>
         )}
         {target === 'blank' && (
           <StyledLink
+            className="special-link"
             color={color}
             href={href}
             target="_blank"

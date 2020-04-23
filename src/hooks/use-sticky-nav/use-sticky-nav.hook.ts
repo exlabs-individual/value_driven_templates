@@ -5,18 +5,21 @@ export enum ScrollDirection {
   DOWN = 'down',
 }
 
-interface UseScrollDirectionProps {
+interface UseStickyNavProps {
   initialDirection?: ScrollDirection;
   thresholdPixels?: number;
+  stickyRef: React.RefObject<HTMLElement>;
 }
 
-export const useScrollDirection = ({
+export const useStickyNav = ({
   initialDirection = ScrollDirection.DOWN,
   thresholdPixels,
-}: UseScrollDirectionProps) => {
+  stickyRef,
+}: UseStickyNavProps) => {
   const [scrollDirection, setScrollDirection] = React.useState<ScrollDirection>(
     initialDirection
   );
+  const [isSticky, setSticky] = React.useState(false);
 
   React.useEffect(() => {
     const threshold = thresholdPixels ?? 0;
@@ -36,6 +39,13 @@ export const useScrollDirection = ({
           : ScrollDirection.UP
       );
 
+      setSticky(
+        stickyRef.current &&
+          window.pageYOffset > stickyRef.current.getBoundingClientRect().top
+          ? true
+          : false
+      );
+
       lastScrollPositon = window.pageYOffset > 0 ? window.pageYOffset : 0;
       ticking = false;
     };
@@ -52,7 +62,7 @@ export const useScrollDirection = ({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [initialDirection, thresholdPixels]);
+  }, [initialDirection, thresholdPixels, stickyRef]);
 
-  return scrollDirection;
+  return scrollDirection === ScrollDirection.UP && isSticky;
 };

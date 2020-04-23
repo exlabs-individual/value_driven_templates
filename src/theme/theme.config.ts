@@ -10,7 +10,7 @@ export type Colors =
 
 export type FontFamilies = 'primary' | 'secondary';
 
-export type PaddingSize = 'small' | 'big';
+export type PaddingSize = 'small' | 'medium' | 'big';
 
 export type FontSize = 'small' | 'medium' | 'big';
 
@@ -40,7 +40,8 @@ export const theme: Theme = {
   },
   padding: {
     small: '20px',
-    big: '40px',
+    medium: '40px',
+    big: '60px',
   },
   fontSize: {
     big: '31px',
