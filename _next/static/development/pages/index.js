@@ -7755,7 +7755,7 @@ const Header = () => {
     }
   })), __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderImage"], {
     alt: "Header",
-    src: "/header-img.svg",
+    src: "".concat("", "/header-img.svg"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
