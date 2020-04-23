@@ -4351,6 +4351,647 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
+/***/ "./node_modules/react-anchor-link-smooth-scroll/lib/anchor-link.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/react-anchor-link-smooth-scroll/lib/anchor-link.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+	else {}
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _anchorLink = __webpack_require__(1);
+
+var _anchorLink2 = _interopRequireDefault(_anchorLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _anchorLink2.default;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AnchorLink = function (_Component) {
+  _inherits(AnchorLink, _Component);
+
+  function AnchorLink(props) {
+    _classCallCheck(this, AnchorLink);
+
+    var _this = _possibleConstructorReturn(this, (AnchorLink.__proto__ || Object.getPrototypeOf(AnchorLink)).call(this, props));
+
+    _this.smoothScroll = _this.smoothScroll.bind(_this);
+    return _this;
+  }
+
+  _createClass(AnchorLink, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      __webpack_require__(3).polyfill();
+    }
+  }, {
+    key: 'smoothScroll',
+    value: function smoothScroll(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      var offset = function offset() {
+        return 0;
+      };
+      if (typeof this.props.offset !== 'undefined') {
+        if (!!(this.props.offset && this.props.offset.constructor && this.props.offset.apply)) {
+          offset = this.props.offset;
+        } else {
+          offset = function offset() {
+            return parseInt(_this2.props.offset);
+          };
+        }
+      }
+      var id = e.currentTarget.getAttribute('href').slice(1);
+      var $anchor = document.getElementById(id);
+      var offsetTop = $anchor.getBoundingClientRect().top + window.pageYOffset;
+      window.scroll({
+        top: offsetTop - offset(),
+        behavior: 'smooth'
+      });
+      if (this.props.onClick) {
+        this.props.onClick(e);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          offset = _props.offset,
+          rest = _objectWithoutProperties(_props, ['offset']);
+
+      return _react2.default.createElement('a', _extends({}, rest, { onClick: this.smoothScroll }));
+    }
+  }]);
+
+  return AnchorLink;
+}(_react.Component);
+
+exports.default = AnchorLink;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* smoothscroll v0.4.0 - 2018 - Dustan Kasten, Jeremias Menichelli - MIT License */
+(function () {
+  'use strict';
+
+  // polyfill
+  function polyfill() {
+    // aliases
+    var w = window;
+    var d = document;
+
+    // return if scroll behavior is supported and polyfill is not forced
+    if (
+      'scrollBehavior' in d.documentElement.style &&
+      w.__forceSmoothScrollPolyfill__ !== true
+    ) {
+      return;
+    }
+
+    // globals
+    var Element = w.HTMLElement || w.Element;
+    var SCROLL_TIME = 468;
+
+    // object gathering original scroll methods
+    var original = {
+      scroll: w.scroll || w.scrollTo,
+      scrollBy: w.scrollBy,
+      elementScroll: Element.prototype.scroll || scrollElement,
+      scrollIntoView: Element.prototype.scrollIntoView
+    };
+
+    // define timing method
+    var now =
+      w.performance && w.performance.now
+        ? w.performance.now.bind(w.performance)
+        : Date.now;
+
+    /**
+     * indicates if a the current browser is made by Microsoft
+     * @method isMicrosoftBrowser
+     * @param {String} userAgent
+     * @returns {Boolean}
+     */
+    function isMicrosoftBrowser(userAgent) {
+      var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+      return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+    }
+
+    /*
+     * IE has rounding bug rounding down clientHeight and clientWidth and
+     * rounding up scrollHeight and scrollWidth causing false positives
+     * on hasScrollableSpace
+     */
+    var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+    /**
+     * changes scroll position inside an element
+     * @method scrollElement
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function scrollElement(x, y) {
+      this.scrollLeft = x;
+      this.scrollTop = y;
+    }
+
+    /**
+     * returns result of applying ease math function to a number
+     * @method ease
+     * @param {Number} k
+     * @returns {Number}
+     */
+    function ease(k) {
+      return 0.5 * (1 - Math.cos(Math.PI * k));
+    }
+
+    /**
+     * indicates if a smooth behavior should be applied
+     * @method shouldBailOut
+     * @param {Number|Object} firstArg
+     * @returns {Boolean}
+     */
+    function shouldBailOut(firstArg) {
+      if (
+        firstArg === null ||
+        typeof firstArg !== 'object' ||
+        firstArg.behavior === undefined ||
+        firstArg.behavior === 'auto' ||
+        firstArg.behavior === 'instant'
+      ) {
+        // first argument is not an object/null
+        // or behavior is auto, instant or undefined
+        return true;
+      }
+
+      if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+        // first argument is an object and behavior is smooth
+        return false;
+      }
+
+      // throw error when behavior is not supported
+      throw new TypeError(
+        'behavior member of ScrollOptions ' +
+          firstArg.behavior +
+          ' is not a valid value for enumeration ScrollBehavior.'
+      );
+    }
+
+    /**
+     * indicates if an element has scrollable space in the provided axis
+     * @method hasScrollableSpace
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function hasScrollableSpace(el, axis) {
+      if (axis === 'Y') {
+        return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+      }
+
+      if (axis === 'X') {
+        return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+      }
+    }
+
+    /**
+     * indicates if an element has a scrollable overflow property in the axis
+     * @method canOverflow
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function canOverflow(el, axis) {
+      var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+      return overflowValue === 'auto' || overflowValue === 'scroll';
+    }
+
+    /**
+     * indicates if an element can be scrolled in either axis
+     * @method isScrollable
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function isScrollable(el) {
+      var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+      var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+      return isScrollableY || isScrollableX;
+    }
+
+    /**
+     * finds scrollable parent of an element
+     * @method findScrollableParent
+     * @param {Node} el
+     * @returns {Node} el
+     */
+    function findScrollableParent(el) {
+      var isBody;
+
+      do {
+        el = el.parentNode;
+
+        isBody = el === d.body;
+      } while (isBody === false && isScrollable(el) === false);
+
+      isBody = null;
+
+      return el;
+    }
+
+    /**
+     * self invoked function that, given a context, steps through scrolling
+     * @method step
+     * @param {Object} context
+     * @returns {undefined}
+     */
+    function step(context) {
+      var time = now();
+      var value;
+      var currentX;
+      var currentY;
+      var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+      // avoid elapsed times higher than one
+      elapsed = elapsed > 1 ? 1 : elapsed;
+
+      // apply easing to elapsed time
+      value = ease(elapsed);
+
+      currentX = context.startX + (context.x - context.startX) * value;
+      currentY = context.startY + (context.y - context.startY) * value;
+
+      context.method.call(context.scrollable, currentX, currentY);
+
+      // scroll more if we have not reached our destination
+      if (currentX !== context.x || currentY !== context.y) {
+        w.requestAnimationFrame(step.bind(w, context));
+      }
+    }
+
+    /**
+     * scrolls window or element with a smooth behavior
+     * @method smoothScroll
+     * @param {Object|Node} el
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function smoothScroll(el, x, y) {
+      var scrollable;
+      var startX;
+      var startY;
+      var method;
+      var startTime = now();
+
+      // define scroll context
+      if (el === d.body) {
+        scrollable = w;
+        startX = w.scrollX || w.pageXOffset;
+        startY = w.scrollY || w.pageYOffset;
+        method = original.scroll;
+      } else {
+        scrollable = el;
+        startX = el.scrollLeft;
+        startY = el.scrollTop;
+        method = scrollElement;
+      }
+
+      // scroll looping over a frame
+      step({
+        scrollable: scrollable,
+        method: method,
+        startTime: startTime,
+        startX: startX,
+        startY: startY,
+        x: x,
+        y: y
+      });
+    }
+
+    // ORIGINAL METHODS OVERRIDES
+    // w.scroll and w.scrollTo
+    w.scroll = w.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scroll.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? arguments[0]
+              : w.scrollX || w.pageXOffset,
+          // use top prop, second argument if present or fallback to scrollY
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+              ? arguments[1]
+              : w.scrollY || w.pageYOffset
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : w.scrollX || w.pageXOffset,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : w.scrollY || w.pageYOffset
+      );
+    };
+
+    // w.scrollBy
+    w.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0])) {
+        original.scrollBy.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined ? arguments[1] : 0
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+        ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      );
+    };
+
+    // Element.prototype.scroll and Element.prototype.scrollTo
+    Element.prototype.scroll = Element.prototype.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        // if one number is passed, throw error to match Firefox implementation
+        if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+          throw new SyntaxError('Value could not be converted');
+        }
+
+        original.elementScroll.call(
+          this,
+          // use left prop, first number argument or fallback to scrollLeft
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+          // use top prop, second argument or fallback to scrollTop
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+        );
+
+        return;
+      }
+
+      var left = arguments[0].left;
+      var top = arguments[0].top;
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        this,
+        this,
+        typeof left === 'undefined' ? this.scrollLeft : ~~left,
+        typeof top === 'undefined' ? this.scrollTop : ~~top
+      );
+    };
+
+    // Element.prototype.scrollBy
+    Element.prototype.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.elementScroll.call(
+          this,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left + this.scrollLeft
+            : ~~arguments[0] + this.scrollLeft,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top + this.scrollTop
+            : ~~arguments[1] + this.scrollTop
+        );
+
+        return;
+      }
+
+      this.scroll({
+        left: ~~arguments[0].left + this.scrollLeft,
+        top: ~~arguments[0].top + this.scrollTop,
+        behavior: arguments[0].behavior
+      });
+    };
+
+    // Element.prototype.scrollIntoView
+    Element.prototype.scrollIntoView = function() {
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scrollIntoView.call(
+          this,
+          arguments[0] === undefined ? true : arguments[0]
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      var scrollableParent = findScrollableParent(this);
+      var parentRects = scrollableParent.getBoundingClientRect();
+      var clientRects = this.getBoundingClientRect();
+
+      if (scrollableParent !== d.body) {
+        // reveal element inside parent
+        smoothScroll.call(
+          this,
+          scrollableParent,
+          scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+        );
+
+        // reveal parent in viewport unless is fixed
+        if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+          w.scrollBy({
+            left: parentRects.left,
+            top: parentRects.top,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // reveal element in viewport
+        w.scrollBy({
+          left: clientRects.left,
+          top: clientRects.top,
+          behavior: 'smooth'
+        });
+      }
+    };
+  }
+
+  if (true) {
+    // commonjs
+    module.exports = { polyfill: polyfill };
+  } else {}
+
+}());
+
+
+/***/ })
+/******/ ]);
+});
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -7461,6 +8102,7 @@ const ArticleList = ({
     }
   }, isMobile ? __jsx(_article_list_styles__WEBPACK_IMPORTED_MODULE_4__["MobileList"], {
     className: "article-list--small",
+    id: "articles",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -7469,10 +8111,11 @@ const ArticleList = ({
     }
   }, articleList) : __jsx(_article_list_styles__WEBPACK_IMPORTED_MODULE_4__["DesktopList"], {
     className: "article-list--big",
+    id: "articles",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 28,
       columnNumber: 9
     }
   }, articleList));
@@ -7692,32 +8335,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _header_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.styles */ "./src/app/home/header/header.styles.tsx");
 /* harmony import */ var _ui_special_link_special_link_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../ui/special-link/special-link.component */ "./src/ui/special-link/special-link.component.tsx");
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-anchor-link-smooth-scroll */ "./node_modules/react-anchor-link-smooth-scroll/lib/anchor-link.js");
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/home/header/header.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 const Header = () => {
+  const {
+    isMobile
+  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_4__["useDeviceDetect"])();
   return __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderContainer"], {
     className: "header-container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 16,
       columnNumber: 5
     }
   }, __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_1__["StyledContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 17,
       columnNumber: 7
     }
   }, __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_1__["TextContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 18,
       columnNumber: 9
     }
   }, __jsx("h2", {
@@ -7725,7 +8376,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 19,
       columnNumber: 11
     }
   }, "Value Driven Engineering"), __jsx("h3", {
@@ -7733,7 +8384,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 20,
       columnNumber: 11
     }
   }, "Powered by Exlabs"), __jsx("p", {
@@ -7741,26 +8392,38 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 21,
       columnNumber: 11
     }
-  }, "We deliver high-level consultancy & flexible, complex data-driven software solutions for the companies of the future"), __jsx(_ui_special_link_special_link_component__WEBPACK_IMPORTED_MODULE_2__["SpecialLink"], {
-    href: "#",
+  }, "We deliver high-level consultancy & flexible, complex data-driven software solutions for the companies of the future"), __jsx(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    offset: "100",
+    href: "#articles",
+    style: {
+      textDecoration: 'none'
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 11
+    }
+  }, __jsx(_ui_special_link_special_link_component__WEBPACK_IMPORTED_MODULE_2__["SpecialLink"], {
+    href: "#articles",
     label: "Explore Resources",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 11
+      lineNumber: 30,
+      columnNumber: 13
     }
-  })), __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderImage"], {
+  }))), !isMobile && __jsx(_header_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderImage"], {
     alt: "Header",
     src: "".concat("", "/header-img.svg"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 9
+      lineNumber: 34,
+      columnNumber: 11
     }
   })));
 };
@@ -7787,11 +8450,9 @@ __webpack_require__.r(__webpack_exports__);
 const HeaderContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "headerstyles__HeaderContainer",
   componentId: "c96k2x-0"
-})(["padding:10px ", ";@media (min-width:", "){height:calc(100vh - 112px);}"], ({
+})(["padding:10px ", ";@media (min-width:1200px){height:calc(100vh - 112px);}"], ({
   theme
-}) => theme.padding.small, ({
-  theme
-}) => theme.deviceBreakpoint.desktop);
+}) => theme.padding.small);
 const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__["Container"]).withConfig({
   displayName: "headerstyles__StyledContainer",
   componentId: "c96k2x-1"
@@ -7799,11 +8460,23 @@ const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["d
 const TextContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyles__TextContainer",
   componentId: "c96k2x-2"
-})(["width:40%;color:", ";& > .title{font-size:49px;margin:0;}& > .sub-title{margin:0;margin-top:5px;font-weight:500;font-size:21px;}& > .additional-info{display:block;margin:40px 0 50px;font-weight:500;max-width:85%;&::before{content:'';display:inline-block;margin-right:10px;height:2px;width:30px;background-color:", ";margin-bottom:5px;}}& > .special-link{display:inline-block;}"], ({
+})(["width:40%;color:", ";@media (max-width:", "){display:flex;flex-direction:column;align-items:center;width:100%;}& > .title{font-size:61px;margin:0;@media (max-width:", "){font-size:49px;}@media (max-width:", "){font-size:37px;text-align:center;}}& > .sub-title{margin:0;margin-top:5px;font-weight:500;font-size:21px;@media (max-width:", "){font-size:17px;}}& > .additional-info{display:block;margin:60px 0 50px;font-weight:500;max-width:85%;@media (max-width:", "){margin:40px 0 50px;}&::before{content:'';display:inline-block;margin-right:10px;height:2px;width:30px;background-color:", ";margin-bottom:5px;}}& > .special-link{display:inline-block;@media (min-width:", "){padding:15px 30px;}}"], ({
   theme
 }) => theme.color.black, ({
   theme
-}) => theme.color.black);
+}) => theme.deviceBreakpoint.desktop, ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.desktop, ({
+  theme
+}) => theme.deviceBreakpoint.desktop, ({
+  theme
+}) => theme.deviceBreakpoint.desktop, ({
+  theme
+}) => theme.color.black, ({
+  theme
+}) => theme.deviceBreakpoint.desktop);
 const HeaderImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
   displayName: "headerstyles__HeaderImage",
   componentId: "c96k2x-3"
@@ -7826,11 +8499,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_container_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home-container.styles */ "./src/app/home/home-container.styles.ts");
 /* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
 /* harmony import */ var _article_list_article_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article-list/article-list.component */ "./src/app/home/article-list/article-list.component.tsx");
-/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
-/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header/header.component */ "./src/app/home/header/header.component.tsx");
+/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header/header.component */ "./src/app/home/header/header.component.tsx");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/home/home-container.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -7839,28 +8510,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const HomeContainer = ({
   articles
 }) => {
-  const {
-    isMobile
-  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_4__["useDeviceDetect"])();
   return __jsx(_home_container_styles__WEBPACK_IMPORTED_MODULE_1__["Home"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 14,
       columnNumber: 5
     }
-  }, !isMobile && __jsx(_header_header_component__WEBPACK_IMPORTED_MODULE_5__["Header"], {
+  }, __jsx(_header_header_component__WEBPACK_IMPORTED_MODULE_4__["Header"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 21
+      lineNumber: 15,
+      columnNumber: 7
     }
   }), __jsx(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__["Container"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 16,
       columnNumber: 7
     }
   }, __jsx(_article_list_article_list_component__WEBPACK_IMPORTED_MODULE_3__["ArticleList"], {
@@ -7868,7 +8536,7 @@ const HomeContainer = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 17,
       columnNumber: 9
     }
   })));
@@ -7891,7 +8559,7 @@ __webpack_require__.r(__webpack_exports__);
 const Home = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "home-containerstyles__Home",
   componentId: "sc-1nprwnm-0"
-})(["padding:10px ", ";& > .header-container{margin-top:40px;}& .article-list--big{margin-top:30px;}"], ({
+})(["padding:10px ", ";& > .header-container{margin-top:40px;}& .article-list--big{margin-top:30px;}& .article-list--small{margin-top:70px;}"], ({
   theme
 }) => theme.padding.small);
 
@@ -7904,7 +8572,7 @@ const Home = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.w
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/value_driven_templates/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"john.doe\",\"createdAt\":\"2020-04-21T06:59:40.101Z\",\"updatedAt\":\"2020-04-21T06:59:40.101Z\"}]");
+module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"john.doe\",\"createdAt\":\"2020-04-21T06:59:40.101Z\",\"updatedAt\":\"2020-04-21T06:59:40.101Z\"}]");
 
 /***/ }),
 
@@ -8285,7 +8953,7 @@ const StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.a
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx ***!
   \**********************************************************************************************************************************************************************/
@@ -8308,5 +8976,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
