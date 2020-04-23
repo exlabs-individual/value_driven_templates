@@ -6,13 +6,18 @@ import { Menu } from '../ui/mobile-menu/menu.component';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../theme/theme.config';
 import { useMobileMenuState } from '../hooks/use-mobile-menu/use-mobile-menu.hook';
-import { Footer } from '../ui/footer/footer';
+import { Footer } from '../ui/footer/footer.component';
+import { DesktopNavigation } from '../ui/desktop-navigation/desktop-navigation.component';
+import { useStickyNav } from '../hooks/use-sticky-nav/use-sticky-nav.hook';
 
 export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const { isMobile } = useDeviceDetect();
   const {
     state: { isVisible },
   } = useMobileMenuState();
+  const stickyRef = React.useRef(null);
+
+  const isStickyNav = useStickyNav({ stickyRef });
 
   return (
     <Layout>
@@ -39,7 +44,14 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
               </React.Fragment>
             ) : (
               <div>
-                <div>{children}</div>
+                {isStickyNav && (
+                  <div style={{ width: '100%', height: '72px' }}></div>
+                )}
+                <DesktopNavigation
+                  theme={isStickyNav ? 'primary' : 'secondary'}
+                  isSticky={isStickyNav}
+                />
+                <div ref={stickyRef}>{children}</div>
               </div>
             )}
           </BodyContainer>
