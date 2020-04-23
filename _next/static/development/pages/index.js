@@ -7904,7 +7904,7 @@ const Home = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.w
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"john.doe\",\"createdAt\":\"2020-04-21T06:59:40.101Z\",\"updatedAt\":\"2020-04-21T06:59:40.101Z\"}]");
+module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/value_driven_templates/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"john.doe\",\"createdAt\":\"2020-04-21T06:59:40.101Z\",\"updatedAt\":\"2020-04-21T06:59:40.101Z\"}]");
 
 /***/ }),
 
