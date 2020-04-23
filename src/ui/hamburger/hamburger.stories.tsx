@@ -1,11 +1,11 @@
 import React from 'react';
-import { Header } from './header.component';
+import { Hambuerger } from './hamburger.component';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme/theme.config';
 
 export default {
-  title: 'Desktop Header',
-  component: Header,
+  title: 'Hamburger',
+  component: Hambuerger,
   decorators: [
     (story) => (
       <ThemeProvider theme={theme}>
@@ -15,4 +15,9 @@ export default {
   ],
 };
 
-export const Default = () => <Header image="header-img" />;
+export const Opened = () => (
+  <Hambuerger isOpen={true} onClick={() => {}} theme="secondary" />
+);
+export const Closed = () => (
+  <Hambuerger isOpen={false} onClick={() => {}} theme="secondary" />
+);

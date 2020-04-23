@@ -11,4 +11,8 @@ export const Home = styled.section`
   & .article-list--big {
     margin-top: 30px;
   }
+
+  & .article-list--small {
+    margin-top: 70px;
+  }
 `;
