@@ -38,9 +38,14 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
           <BodyContainer>
             {isMobile ? (
               <React.Fragment>
-                <MobileHeader />
-                {isVisible && <Menu />}
-                <div>{children}</div>
+                {isStickyNav && (
+                  <div style={{ width: '100%', height: '62px' }}></div>
+                )}
+                <MobileHeader isSticky={isVisible ? true : isStickyNav} />
+                <div ref={stickyRef}>
+                  {isVisible && <Menu />}
+                  <div>{children}</div>
+                </div>
               </React.Fragment>
             ) : (
               <div>

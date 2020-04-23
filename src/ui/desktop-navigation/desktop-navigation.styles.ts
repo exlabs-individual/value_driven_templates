@@ -21,6 +21,7 @@ export const NavigationContainer = styled.header.attrs(
   }: ThemedProps & { isSticky?: boolean }) =>
     themeType === 'primary' ? theme.color.primary : 'inherit'};
   padding: 10px ${({ theme }: ThemeProps) => theme.padding.small};
+  animation: moveUp 0.3s ease-in-out;
 
   ${(props) =>
     props.isSticky &&
@@ -32,6 +33,15 @@ export const NavigationContainer = styled.header.attrs(
       z-index: 999;
       animation: moveDown 0.5s ease-in-out;
   `}
+
+  @keyframes moveUp {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0rem);
+    }
+  }
 
   @keyframes moveDown {
     from {

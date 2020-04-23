@@ -1,16 +1,31 @@
 import styled from 'styled-components';
+import { ThemeProps } from '../../theme/theme.config';
 
-export const HeaderContainer = styled.div`
-  background: linear-gradient(90deg, #044aaf, #022558);
+export const HeaderContainer = styled.div.attrs(
+  ({ isSticky = false }: { isSticky?: boolean }) => ({ isSticky })
+)`
+  background-color: ${({
+    theme,
+    isSticky,
+  }: ThemeProps & { isSticky?: boolean }) =>
+    isSticky ? theme.color.primary : 'inherit'};
   width: calc(100% - 40px);
   padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  z-index: 999;
+  color: #000;
+  animation: none;
+
+  ${(props) =>
+    props.isSticky &&
+    `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: calc(100% - 40px);
+      z-index: 999;
+  `}
 `;
 
 export const MenuContainer = styled.div`

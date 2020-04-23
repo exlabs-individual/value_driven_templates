@@ -3,8 +3,13 @@ import { HeaderContainer, MenuContainer } from './header.styles';
 import { useMobileMenuState } from '../../hooks/use-mobile-menu/use-mobile-menu.hook';
 import { toggleMenu } from '../../context/mobile-menu/mobile-menu.action-creators';
 import { Logo } from '../logo/logo.component';
+import { Hambuerger } from '../hamburger/hamburger.component';
 
-export const Header = () => {
+interface HeaderProps {
+  isSticky?: boolean;
+}
+
+export const Header = ({ isSticky = false }: HeaderProps) => {
   const {
     state: { isVisible: isMenuVisible },
     dispatch,
@@ -13,20 +18,14 @@ export const Header = () => {
   const onMenuClick = () => dispatch(toggleMenu());
 
   return (
-    <HeaderContainer>
-      <Logo />
+    <HeaderContainer isSticky={isSticky}>
+      <Logo theme={isSticky ? 'primary' : 'secondary'} />
       <MenuContainer>
-        <button className="menu-btn" onClick={onMenuClick}>
-          <img
-            src={
-              isMenuVisible
-                ? `${process.env.ASSET_PREFIX}/close.svg`
-                : `${process.env.ASSET_PREFIX}/hamburger.svg`
-            }
-            alt="Hamburger menu"
-            className="hamburger-icon"
-          />
-        </button>
+        <Hambuerger
+          isOpen={isMenuVisible}
+          onClick={onMenuClick}
+          theme={isSticky ? 'primary' : 'secondary'}
+        />
       </MenuContainer>
     </HeaderContainer>
   );

@@ -7,8 +7,11 @@ import {
 } from './header.styles';
 import { SpecialLink } from '../../../ui/special-link/special-link.component';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
 
 export const Header = () => {
+  const { isMobile } = useDeviceDetect();
+
   return (
     <HeaderContainer className="header-container">
       <StyledContainer>
@@ -27,10 +30,12 @@ export const Header = () => {
             <SpecialLink href="#articles" label="Explore Resources" />
           </AnchorLink>
         </TextContainer>
-        <HeaderImage
-          alt="Header"
-          src={`${process.env.ASSET_PREFIX}/header-img.svg`}
-        />
+        {!isMobile && (
+          <HeaderImage
+            alt="Header"
+            src={`${process.env.ASSET_PREFIX}/header-img.svg`}
+          />
+        )}
       </StyledContainer>
     </HeaderContainer>
   );
