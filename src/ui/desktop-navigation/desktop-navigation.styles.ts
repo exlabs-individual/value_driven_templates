@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ThemeType, ThemedProps } from '../../../types';
 import { ThemeProps } from '../../theme/theme.config';
+import { Container } from '../container/container.styles';
 
 export const NavigationContainer = styled.header.attrs(
   ({
@@ -20,8 +21,7 @@ export const NavigationContainer = styled.header.attrs(
   }: ThemedProps & { isSticky?: boolean }) =>
     themeType === 'primary' ? theme.color.primary : 'inherit'};
   padding: 10px ${({ theme }: ThemeProps) => theme.padding.small};
-  display: flex;
-  justify-content: space-between;
+
   ${(props) =>
     props.isSticky &&
     `
@@ -41,6 +41,11 @@ export const NavigationContainer = styled.header.attrs(
       transform: translateY(0rem);
     }
   }
+`;
+
+export const StyledContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const StyledNav = styled.nav``;

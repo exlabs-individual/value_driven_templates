@@ -14,11 +14,14 @@ export type PaddingSize = 'small' | 'medium' | 'big';
 
 export type FontSize = 'small' | 'medium' | 'big';
 
+export type DeviceBreakpoint = 'mobile' | 'tablet' | 'desktop';
+
 export interface Theme {
   color: { [key in Colors]: string };
   fontFamily: { [key in FontFamilies]: string };
   padding: { [key in PaddingSize]: string };
   fontSize: { [key in FontSize]: string };
+  deviceBreakpoint: { [key in DeviceBreakpoint]: string };
   defaultRadius: string;
   transitionValue: (value: string) => string;
 }
@@ -47,6 +50,11 @@ export const theme: Theme = {
     big: '31px',
     medium: '17px',
     small: '14px',
+  },
+  deviceBreakpoint: {
+    mobile: '768px',
+    tablet: '1100px',
+    desktop: '1200px',
   },
   defaultRadius: '4px',
   transitionValue: (value: string) => `${value} 0.3s ease`,

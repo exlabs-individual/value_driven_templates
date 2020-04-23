@@ -1,11 +1,11 @@
 import React from 'react';
+import { Article } from './article.component';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme/theme.config';
-import { Footer } from './footer.component';
 
 export default {
-  title: 'Footer',
-  component: Footer,
+  title: 'Article',
+  component: Article,
   decorators: [
     (story) => (
       <ThemeProvider theme={theme}>
@@ -15,4 +15,6 @@ export default {
   ],
 };
 
-export const Default = () => <Footer />;
+export const Default = () => (
+  <Article content="" imageUrl="" publishDate={new Date()} title="" />
+);
