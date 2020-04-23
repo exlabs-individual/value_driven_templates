@@ -23,7 +23,9 @@ export const ArticleList = ({ articles }: ArticleListProps) => {
       {isMobile ? (
         <MobileList className="article-list--small">{articleList}</MobileList>
       ) : (
-        <DesktopList className="article-list--big">{articleList}</DesktopList>
+        <DesktopList className="article-list--big" id="articles">
+          {articleList}
+        </DesktopList>
       )}
     </React.Fragment>
   );
