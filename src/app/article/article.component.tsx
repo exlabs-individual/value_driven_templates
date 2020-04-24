@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+
+import { Author } from '../../ui/author/author.component';
 import {
   StyledArticle,
   StyledHeader,
   InformationContainer,
-  ContentSection,
-  StyledFooter,
-  PaddingContainer,
+  StyledContent,
 } from './article.styles';
-import { Author } from '../../ui/author/author.component';
+import { Image } from '../../ui/md-components/image/image.component';
 
 interface ArticleProps {
   title: string;
@@ -23,34 +23,24 @@ export const Article = ({
   publishDate,
   content,
 }: ArticleProps) => {
-  // TODO: Improve styles
   return (
     <StyledArticle className="article">
-      <StyledHeader
-        style={{
-          backgroundImage: `url("${imageUrl}")`,
-        }}
-      >
-        <h2 className="article-title">{title}</h2>
-      </StyledHeader>
-      <PaddingContainer>
+      <StyledHeader style={{ backgroundImage: `url("${imageUrl}")` }}>
+        <p className="category">Development</p>
+        <h2 className="title">{title}</h2>
         <InformationContainer>
-          <Author
-            img="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-            name="John Doe"
-          />
-          <p className="publish-date">{publishDate.toTimeString()}</p>
+          <Author img="" name="By John Doe" />
+          <p className="publish-date">{new Date().toDateString()}</p>
         </InformationContainer>
-        <ContentSection>
-          <ReactMarkdown source={content} />
-        </ContentSection>
-        <StyledFooter>
-          <Author
-            img="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-            name="John Doe"
-          />
-        </StyledFooter>
-      </PaddingContainer>
+      </StyledHeader>
+      <StyledContent>
+        <ReactMarkdown
+          source={content}
+          renderers={{
+            image: Image,
+          }}
+        />
+      </StyledContent>
     </StyledArticle>
   );
 };

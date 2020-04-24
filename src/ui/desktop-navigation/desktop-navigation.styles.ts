@@ -20,7 +20,7 @@ export const NavigationContainer = styled.header.attrs(
     themeType,
   }: ThemedProps & { isSticky?: boolean }) =>
     themeType === 'primary' ? theme.color.primary : 'inherit'};
-  padding: 10px ${({ theme }: ThemeProps) => theme.padding.small};
+  padding: 15px ${({ theme }: ThemeProps) => theme.padding.small};
   animation: moveUp 0.3s ease-in-out;
 
   ${(props) =>
@@ -56,6 +56,7 @@ export const NavigationContainer = styled.header.attrs(
 export const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const StyledNav = styled.nav``;
@@ -67,6 +68,7 @@ export const StyledList = styled.ul.attrs(
 )`
   list-style: none;
   display: flex;
+  align-items: center;
 
   & .nav-item {
     margin-right: 20px;
