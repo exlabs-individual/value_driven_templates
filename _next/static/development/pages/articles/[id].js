@@ -13301,6 +13301,29 @@ function extend() {
 
 /***/ }),
 
+/***/ "./src/app/article/article-page.styles.ts":
+/*!************************************************!*\
+  !*** ./src/app/article/article-page.styles.ts ***!
+  \************************************************/
+/*! exports provided: StyledContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledContainer", function() { return StyledContainer; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
+
+
+const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__["Container"]).withConfig({
+  displayName: "article-pagestyles__StyledContainer",
+  componentId: "sc-3xlwi0-0"
+})(["& > .article{margin:20px 0;}@media (max-width:", "){& > .article{margin:0;}}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+
+/***/ }),
+
 /***/ "./src/app/article/article.component.tsx":
 /*!***********************************************!*\
   !*** ./src/app/article/article.component.tsx ***!
@@ -13315,10 +13338,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_markdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-markdown */ "./node_modules/react-markdown/lib/react-markdown.js");
 /* harmony import */ var react_markdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_markdown__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _article_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article.styles */ "./src/app/article/article.styles.ts");
-/* harmony import */ var _ui_author_author_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../ui/author/author.component */ "./src/ui/author/author.component.tsx");
+/* harmony import */ var _ui_author_author_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ui/author/author.component */ "./src/ui/author/author.component.tsx");
+/* harmony import */ var _article_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article.styles */ "./src/app/article/article.styles.ts");
+/* harmony import */ var _ui_md_components_image_image_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../ui/md-components/image/image.component */ "./src/ui/md-components/image/image.component.tsx");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/article/article.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -13329,54 +13354,54 @@ const Article = ({
   publishDate,
   content
 }) => {
-  // TODO: Improve styles
-  return __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_2__["StyledArticle"], {
+  return __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["StyledArticle"], {
     className: "article",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 27,
       columnNumber: 5
     }
-  }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_2__["StyledHeader"], {
+  }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
     style: {
       backgroundImage: "url(\"".concat(imageUrl, "\")")
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 7
+    }
+  }, __jsx("p", {
+    className: "category",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 29,
-      columnNumber: 7
-    }
-  }, __jsx("h2", {
-    className: "article-title",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
       columnNumber: 9
     }
-  }, title)), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_2__["PaddingContainer"], {
+  }, "Development"), __jsx("h2", {
+    className: "title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 7
-    }
-  }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_2__["InformationContainer"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 30,
       columnNumber: 9
     }
-  }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_3__["Author"], {
-    img: "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    name: "John Doe",
+  }, title), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["InformationContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 31,
+      columnNumber: 9
+    }
+  }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_2__["Author"], {
+    img: "",
+    name: "By John Doe",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
       columnNumber: 11
     }
   }), __jsx("p", {
@@ -13384,41 +13409,28 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 33,
       columnNumber: 11
     }
-  }, publishDate.toTimeString())), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_2__["ContentSection"], {
+  }, new Date().toDateString()))), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["StyledContent"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 9
+      lineNumber: 36,
+      columnNumber: 7
     }
   }, __jsx(react_markdown__WEBPACK_IMPORTED_MODULE_1___default.a, {
     source: content,
+    renderers: {
+      image: _ui_md_components_image_image_component__WEBPACK_IMPORTED_MODULE_4__["Image"]
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 11
-    }
-  })), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_2__["StyledFooter"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 37,
       columnNumber: 9
     }
-  }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_3__["Author"], {
-    img: "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    name: "John Doe",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48,
-      columnNumber: 11
-    }
-  }))));
+  })));
 };
 
 /***/ }),
@@ -13427,50 +13439,55 @@ const Article = ({
 /*!*******************************************!*\
   !*** ./src/app/article/article.styles.ts ***!
   \*******************************************/
-/*! exports provided: StyledArticle, TextSection, PaddingContainer, StyledHeader, InformationContainer, ContentSection, StyledFooter */
+/*! exports provided: StyledArticle, StyledHeader, InformationContainer, StyledContent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledArticle", function() { return StyledArticle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TextSection", function() { return TextSection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaddingContainer", function() { return PaddingContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledHeader", function() { return StyledHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformationContainer", function() { return InformationContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentSection", function() { return ContentSection; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledFooter", function() { return StyledFooter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledContent", function() { return StyledContent; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 const StyledArticle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].article.withConfig({
   displayName: "articlestyles__StyledArticle",
   componentId: "sc-1tz3zm3-0"
-})([""]);
-const TextSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
-  displayName: "articlestyles__TextSection",
-  componentId: "sc-1tz3zm3-1"
 })(["display:flex;flex-direction:column;"]);
-const PaddingContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "articlestyles__PaddingContainer",
-  componentId: "sc-1tz3zm3-2"
-})(["padding:0 40px;"]);
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
   displayName: "articlestyles__StyledHeader",
-  componentId: "sc-1tz3zm3-3"
-})(["background-position:center;background-size:cover;height:250px;box-shadow:inset 0 250px 0 rgba(4,74,175,0.55);display:flex;flex-direction:column;justify-content:center;align-items:center;text-transform:uppercase;& > .article-title{color:", ";font-size:37px;margin:0;}"], ({
+  componentId: "sc-1tz3zm3-1"
+})(["height:300px;background-position:center;background-size:cover;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:inset 0px 340px 0px rgba(4,74,175,0.65);color:", ";padding:0 0 40px 60px;& > .category{font-size:", ";}& > .title{font-size:39px;margin:15px 0;}@media (max-width:", "){padding:0 20px 20px;height:250px;& > .category{font-size:", ";}& > .title{font-size:23px;margin:5px 0 20px;}}"], ({
   theme
-}) => theme.color.white);
-const InformationContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
+}) => theme.color.white, ({
+  theme
+}) => theme.fontSize.medium, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.fontSize.small);
+const InformationContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "articlestyles__InformationContainer",
-  componentId: "sc-1tz3zm3-4"
-})(["margin-top:20px;display:flex;justify-content:space-between;padding:0 40px;border-bottom:1px solid #ccc;"]);
-const ContentSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
-  displayName: "articlestyles__ContentSection",
-  componentId: "sc-1tz3zm3-5"
-})([""]);
-const StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].footer.withConfig({
-  displayName: "articlestyles__StyledFooter",
-  componentId: "sc-1tz3zm3-6"
-})([""]);
+  componentId: "sc-1tz3zm3-2"
+})(["display:flex;align-items:center;& .author__img{width:40px;height:40px;margin-right:10px;}& .author__name{font-size:", ";}& > .publish-date{margin-left:20px;font-size:", ";}@media (max-width:", "){& .author__img{width:30px;height:30px;margin-right:5px;}& .author__name{font-size:", ";}& > .publish-date{margin-left:10px;font-size:", ";}}"], ({
+  theme
+}) => theme.fontSize.medium, ({
+  theme
+}) => theme.fontSize.medium, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.fontSize.small, ({
+  theme
+}) => theme.fontSize.small);
+const StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
+  displayName: "articlestyles__StyledContent",
+  componentId: "sc-1tz3zm3-3"
+})(["background-color:", ";box-shadow:0px 3px 6px rgba(0,0,0,0.3);padding:20px 60px;@media (max-width:", "){padding:20px;}"], ({
+  theme
+}) => theme.color.white, ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
 
 /***/ }),
 
@@ -13488,21 +13505,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _app_article_article_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../app/article/article.component */ "./src/app/article/article.component.tsx");
+/* harmony import */ var _app_article_article_page_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app/article/article-page.styles */ "./src/app/article/article-page.styles.ts");
 
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/pages/articles/[id].tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 const ArticleContainer = ({
   article
 }) => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_app_article_article_component__WEBPACK_IMPORTED_MODULE_2__["Article"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, article, {
-    publishDate: new Date(article.updatedAt),
+  return __jsx(_app_article_article_page_styles__WEBPACK_IMPORTED_MODULE_3__["StyledContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
+      columnNumber: 5
+    }
+  }, __jsx(_app_article_article_component__WEBPACK_IMPORTED_MODULE_2__["Article"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, article, {
+    publishDate: new Date(article.updatedAt),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
       columnNumber: 7
     }
   })));
@@ -13583,6 +13609,77 @@ const AuthorContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"
 })(["display:flex;align-items:center;& > .author__img{width:30px;height:30px;background-position:center;background-size:cover;border-radius:50%;background-color:", ";}& > .author__name{margin-left:10px;font-weight:500;font-size:14px;}"], ({
   theme
 }) => theme.color.primary);
+
+/***/ }),
+
+/***/ "./src/ui/container/container.styles.ts":
+/*!**********************************************!*\
+  !*** ./src/ui/container/container.styles.ts ***!
+  \**********************************************/
+/*! exports provided: Container */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "containerstyles__Container",
+  componentId: "sc-16wrb8n-0"
+})(["max-width:1440px;margin:0 auto;"]);
+
+/***/ }),
+
+/***/ "./src/ui/md-components/image/image.component.tsx":
+/*!********************************************************!*\
+  !*** ./src/ui/md-components/image/image.component.tsx ***!
+  \********************************************************/
+/*! exports provided: Image */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return Image; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _image_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image.styles */ "./src/ui/md-components/image/image.styles.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/ui/md-components/image/image.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Image = ({
+  src
+}) => {
+  return __jsx(_image_styles__WEBPACK_IMPORTED_MODULE_1__["StyledImage"], {
+    src: src,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 10
+    }
+  });
+};
+
+/***/ }),
+
+/***/ "./src/ui/md-components/image/image.styles.ts":
+/*!****************************************************!*\
+  !*** ./src/ui/md-components/image/image.styles.ts ***!
+  \****************************************************/
+/*! exports provided: StyledImage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledImage", function() { return StyledImage; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const StyledImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  displayName: "imagestyles__StyledImage",
+  componentId: "qkdo36-0"
+})(["max-width:80%;box-shadow:0px 3px 6px rgba(0,0,0,0.2);border-radius:4px;margin:20px 0;display:block;"]);
 
 /***/ }),
 
