@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
           ></link>
           <link
             rel="icon"
-            href={`${process.env.ASSET_PREFIX}/logo-small.svg`}
+            href={`${process.env.ASSET_PREFIX}/favicon-32x32.png`}
           ></link>
         </Head>
         <body>
