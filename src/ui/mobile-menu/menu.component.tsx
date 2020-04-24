@@ -30,8 +30,12 @@ export const Menu = () => {
                 onClick={onMenuItemClick}
                 key={navigationItem.link}
               >
-                <Link href={navigationItem.link}>
-                  <a href={navigationItem.link}>{navigationItem.label}</a>
+                <Link
+                  href={`${process.env.ASSET_PREFIX}${navigationItem.link}`}
+                >
+                  <a href={`${process.env.ASSET_PREFIX}${navigationItem.link}`}>
+                    {navigationItem.label}
+                  </a>
                 </Link>
               </StyledListItem>
             ))}

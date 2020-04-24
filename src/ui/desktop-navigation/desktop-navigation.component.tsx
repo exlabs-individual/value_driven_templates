@@ -31,15 +31,23 @@ export const DesktopNavigation = ({
         <StyledNav>
           <StyledList themeType={theme}>
             <li className="nav-item">
-              <Link href={AppRoute.ABOUT}>
-                <a className="nav-item__link" href={AppRoute.ABOUT}>
+              <Link href={`${process.env.ASSET_PREFIX}${AppRoute.ABOUT}`}>
+                <a
+                  className="nav-item__link"
+                  href={`${process.env.ASSET_PREFIX}${AppRoute.ABOUT}`}
+                >
                   About
                 </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={AppRoute.HOW_TO_CONTRIBUTE}>
-                <a className="nav-item__link" href={AppRoute.HOW_TO_CONTRIBUTE}>
+              <Link
+                href={`${process.env.ASSET_PREFIX}${AppRoute.HOW_TO_CONTRIBUTE}`}
+              >
+                <a
+                  className="nav-item__link"
+                  href={`${process.env.ASSET_PREFIX}${AppRoute.HOW_TO_CONTRIBUTE}`}
+                >
                   How to contribute?
                 </a>
               </Link>
