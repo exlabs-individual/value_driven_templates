@@ -9593,7 +9593,7 @@ const DesktopNavigation = ({
       columnNumber: 13
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: _routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].ABOUT,
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].ABOUT),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -9602,7 +9602,7 @@ const DesktopNavigation = ({
     }
   }, __jsx("a", {
     className: "nav-item__link",
-    href: _routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].ABOUT,
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].ABOUT),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -9614,24 +9614,24 @@ const DesktopNavigation = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 43,
       columnNumber: 13
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: _routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].HOW_TO_CONTRIBUTE,
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].HOW_TO_CONTRIBUTE),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 44,
       columnNumber: 15
     }
   }, __jsx("a", {
     className: "nav-item__link",
-    href: _routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].HOW_TO_CONTRIBUTE,
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_4__["AppRoute"].HOW_TO_CONTRIBUTE),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 47,
       columnNumber: 17
     }
   }, "How to contribute?"))), __jsx("li", {
@@ -9639,7 +9639,7 @@ const DesktopNavigation = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 55,
       columnNumber: 13
     }
   }, __jsx(_special_link_special_link_component__WEBPACK_IMPORTED_MODULE_5__["SpecialLink"], {
@@ -9650,7 +9650,7 @@ const DesktopNavigation = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 56,
       columnNumber: 15
     }
   }))))));
@@ -9963,7 +9963,7 @@ const Logo = ({
   theme = 'primary'
 }) => {
   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: _routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOME,
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOME),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -9972,7 +9972,7 @@ const Logo = ({
     }
   }, __jsx(_logo_styles__WEBPACK_IMPORTED_MODULE_2__["LogoLink"], {
     className: "logo-link",
-    href: _routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOME,
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOME),
     themeType: theme,
     __self: undefined,
     __source: {
@@ -9987,7 +9987,7 @@ const Logo = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 19,
       columnNumber: 9
     }
   }), __jsx("span", {
@@ -9995,7 +9995,7 @@ const Logo = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 26,
       columnNumber: 9
     }
   }), __jsx("h1", {
@@ -10003,7 +10003,7 @@ const Logo = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 27,
       columnNumber: 9
     }
   }, "value reader.")));
@@ -10215,7 +10215,7 @@ const Menu = () => {
       columnNumber: 15
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: navigationItem.link,
+    href: "".concat("").concat(navigationItem.link),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -10223,11 +10223,11 @@ const Menu = () => {
       columnNumber: 17
     }
   }, __jsx("a", {
-    href: navigationItem.link,
+    href: "".concat("").concat(navigationItem.link),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 36,
       columnNumber: 19
     }
   }, navigationItem.label)))), __jsx(_menu_styles__WEBPACK_IMPORTED_MODULE_1__["SpecialListItem"], {
@@ -10235,7 +10235,7 @@ const Menu = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 42,
       columnNumber: 13
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -10243,7 +10243,7 @@ const Menu = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 43,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -10253,7 +10253,7 @@ const Menu = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 44,
       columnNumber: 17
     }
   }, "Get in touch"))))));
