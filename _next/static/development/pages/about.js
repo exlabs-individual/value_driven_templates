@@ -3458,7 +3458,7 @@ const useDeviceDetect = () => {
     global__WEBPACK_IMPORTED_MODULE_0___default.a.addEventListener('resize', handleResize);
     return () => global__WEBPACK_IMPORTED_MODULE_0___default.a.removeEventListener('resize', handleResize);
   }, // eslint-disable-next-line react-hooks/exhaustive-deps
-  []);
+  [global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth]);
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
     if (windowSize.width <= 768) {
       setDeviceData({
@@ -3479,7 +3479,7 @@ const useDeviceDetect = () => {
         isTablet: false
       });
     }
-  }, [windowSize.width]);
+  }, [windowSize.width, windowSize.height]);
   return deviceData;
 };
 
@@ -3561,7 +3561,7 @@ const About = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx ***!
   \***************************************************************************************************************************************************************************/
@@ -3584,5 +3584,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map

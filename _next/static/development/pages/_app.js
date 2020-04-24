@@ -8922,7 +8922,7 @@ const useDeviceDetect = () => {
     global__WEBPACK_IMPORTED_MODULE_0___default.a.addEventListener('resize', handleResize);
     return () => global__WEBPACK_IMPORTED_MODULE_0___default.a.removeEventListener('resize', handleResize);
   }, // eslint-disable-next-line react-hooks/exhaustive-deps
-  []);
+  [global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth]);
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
     if (windowSize.width <= 768) {
       setDeviceData({
@@ -8943,7 +8943,7 @@ const useDeviceDetect = () => {
         isTablet: false
       });
     }
-  }, [windowSize.width]);
+  }, [windowSize.width, windowSize.height]);
   return deviceData;
 };
 
