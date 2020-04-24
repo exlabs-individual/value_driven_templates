@@ -9,6 +9,7 @@ import { useMobileMenuState } from '../hooks/use-mobile-menu/use-mobile-menu.hoo
 import { Footer } from '../ui/footer/footer.component';
 import { DesktopNavigation } from '../ui/desktop-navigation/desktop-navigation.component';
 import { useStickyNav } from '../hooks/use-sticky-nav/use-sticky-nav.hook';
+import { ResetStyles } from '../theme/reset-styles';
 
 export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const { isMobile } = useDeviceDetect();
@@ -33,6 +34,7 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
           }
         `}
       </style>
+      <ResetStyles />
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <BodyContainer>
