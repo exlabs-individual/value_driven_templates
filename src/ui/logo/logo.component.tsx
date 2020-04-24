@@ -10,8 +10,12 @@ interface LogoProps {
 
 export const Logo = ({ theme = 'primary' }: LogoProps) => {
   return (
-    <Link href={AppRoute.HOME}>
-      <LogoLink className="logo-link" href={AppRoute.HOME} themeType={theme}>
+    <Link href={`${process.env.ASSET_PREFIX}${AppRoute.HOME}`}>
+      <LogoLink
+        className="logo-link"
+        href={`${process.env.ASSET_PREFIX}${AppRoute.HOME}`}
+        themeType={theme}
+      >
         <img
           className="logo-img"
           src={`${process.env.ASSET_PREFIX}/${
