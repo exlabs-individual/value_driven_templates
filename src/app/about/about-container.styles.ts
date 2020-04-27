@@ -12,6 +12,13 @@ export const StyledAbout = styled.div`
       margin-bottom: 30px;
     }
   }
+
+  & > .about-section:first-child {
+    &::before {
+      content: '';
+      display: none;
+    }
+  }
 `;
 
 export const ContributionText = styled.p`
