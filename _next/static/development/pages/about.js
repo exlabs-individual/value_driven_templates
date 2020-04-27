@@ -742,31 +742,6 @@ var unitlessKeys = {
 
 /***/ }),
 
-/***/ "./node_modules/global/window.js":
-/*!***************************************!*\
-  !*** ./node_modules/global/window.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var win;
-
-if (typeof window !== "undefined") {
-    win = window;
-} else if (typeof global !== "undefined") {
-    win = global;
-} else if (typeof self !== "undefined"){
-    win = self;
-} else {
-    win = {};
-}
-
-module.exports = win;
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
@@ -3383,140 +3358,216 @@ if ( true && typeof window !== 'undefined') {
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./src/hooks/use-device-detect/use-device-detect.hook.ts":
-/*!***************************************************************!*\
-  !*** ./src/hooks/use-device-detect/use-device-detect.hook.ts ***!
-  \***************************************************************/
-/*! exports provided: useDeviceDetect */
+/***/ "./src/app/about/about-container.component.tsx":
+/*!*****************************************************!*\
+  !*** ./src/app/about/about-container.component.tsx ***!
+  \*****************************************************/
+/*! exports provided: AboutContainer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDeviceDetect", function() { return useDeviceDetect; });
-/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! global */ "./node_modules/global/window.js");
-/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(global__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutContainer", function() { return AboutContainer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _section_section_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section/section.component */ "./src/app/about/section/section.component.tsx");
+/* harmony import */ var _about_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about-container.styles */ "./src/app/about/about-container.styles.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/about-container.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const useDeviceDetect = () => {
-  const isClient = true;
 
-  const getSize = () => {
-    return {
-      width: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth : undefined,
-      height: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerHeight : undefined
-    };
-  };
-
-  const [windowSize, setWindowSize] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(getSize);
-  const [deviceData, setDeviceData] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
-    isMobile: false,
-    isDesktop: false,
-    isTablet: false
-  });
-  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
-    if (!isClient) {
-      return;
+const AboutContainer = () => {
+  return __jsx(_about_container_styles__WEBPACK_IMPORTED_MODULE_2__["StyledAbout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 5
     }
-
-    function handleResize() {
-      setWindowSize(getSize());
+  }, __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    title: "About Value Driven Engineering",
+    image: "about",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 7
     }
-
-    global__WEBPACK_IMPORTED_MODULE_0___default.a.addEventListener('resize', handleResize);
-    return () => global__WEBPACK_IMPORTED_MODULE_0___default.a.removeEventListener('resize', handleResize);
-  }, // eslint-disable-next-line react-hooks/exhaustive-deps
-  [global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth]);
-  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
-    if (windowSize.width <= 768) {
-      setDeviceData({
-        isMobile: true,
-        isDesktop: false,
-        isTablet: false
-      });
-    } else if (windowSize.width >= 768 && windowSize.width <= 1100) {
-      setDeviceData({
-        isMobile: false,
-        isDesktop: false,
-        isTablet: true
-      });
-    } else {
-      setDeviceData({
-        isMobile: false,
-        isDesktop: true,
-        isTablet: false
-      });
+  }, "In digital-first world, effectiveness in delivering software initiatives is what makes or brakes organisations. Yet many IT teams suffer from lack of true alignment with business goals, which results in software becoming a cost generator instead of an assets. There\u2019s now a handful number of resources and tools helping engineers improve software delivery performance, though most of them don\u2019t fill the gap when it comes to match IT strategy with delivery."), __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    textPosition: "left",
+    title: "Our values",
+    image: "values",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 7
     }
-  }, [windowSize.width, windowSize.height]);
-  return deviceData;
+  }, "At Exlabs, we believe that the true alignment between management and engineers can only be achieved by helping both sides speak the same language. That\u2019s why we\u2019ve came up with a concept of Value Driven Engineering which manifests a need to focus on results rather than actions. In days of ubiquitous dependency on software, results are more multi-dimensional than ever before. It\u2019s not longer possible to measure business benefit simply by direct ROI from implemented change. Your enterprise\u2019s software ecosystem is most likely very complex and you need a great roadmap to navigate it. In order to help organisations reduce waste and guess work, we\u2019ve created a curated list of resources and frameworks we use in our day-to-day practice."), __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    textPosition: "right",
+    title: "Sharing",
+    image: "sharing",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 7
+    }
+  }, "\"We believe the knowledge we share here will help IT groups improve their planning, delivery and maintenance processes, which would result in delivering software assets better suited for unique business needs.\""));
 };
 
 /***/ }),
 
-/***/ "./src/layout/layout.styles.ts":
-/*!*************************************!*\
-  !*** ./src/layout/layout.styles.ts ***!
-  \*************************************/
-/*! exports provided: Layout, BodyContainer, LayoutBody */
+/***/ "./src/app/about/about-container.styles.ts":
+/*!*************************************************!*\
+  !*** ./src/app/about/about-container.styles.ts ***!
+  \*************************************************/
+/*! exports provided: StyledAbout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Layout", function() { return Layout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BodyContainer", function() { return BodyContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutBody", function() { return LayoutBody; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledAbout", function() { return StyledAbout; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-const Layout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "layoutstyles__Layout",
-  componentId: "j1hzp4-0"
-})(["width:100%;height:100%;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;"]);
-const BodyContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "layoutstyles__BodyContainer",
-  componentId: "j1hzp4-1"
-})([""]);
-const LayoutBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
-  isMobile = false,
-  isDesktop = false
+const StyledAbout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "about-containerstyles__StyledAbout",
+  componentId: "sc-8x6ju8-0"
+})(["& > .about-section{&::before{content:'';display:block;width:100%;height:1px;background-color:#ebebeb;margin-bottom:30px;}}"]);
+
+/***/ }),
+
+/***/ "./src/app/about/section/section.component.tsx":
+/*!*****************************************************!*\
+  !*** ./src/app/about/section/section.component.tsx ***!
+  \*****************************************************/
+/*! exports provided: Section */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _section_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section.styles */ "./src/app/about/section/section.styles.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/section/section.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Section = ({
+  title,
+  image,
+  children,
+  textPosition = 'right'
+}) => {
+  return __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["StyledSection"], {
+    className: "about-section",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 5
+    }
+  }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionTitle"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 7
+    }
+  }, title), __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionContent"], {
+    textPosition: textPosition,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 7
+    }
+  }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionImage"], {
+    src: "".concat("", "/about/").concat(image, ".svg"),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 9
+    }
+  }), __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionText"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  }, children)));
+};
+
+/***/ }),
+
+/***/ "./src/app/about/section/section.styles.ts":
+/*!*************************************************!*\
+  !*** ./src/app/about/section/section.styles.ts ***!
+  \*************************************************/
+/*! exports provided: StyledSection, SectionTitle, SectionContent, SectionImage, SectionText */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledSection", function() { return StyledSection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionTitle", function() { return SectionTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionContent", function() { return SectionContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionImage", function() { return SectionImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionText", function() { return SectionText; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
+  displayName: "sectionstyles__StyledSection",
+  componentId: "f3appt-0"
+})(["display:flex;flex-direction:column;color:", ";min-height:calc(100vh - 142px);padding:", ";@media (max-width:", "){padding:", ";min-height:calc(100vh - 104px);}"], ({
+  theme
+}) => theme.color.black, ({
+  theme
+}) => theme.padding.medium, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.padding.small);
+const SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
+  displayName: "sectionstyles__SectionTitle",
+  componentId: "f3appt-1"
+})(["max-width:40%;font-size:40px;margin-bottom:40px;@media (max-width:", "){font-size:30px;max-width:70%;margin-bottom:20px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
+  textPosition
 }) => ({
-  isMobile,
-  isDesktop
+  textPosition
 })).withConfig({
-  displayName: "layoutstyles__LayoutBody",
-  componentId: "j1hzp4-2"
-})(["padding:", ";position:relative;& > .titled-content{position:", ";bottom:80px;width:100%;overflow:scroll;height:100%;}"], props => props.isMobile ? '20px 10px' : '20px 40px', props => props.isDesktop ? 'relative' : 'initial');
+  displayName: "sectionstyles__SectionContent",
+  componentId: "f3appt-2"
+})(["display:flex;align-items:center;justify-content:space-between;flex-direction:", ";width:100%;@media (max-width:", "){flex-direction:column;}"], props => props.textPosition === 'left' ? 'row-reverse' : 'row', ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  displayName: "sectionstyles__SectionImage",
+  componentId: "f3appt-3"
+})(["width:40%;@media (max-width:", "){width:80%;}@media (min-width:", ") and (max-width:", "){width:60%;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.tablet);
+const SectionText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "sectionstyles__SectionText",
+  componentId: "f3appt-4"
+})(["width:55%;margin-left:20px;font-size:27px;font-weight:300;@media (max-width:", "){width:100%;margin-left:0;font-size:19px;}@media (min-width:", ") and (max-width:", "){width:40%;font-size:19px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.tablet);
 
 /***/ }),
 
@@ -3531,8 +3582,8 @@ const LayoutBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
-/* harmony import */ var _layout_layout_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layout/layout.styles */ "./src/layout/layout.styles.ts");
+/* harmony import */ var _app_about_about_container_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../app/about/about-container.component */ "./src/app/about/about-container.component.tsx");
+/* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/pages/about.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3540,28 +3591,47 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const About = () => {
-  // TODO: Finish the page
-  const {
-    isMobile,
-    isDesktop
-  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__["useDeviceDetect"])();
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_layout_layout_styles__WEBPACK_IMPORTED_MODULE_2__["LayoutBody"], {
-    isMobile: isMobile,
-    isDesktop: isDesktop,
+  return __jsx(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__["Container"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 7,
+      columnNumber: 5
+    }
+  }, __jsx(_app_about_about_container_component__WEBPACK_IMPORTED_MODULE_1__["AboutContainer"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
       columnNumber: 7
     }
-  }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum blandit ultricies. Morbi interdum commodo cursus. Maecenas a tellus a arcu finibus tristique. Morbi venenatis faucibus massa. Mauris ac faucibus lectus. Praesent cursus, ligula in aliquet volutpat, purus metus pharetra quam, ut feugiat ex diam vehicula diam. Aliquam dui turpis, tempor accumsan ultrices varius, pulvinar ut metus. Mauris porttitor egestas lacinia. Curabitur elementum congue risus ut sodales. Phasellus augue risus, finibus ut erat ac, tristique finibus nibh. Phasellus vitae velit quis elit porta lacinia. Fusce at nisi nibh. Mauris et ultricies diam, in condimentum neque. Nullam dictum, tellus lobortis condimentum sagittis, metus eros dapibus nibh, at faucibus eros eros vitae diam. Duis placerat lorem nulla, eu imperdiet velit suscipit a. Morbi consequat dictum est, eu imperdiet nisl convallis sit amet. Nullam imperdiet tempor libero et elementum. Duis a ex id felis euismod faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi libero augue, sollicitudin ac fringilla in, laoreet non quam. Proin finibus turpis auctor magna faucibus, sit amet varius nunc euismod. Pellentesque ornare risus leo, sit amet rhoncus felis venenatis at."));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
-/***/ 4:
+/***/ "./src/ui/container/container.styles.ts":
+/*!**********************************************!*\
+  !*** ./src/ui/container/container.styles.ts ***!
+  \**********************************************/
+/*! exports provided: Container */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "containerstyles__Container",
+  componentId: "sc-16wrb8n-0"
+})(["max-width:1440px;margin:0 auto;"]);
+
+/***/ }),
+
+/***/ 3:
 /*!***************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx ***!
   \***************************************************************************************************************************************************************************/
@@ -3584,5 +3654,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map

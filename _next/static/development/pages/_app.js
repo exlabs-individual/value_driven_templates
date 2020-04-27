@@ -8922,7 +8922,7 @@ const useDeviceDetect = () => {
     global__WEBPACK_IMPORTED_MODULE_0___default.a.addEventListener('resize', handleResize);
     return () => global__WEBPACK_IMPORTED_MODULE_0___default.a.removeEventListener('resize', handleResize);
   }, // eslint-disable-next-line react-hooks/exhaustive-deps
-  [global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth]);
+  []);
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
     if (windowSize.width <= 768) {
       setDeviceData({
@@ -8943,7 +8943,7 @@ const useDeviceDetect = () => {
         isTablet: false
       });
     }
-  }, [windowSize.width, windowSize.height]);
+  }, [windowSize.width]);
   return deviceData;
 };
 
@@ -9684,7 +9684,7 @@ const NavigationContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["defa
 })).withConfig({
   displayName: "desktop-navigationstyles__NavigationContainer",
   componentId: "sc-1cr38vd-0"
-})(["background-color:", ";padding:15px ", ";animation:moveUp 0.3s ease-in-out;", " @keyframes moveUp{from{transform:translateY(-5rem);}to{transform:translateY(0rem);}}@keyframes moveDown{from{transform:translateY(-5rem);}to{transform:translateY(0rem);}}"], ({
+})(["background-color:", ";padding:15px ", ";", " @keyframes moveDown{from{transform:translateY(-5rem);}to{transform:translateY(0rem);}}"], ({
   theme,
   themeType
 }) => themeType === 'primary' ? theme.color.primary : 'inherit', ({
@@ -9866,6 +9866,7 @@ const Hambuerger = ({
   theme = 'primary'
 }) => {
   return __jsx(_hamburger_styles__WEBPACK_IMPORTED_MODULE_1__["StyledBurger"], {
+    name: "menu-button",
     open: isOpen,
     onClick: onClick,
     themeType: theme,
@@ -9879,21 +9880,21 @@ const Hambuerger = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 23,
       columnNumber: 7
     }
   }), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 24,
       columnNumber: 7
     }
   }), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 25,
       columnNumber: 7
     }
   }));
