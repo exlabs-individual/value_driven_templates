@@ -24,7 +24,10 @@ export const Section = ({
     <StyledSection className="about-section">
       <SectionTitle>{title}</SectionTitle>
       <SectionContent textPosition={textPosition}>
-        <SectionImage src={`${process.env.ASSET_PREFIX}/about/${image}.svg`} />
+        <SectionImage
+          src={`${process.env.ASSET_PREFIX}/about/${image}.svg`}
+          alt={`${image} section`}
+        />
         <SectionText>{children}</SectionText>
       </SectionContent>
     </StyledSection>
