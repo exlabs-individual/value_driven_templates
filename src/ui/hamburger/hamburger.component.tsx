@@ -14,7 +14,12 @@ export const Hambuerger = ({
   theme = 'primary',
 }: HambuergerProps) => {
   return (
-    <StyledBurger open={isOpen} onClick={onClick} themeType={theme}>
+    <StyledBurger
+      name="menu-button"
+      open={isOpen}
+      onClick={onClick}
+      themeType={theme}
+    >
       <div />
       <div />
       <div />
