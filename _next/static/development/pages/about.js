@@ -7337,7 +7337,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledAbout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "about-containerstyles__StyledAbout",
   componentId: "sc-8x6ju8-0"
-})(["& > .about-section{&::before{content:'';display:block;width:100%;height:1px;background-color:#ebebeb;margin-bottom:30px;}}"]);
+})(["& > .about-section{&::before{content:'';display:block;width:100%;height:1px;background-color:#ebebeb;margin-bottom:30px;}}& > .about-section:first-child{&::before{content:'';display:none;}}"]);
 const ContributionText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "about-containerstyles__ContributionText",
   componentId: "sc-8x6ju8-1"
@@ -7397,6 +7397,7 @@ const Section = ({
     }
   }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionImage"], {
     src: "".concat("", "/about/").concat(image, ".svg"),
+    alt: "".concat(image, " section"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -7407,7 +7408,7 @@ const Section = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 31,
       columnNumber: 9
     }
   }, children)));
