@@ -19,8 +19,8 @@ export const Header = () => {
           <h2 className="title">Value Driven Engineering</h2>
           <h3 className="sub-title">Powered by Exlabs</h3>
           <p className="additional-info">
-            We deliver high-level consultancy & flexible, complex data-driven
-            software solutions for the companies of the future
+            Curated, community driven resources and frameworks for IT leaders
+            and engineering managers.
           </p>
           <AnchorLink
             offset="100"
