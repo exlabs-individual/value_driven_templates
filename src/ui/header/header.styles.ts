@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Container } from '../../../ui/container/container.styles';
-import { ThemeProps } from '../../../theme/theme.config';
+import { Container } from '../container/container.styles';
+import { ThemeProps } from '../../theme/theme.config';
 
 export const StyledHeader = styled.header`
   height: calc(100vh - 62px);
@@ -23,6 +23,8 @@ export const StyledContainer = styled(Container)`
   justify-content: space-between;
   margin-top: 20px;
 
+  width: 100%;
+
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
     flex-direction: column;
@@ -30,39 +32,15 @@ export const StyledContainer = styled(Container)`
   }
 `;
 
-export const InformationContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-right: 50px;
-
-  & .special-link {
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  @media (max-width: ${({ theme }: ThemeProps) =>
-      theme.deviceBreakpoint.mobile}) {
-    width: 100%;
-    margin-right: 0;
-    align-items: center;
-  }
-
-  @media (max-width: ${({ theme }: ThemeProps) =>
-      theme.deviceBreakpoint.mobile}) {
-    & .special-link {
-      display: block;
-      height: 25px;
-      line-height: 25px;
-      font-size: 14px;
-    }
-  }
-`;
-
 export const HeaderTitle = styled.h2`
   font-size: 65px;
   margin-top: 130px;
+
+  @media (max-width: ${({ theme }: ThemeProps) =>
+      theme.deviceBreakpoint.tablet}) {
+    font-size: 50px;
+    margin-top: 100px;
+  }
 
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
@@ -77,6 +55,11 @@ export const HeaderSubtitle = styled.h3`
   margin: 20px 0 70px;
 
   @media (max-width: ${({ theme }: ThemeProps) =>
+      theme.deviceBreakpoint.tablet}) {
+    font-size: 25px;
+  }
+
+  @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
     font-size: 19px;
     text-align: center;
@@ -85,16 +68,39 @@ export const HeaderSubtitle = styled.h3`
   }
 `;
 
-export const HeaderImage = styled.img`
-  width: 50%;
+export const TextContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 50px);
+  margin-right: 50px;
 
-  @media (max-width: ${({ theme }: ThemeProps) =>
-      theme.deviceBreakpoint.tablet}) {
-    width: 50%;
+  & .special-link {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
   }
 
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
-    width: 80%;
+    width: 100%;
+    margin-right: 0;
+    align-items: center;
+
+    & .special-link {
+      display: block;
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+`;
+
+export const HeaderImage = styled.img`
+  width: 50%;
+
+  @media (max-width: ${({ theme }: ThemeProps) =>
+      theme.deviceBreakpoint.mobile}) {
+    min-width: 80%;
+    max-width: 80%;
   }
 `;

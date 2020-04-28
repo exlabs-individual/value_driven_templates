@@ -1,20 +1,22 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { SpecialLink } from '../../../ui/special-link/special-link.component';
-import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
 import { Header } from '../../../ui/header/header.component';
 import {
-  HeaderImage,
   HeaderTitle,
+  HeaderImage,
   HeaderSubtitle,
 } from '../../../ui/header/header.styles';
+import { SpecialLink } from '../../../ui/special-link/special-link.component';
+import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
 
-export const AboutHeader = () => {
+export const HowToContributeHeader = () => {
   const { isMobile } = useDeviceDetect();
 
   return (
-    <Header imageUrl={`${process.env.ASSET_PREFIX}/about/header.svg`}>
-      <HeaderTitle>Hello, We are Exlabs.</HeaderTitle>
+    <Header
+      imageUrl={`${process.env.ASSET_PREFIX}/how-to-contribute/header.svg`}
+    >
+      <HeaderTitle>Sharing is caring.</HeaderTitle>
       {isMobile && (
         <HeaderImage
           alt="Header"
@@ -22,8 +24,7 @@ export const AboutHeader = () => {
         />
       )}
       <HeaderSubtitle>
-        We deliver high-level consultancy & flexible, complex data-driven
-        software solutions for the companies of the future.
+        Want to share your knowledge? You can learn here how.
       </HeaderSubtitle>
       <AnchorLink
         offset="100"
@@ -31,8 +32,8 @@ export const AboutHeader = () => {
         style={{ textDecoration: 'none' }}
       >
         <SpecialLink
-          href="#about-content"
-          label="Read about Value Driven Engineering"
+          href="#how-to-contribute-content"
+          label="I’m ready to share my knowledge!"
         />
       </AnchorLink>
     </Header>
