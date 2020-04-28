@@ -8150,7 +8150,7 @@ const AboutHeader = () => {
       columnNumber: 13
     }
   }))), !isMobile && __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["HeaderImage"], {
-    src: "/about/header.svg",
+    src: "".concat("", "/about/header.svg"),
     alt: "About header",
     __self: undefined,
     __source: {
