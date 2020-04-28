@@ -12,6 +12,7 @@ interface SectionProps {
   image: 'about' | 'values' | 'sharing';
   children: React.ReactNode;
   textPosition?: 'left' | 'right';
+  id?: string;
 }
 
 export const Section = ({
@@ -19,9 +20,10 @@ export const Section = ({
   image,
   children,
   textPosition = 'right',
+  id,
 }: SectionProps) => {
   return (
-    <StyledSection className="about-section">
+    <StyledSection className="about-section" id={id ?? ''}>
       <SectionTitle>{title}</SectionTitle>
       <SectionContent textPosition={textPosition}>
         <SectionImage
