@@ -8460,7 +8460,7 @@ const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["d
 const TextContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyles__TextContainer",
   componentId: "c96k2x-2"
-})(["width:40%;color:", ";@media (max-width:", "){display:flex;flex-direction:column;align-items:center;width:100%;}& > .title{font-size:61px;margin:0;@media (max-width:", "){font-size:49px;}@media (max-width:", "){font-size:37px;text-align:center;}}& > .sub-title{margin:0;margin-top:5px;font-weight:500;font-size:21px;@media (max-width:", "){font-size:17px;}}& > .additional-info{display:block;margin:60px 0 50px;font-weight:500;max-width:85%;@media (max-width:", "){margin:40px 0 50px;}&::before{content:'';display:inline-block;margin-right:10px;height:2px;width:30px;background-color:", ";margin-bottom:5px;}}& > .special-link{display:inline-block;@media (min-width:", "){padding:15px 30px;}}"], ({
+})(["width:40%;color:", ";@media (max-width:", "){display:flex;flex-direction:column;align-items:center;width:100%;}& > .title{font-size:65px;margin:0;@media (max-width:", "){font-size:49px;}@media (max-width:", "){font-size:37px;text-align:center;}}& > .sub-title{margin:0;margin-top:5px;font-weight:500;font-size:30px;@media (max-width:", "){font-size:17px;}}& > .additional-info{display:block;margin:60px 0 50px;font-weight:500;max-width:85%;font-size:26px;@media (max-width:", "){font-size:19px;text-align:center;margin:0 0 20px;}@media (max-width:", "){margin:40px 0 50px;}&::before{content:'';display:inline-block;margin-right:10px;height:2px;width:30px;background-color:", ";margin-bottom:5px;}}& > .special-link{display:inline-block;@media (min-width:", "){padding:15px 30px;}}"], ({
   theme
 }) => theme.color.black, ({
   theme
@@ -8471,6 +8471,8 @@ const TextContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 }) => theme.deviceBreakpoint.desktop, ({
   theme
 }) => theme.deviceBreakpoint.desktop, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
   theme
 }) => theme.deviceBreakpoint.desktop, ({
   theme

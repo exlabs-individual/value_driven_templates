@@ -1143,6 +1143,31 @@ module.exports = Function.prototype.bind || implementation;
 
 /***/ }),
 
+/***/ "./node_modules/global/window.js":
+/*!***************************************!*\
+  !*** ./node_modules/global/window.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof global !== "undefined") {
+    win = global;
+} else if (typeof self !== "undefined"){
+    win = self;
+} else {
+    win = {};
+}
+
+module.exports = win;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/has/src/index.js":
 /*!***************************************!*\
   !*** ./node_modules/has/src/index.js ***!
@@ -4209,6 +4234,647 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
+/***/ "./node_modules/react-anchor-link-smooth-scroll/lib/anchor-link.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/react-anchor-link-smooth-scroll/lib/anchor-link.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+	else {}
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _anchorLink = __webpack_require__(1);
+
+var _anchorLink2 = _interopRequireDefault(_anchorLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _anchorLink2.default;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AnchorLink = function (_Component) {
+  _inherits(AnchorLink, _Component);
+
+  function AnchorLink(props) {
+    _classCallCheck(this, AnchorLink);
+
+    var _this = _possibleConstructorReturn(this, (AnchorLink.__proto__ || Object.getPrototypeOf(AnchorLink)).call(this, props));
+
+    _this.smoothScroll = _this.smoothScroll.bind(_this);
+    return _this;
+  }
+
+  _createClass(AnchorLink, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      __webpack_require__(3).polyfill();
+    }
+  }, {
+    key: 'smoothScroll',
+    value: function smoothScroll(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      var offset = function offset() {
+        return 0;
+      };
+      if (typeof this.props.offset !== 'undefined') {
+        if (!!(this.props.offset && this.props.offset.constructor && this.props.offset.apply)) {
+          offset = this.props.offset;
+        } else {
+          offset = function offset() {
+            return parseInt(_this2.props.offset);
+          };
+        }
+      }
+      var id = e.currentTarget.getAttribute('href').slice(1);
+      var $anchor = document.getElementById(id);
+      var offsetTop = $anchor.getBoundingClientRect().top + window.pageYOffset;
+      window.scroll({
+        top: offsetTop - offset(),
+        behavior: 'smooth'
+      });
+      if (this.props.onClick) {
+        this.props.onClick(e);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          offset = _props.offset,
+          rest = _objectWithoutProperties(_props, ['offset']);
+
+      return _react2.default.createElement('a', _extends({}, rest, { onClick: this.smoothScroll }));
+    }
+  }]);
+
+  return AnchorLink;
+}(_react.Component);
+
+exports.default = AnchorLink;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* smoothscroll v0.4.0 - 2018 - Dustan Kasten, Jeremias Menichelli - MIT License */
+(function () {
+  'use strict';
+
+  // polyfill
+  function polyfill() {
+    // aliases
+    var w = window;
+    var d = document;
+
+    // return if scroll behavior is supported and polyfill is not forced
+    if (
+      'scrollBehavior' in d.documentElement.style &&
+      w.__forceSmoothScrollPolyfill__ !== true
+    ) {
+      return;
+    }
+
+    // globals
+    var Element = w.HTMLElement || w.Element;
+    var SCROLL_TIME = 468;
+
+    // object gathering original scroll methods
+    var original = {
+      scroll: w.scroll || w.scrollTo,
+      scrollBy: w.scrollBy,
+      elementScroll: Element.prototype.scroll || scrollElement,
+      scrollIntoView: Element.prototype.scrollIntoView
+    };
+
+    // define timing method
+    var now =
+      w.performance && w.performance.now
+        ? w.performance.now.bind(w.performance)
+        : Date.now;
+
+    /**
+     * indicates if a the current browser is made by Microsoft
+     * @method isMicrosoftBrowser
+     * @param {String} userAgent
+     * @returns {Boolean}
+     */
+    function isMicrosoftBrowser(userAgent) {
+      var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+      return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+    }
+
+    /*
+     * IE has rounding bug rounding down clientHeight and clientWidth and
+     * rounding up scrollHeight and scrollWidth causing false positives
+     * on hasScrollableSpace
+     */
+    var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+    /**
+     * changes scroll position inside an element
+     * @method scrollElement
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function scrollElement(x, y) {
+      this.scrollLeft = x;
+      this.scrollTop = y;
+    }
+
+    /**
+     * returns result of applying ease math function to a number
+     * @method ease
+     * @param {Number} k
+     * @returns {Number}
+     */
+    function ease(k) {
+      return 0.5 * (1 - Math.cos(Math.PI * k));
+    }
+
+    /**
+     * indicates if a smooth behavior should be applied
+     * @method shouldBailOut
+     * @param {Number|Object} firstArg
+     * @returns {Boolean}
+     */
+    function shouldBailOut(firstArg) {
+      if (
+        firstArg === null ||
+        typeof firstArg !== 'object' ||
+        firstArg.behavior === undefined ||
+        firstArg.behavior === 'auto' ||
+        firstArg.behavior === 'instant'
+      ) {
+        // first argument is not an object/null
+        // or behavior is auto, instant or undefined
+        return true;
+      }
+
+      if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+        // first argument is an object and behavior is smooth
+        return false;
+      }
+
+      // throw error when behavior is not supported
+      throw new TypeError(
+        'behavior member of ScrollOptions ' +
+          firstArg.behavior +
+          ' is not a valid value for enumeration ScrollBehavior.'
+      );
+    }
+
+    /**
+     * indicates if an element has scrollable space in the provided axis
+     * @method hasScrollableSpace
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function hasScrollableSpace(el, axis) {
+      if (axis === 'Y') {
+        return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+      }
+
+      if (axis === 'X') {
+        return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+      }
+    }
+
+    /**
+     * indicates if an element has a scrollable overflow property in the axis
+     * @method canOverflow
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function canOverflow(el, axis) {
+      var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+      return overflowValue === 'auto' || overflowValue === 'scroll';
+    }
+
+    /**
+     * indicates if an element can be scrolled in either axis
+     * @method isScrollable
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function isScrollable(el) {
+      var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+      var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+      return isScrollableY || isScrollableX;
+    }
+
+    /**
+     * finds scrollable parent of an element
+     * @method findScrollableParent
+     * @param {Node} el
+     * @returns {Node} el
+     */
+    function findScrollableParent(el) {
+      var isBody;
+
+      do {
+        el = el.parentNode;
+
+        isBody = el === d.body;
+      } while (isBody === false && isScrollable(el) === false);
+
+      isBody = null;
+
+      return el;
+    }
+
+    /**
+     * self invoked function that, given a context, steps through scrolling
+     * @method step
+     * @param {Object} context
+     * @returns {undefined}
+     */
+    function step(context) {
+      var time = now();
+      var value;
+      var currentX;
+      var currentY;
+      var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+      // avoid elapsed times higher than one
+      elapsed = elapsed > 1 ? 1 : elapsed;
+
+      // apply easing to elapsed time
+      value = ease(elapsed);
+
+      currentX = context.startX + (context.x - context.startX) * value;
+      currentY = context.startY + (context.y - context.startY) * value;
+
+      context.method.call(context.scrollable, currentX, currentY);
+
+      // scroll more if we have not reached our destination
+      if (currentX !== context.x || currentY !== context.y) {
+        w.requestAnimationFrame(step.bind(w, context));
+      }
+    }
+
+    /**
+     * scrolls window or element with a smooth behavior
+     * @method smoothScroll
+     * @param {Object|Node} el
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function smoothScroll(el, x, y) {
+      var scrollable;
+      var startX;
+      var startY;
+      var method;
+      var startTime = now();
+
+      // define scroll context
+      if (el === d.body) {
+        scrollable = w;
+        startX = w.scrollX || w.pageXOffset;
+        startY = w.scrollY || w.pageYOffset;
+        method = original.scroll;
+      } else {
+        scrollable = el;
+        startX = el.scrollLeft;
+        startY = el.scrollTop;
+        method = scrollElement;
+      }
+
+      // scroll looping over a frame
+      step({
+        scrollable: scrollable,
+        method: method,
+        startTime: startTime,
+        startX: startX,
+        startY: startY,
+        x: x,
+        y: y
+      });
+    }
+
+    // ORIGINAL METHODS OVERRIDES
+    // w.scroll and w.scrollTo
+    w.scroll = w.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scroll.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? arguments[0]
+              : w.scrollX || w.pageXOffset,
+          // use top prop, second argument if present or fallback to scrollY
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+              ? arguments[1]
+              : w.scrollY || w.pageYOffset
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : w.scrollX || w.pageXOffset,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : w.scrollY || w.pageYOffset
+      );
+    };
+
+    // w.scrollBy
+    w.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0])) {
+        original.scrollBy.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined ? arguments[1] : 0
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+        ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      );
+    };
+
+    // Element.prototype.scroll and Element.prototype.scrollTo
+    Element.prototype.scroll = Element.prototype.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        // if one number is passed, throw error to match Firefox implementation
+        if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+          throw new SyntaxError('Value could not be converted');
+        }
+
+        original.elementScroll.call(
+          this,
+          // use left prop, first number argument or fallback to scrollLeft
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+          // use top prop, second argument or fallback to scrollTop
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+        );
+
+        return;
+      }
+
+      var left = arguments[0].left;
+      var top = arguments[0].top;
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        this,
+        this,
+        typeof left === 'undefined' ? this.scrollLeft : ~~left,
+        typeof top === 'undefined' ? this.scrollTop : ~~top
+      );
+    };
+
+    // Element.prototype.scrollBy
+    Element.prototype.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.elementScroll.call(
+          this,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left + this.scrollLeft
+            : ~~arguments[0] + this.scrollLeft,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top + this.scrollTop
+            : ~~arguments[1] + this.scrollTop
+        );
+
+        return;
+      }
+
+      this.scroll({
+        left: ~~arguments[0].left + this.scrollLeft,
+        top: ~~arguments[0].top + this.scrollTop,
+        behavior: arguments[0].behavior
+      });
+    };
+
+    // Element.prototype.scrollIntoView
+    Element.prototype.scrollIntoView = function() {
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scrollIntoView.call(
+          this,
+          arguments[0] === undefined ? true : arguments[0]
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      var scrollableParent = findScrollableParent(this);
+      var parentRects = scrollableParent.getBoundingClientRect();
+      var clientRects = this.getBoundingClientRect();
+
+      if (scrollableParent !== d.body) {
+        // reveal element inside parent
+        smoothScroll.call(
+          this,
+          scrollableParent,
+          scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+        );
+
+        // reveal parent in viewport unless is fixed
+        if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+          w.scrollBy({
+            left: parentRects.left,
+            top: parentRects.top,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // reveal element in viewport
+        w.scrollBy({
+          left: clientRects.left,
+          top: clientRects.top,
+          behavior: 'smooth'
+        });
+      }
+    };
+  }
+
+  if (true) {
+    // commonjs
+    module.exports = { polyfill: polyfill };
+  } else {}
+
+}());
+
+
+/***/ })
+/******/ ]);
+});
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -7232,6 +7898,37 @@ if ( true && typeof window !== 'undefined') {
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
 /***/ "./src/app/about/about-container.component.tsx":
 /*!*****************************************************!*\
   !*** ./src/app/about/about-container.component.tsx ***!
@@ -7249,6 +7946,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _routing_app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../routing/app-routes */ "./src/routing/app-routes.tsx");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _header_about_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header/about-header.component */ "./src/app/about/header/about-header.component.tsx");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/about-container.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -7256,22 +7954,31 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 const AboutContainer = () => {
-  return __jsx(_about_container_styles__WEBPACK_IMPORTED_MODULE_2__["StyledAbout"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_header_about_header_component__WEBPACK_IMPORTED_MODULE_5__["AboutHeader"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 5
+      lineNumber: 11,
+      columnNumber: 7
+    }
+  }), __jsx(_about_container_styles__WEBPACK_IMPORTED_MODULE_2__["StyledAbout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 7
     }
   }, __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     title: "About Value Driven Engineering",
     image: "about",
+    id: "about-content",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 7
+      lineNumber: 13,
+      columnNumber: 9
     }
   }, "In digital-first world, effectiveness in delivering software initiatives is what makes or brakes organisations. Yet many IT teams suffer from lack of true alignment with business goals, which results in software becoming a cost generator instead of an assets. There\u2019s now a handful number of resources and tools helping engineers improve software delivery performance, though most of them don\u2019t fill the gap when it comes to match IT strategy with delivery."), __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     textPosition: "left",
@@ -7280,8 +7987,8 @@ const AboutContainer = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 7
+      lineNumber: 26,
+      columnNumber: 9
     }
   }, "At Exlabs, we believe that the true alignment between management and engineers can only be achieved by helping both sides speak the same language. That\u2019s why we\u2019ve came up with a concept of Value Driven Engineering which manifests a need to focus on results rather than actions. In days of ubiquitous dependency on software, results are more multi-dimensional than ever before. It\u2019s not longer possible to measure business benefit simply by direct ROI from implemented change. Your enterprise\u2019s software ecosystem is most likely very complex and you need a great roadmap to navigate it. In order to help organisations reduce waste and guess work, we\u2019ve created a curated list of resources and frameworks we use in our day-to-day practice."), __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     textPosition: "right",
@@ -7290,33 +7997,33 @@ const AboutContainer = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 7
+      lineNumber: 40,
+      columnNumber: 9
     }
   }, "\"We believe the knowledge we share here will help IT groups improve their planning, delivery and maintenance processes, which would result in delivering software assets better suited for unique business needs.\"", __jsx(_about_container_styles__WEBPACK_IMPORTED_MODULE_2__["ContributionText"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 9
+      lineNumber: 45,
+      columnNumber: 11
     }
   }, "Interested in contribute?", __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOW_TO_CONTRIBUTE),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 11
+      lineNumber: 47,
+      columnNumber: 13
     }
   }, __jsx("a", {
     href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOW_TO_CONTRIBUTE),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 13
+      lineNumber: 50,
+      columnNumber: 15
     }
-  }, "Learn more here.")))));
+  }, "Learn more here."))))));
 };
 
 /***/ }),
@@ -7349,6 +8056,181 @@ const ContributionText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default
 
 /***/ }),
 
+/***/ "./src/app/about/header/about-header.component.tsx":
+/*!*********************************************************!*\
+  !*** ./src/app/about/header/about-header.component.tsx ***!
+  \*********************************************************/
+/*! exports provided: AboutHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutHeader", function() { return AboutHeader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-anchor-link-smooth-scroll */ "./node_modules/react-anchor-link-smooth-scroll/lib/anchor-link.js");
+/* harmony import */ var react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _about_header_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about-header.styles */ "./src/app/about/header/about-header.styles.ts");
+/* harmony import */ var _ui_special_link_special_link_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../ui/special-link/special-link.component */ "./src/ui/special-link/special-link.component.tsx");
+/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/header/about-header.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const AboutHeader = () => {
+  const {
+    isMobile
+  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_4__["useDeviceDetect"])();
+  return __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["StyledHeader"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 5
+    }
+  }, __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 7
+    }
+  }, __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["InformationContainer"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 9
+    }
+  }, __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["HeaderTitle"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 11
+    }
+  }, "Hello, We are Exlabs."), isMobile && __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["HeaderImage"], {
+    src: "".concat("", "/about/header.svg"),
+    alt: "About header",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 13
+    }
+  }), __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["HeaderSubtitle"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 11
+    }
+  }, "We deliver high-level consultancy & flexible, complex data-driven software solutions for the companies of the future."), __jsx(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    offset: "100",
+    href: "#about-content",
+    style: {
+      textDecoration: 'none'
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 11
+    }
+  }, __jsx(_ui_special_link_special_link_component__WEBPACK_IMPORTED_MODULE_3__["SpecialLink"], {
+    href: "#about-content",
+    label: "Read about Value Driven Engineering",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 13
+    }
+  }))), !isMobile && __jsx(_about_header_styles__WEBPACK_IMPORTED_MODULE_2__["HeaderImage"], {
+    src: "/about/header.svg",
+    alt: "About header",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 11
+    }
+  })));
+};
+
+/***/ }),
+
+/***/ "./src/app/about/header/about-header.styles.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/about/header/about-header.styles.ts ***!
+  \*****************************************************/
+/*! exports provided: StyledHeader, StyledContainer, InformationContainer, HeaderTitle, HeaderSubtitle, HeaderImage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledHeader", function() { return StyledHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledContainer", function() { return StyledContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformationContainer", function() { return InformationContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderTitle", function() { return HeaderTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderSubtitle", function() { return HeaderSubtitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderImage", function() { return HeaderImage; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
+
+
+const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
+  displayName: "about-headerstyles__StyledHeader",
+  componentId: "n4gzhx-0"
+})(["height:calc(100vh - 62px);color:", ";padding:10px ", ";@media (max-width:", "){height:auto;}@media (max-width:", "){height:100vh;}"], ({
+  theme
+}) => theme.color.black, ({
+  theme
+}) => theme.padding.small, ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__["Container"]).withConfig({
+  displayName: "about-headerstyles__StyledContainer",
+  componentId: "n4gzhx-1"
+})(["display:flex;justify-content:space-between;margin-top:20px;@media (max-width:", "){flex-direction:column;margin-top:0px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const InformationContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
+  displayName: "about-headerstyles__InformationContainer",
+  componentId: "n4gzhx-2"
+})(["display:flex;flex-direction:column;width:50%;margin-right:50px;& .special-link{display:inline-block;height:30px;line-height:30px;}@media (max-width:", "){width:100%;margin-right:0;align-items:center;}@media (max-width:", "){& .special-link{display:block;height:25px;line-height:25px;font-size:14px;}}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const HeaderTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
+  displayName: "about-headerstyles__HeaderTitle",
+  componentId: "n4gzhx-3"
+})(["font-size:65px;margin-top:130px;@media (max-width:", "){font-size:28px;margin-top:10px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const HeaderSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
+  displayName: "about-headerstyles__HeaderSubtitle",
+  componentId: "n4gzhx-4"
+})(["font-size:30px;font-weight:300;margin:20px 0 70px;@media (max-width:", "){font-size:19px;text-align:center;margin:0 0 20px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const HeaderImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  displayName: "about-headerstyles__HeaderImage",
+  componentId: "n4gzhx-5"
+})(["width:50%;@media (max-width:", "){width:50%;}@media (max-width:", "){width:80%;}"], ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+
+/***/ }),
+
 /***/ "./src/app/about/section/section.component.tsx":
 /*!*****************************************************!*\
   !*** ./src/app/about/section/section.component.tsx ***!
@@ -7370,21 +8252,23 @@ const Section = ({
   title,
   image,
   children,
-  textPosition = 'right'
+  textPosition = 'right',
+  id
 }) => {
   return __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["StyledSection"], {
     className: "about-section",
+    id: id !== null && id !== void 0 ? id : '',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 5
     }
   }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionTitle"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, title), __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionContent"], {
@@ -7392,7 +8276,7 @@ const Section = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 28,
       columnNumber: 7
     }
   }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionImage"], {
@@ -7401,14 +8285,14 @@ const Section = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 29,
       columnNumber: 9
     }
   }), __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionText"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 33,
       columnNumber: 9
     }
   }, children)));
@@ -7480,6 +8364,77 @@ const SectionText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
 }) => theme.deviceBreakpoint.mobile, ({
   theme
 }) => theme.deviceBreakpoint.tablet);
+
+/***/ }),
+
+/***/ "./src/hooks/use-device-detect/use-device-detect.hook.ts":
+/*!***************************************************************!*\
+  !*** ./src/hooks/use-device-detect/use-device-detect.hook.ts ***!
+  \***************************************************************/
+/*! exports provided: useDeviceDetect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDeviceDetect", function() { return useDeviceDetect; });
+/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! global */ "./node_modules/global/window.js");
+/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(global__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const useDeviceDetect = () => {
+  const isClient = true;
+
+  const getSize = () => {
+    return {
+      width: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth : undefined,
+      height: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerHeight : undefined
+    };
+  };
+
+  const [windowSize, setWindowSize] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(getSize);
+  const [deviceData, setDeviceData] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
+    isMobile: false,
+    isDesktop: false,
+    isTablet: false
+  });
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+
+    function handleResize() {
+      setWindowSize(getSize());
+    }
+
+    global__WEBPACK_IMPORTED_MODULE_0___default.a.addEventListener('resize', handleResize);
+    return () => global__WEBPACK_IMPORTED_MODULE_0___default.a.removeEventListener('resize', handleResize);
+  }, // eslint-disable-next-line react-hooks/exhaustive-deps
+  []);
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
+    if (windowSize.width <= 768) {
+      setDeviceData({
+        isMobile: true,
+        isDesktop: false,
+        isTablet: false
+      });
+    } else if (windowSize.width >= 768 && windowSize.width <= 1100) {
+      setDeviceData({
+        isMobile: false,
+        isDesktop: false,
+        isTablet: true
+      });
+    } else {
+      setDeviceData({
+        isMobile: false,
+        isDesktop: true,
+        isTablet: false
+      });
+    }
+  }, [windowSize.width]);
+  return deviceData;
+};
 
 /***/ }),
 
@@ -7556,6 +8511,50 @@ const navigationData = [{
 
 /***/ }),
 
+/***/ "./src/theme/theme.config.ts":
+/*!***********************************!*\
+  !*** ./src/theme/theme.config.ts ***!
+  \***********************************/
+/*! exports provided: theme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
+const theme = {
+  color: {
+    primary: '#044aaf',
+    'dark-primary': '#03399e',
+    red: '#ff3e5b',
+    white: '#ffffff',
+    'dark-red': '#ee2d4a',
+    black: '#3D3B3C'
+  },
+  fontFamily: {
+    primary: 'Montserrat',
+    secondary: 'Open Sans'
+  },
+  padding: {
+    small: '20px',
+    medium: '40px',
+    big: '60px'
+  },
+  fontSize: {
+    big: '31px',
+    medium: '17px',
+    small: '14px'
+  },
+  deviceBreakpoint: {
+    mobile: '768px',
+    tablet: '1100px',
+    desktop: '1200px'
+  },
+  defaultRadius: '4px',
+  transitionValue: value => "".concat(value, " 0.3s ease")
+};
+
+/***/ }),
+
 /***/ "./src/ui/container/container.styles.ts":
 /*!**********************************************!*\
   !*** ./src/ui/container/container.styles.ts ***!
@@ -7572,6 +8571,108 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.
   displayName: "containerstyles__Container",
   componentId: "sc-16wrb8n-0"
 })(["max-width:1440px;margin:0 auto;"]);
+
+/***/ }),
+
+/***/ "./src/ui/special-link/special-link.component.tsx":
+/*!********************************************************!*\
+  !*** ./src/ui/special-link/special-link.component.tsx ***!
+  \********************************************************/
+/*! exports provided: SpecialLink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpecialLink", function() { return SpecialLink; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _special_link_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./special-link.styles */ "./src/ui/special-link/special-link.styles.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/ui/special-link/special-link.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const SpecialLink = ({
+  color = 'primary',
+  target = 'self',
+  label,
+  href
+}) => {
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: href,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 5
+    }
+  }, __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, target === 'self' && __jsx(_special_link_styles__WEBPACK_IMPORTED_MODULE_2__["StyledLink"], {
+    className: "special-link",
+    color: color,
+    href: href,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 11
+    }
+  }, label), target === 'blank' && __jsx(_special_link_styles__WEBPACK_IMPORTED_MODULE_2__["StyledLink"], {
+    className: "special-link",
+    color: color,
+    href: href,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 11
+    }
+  }, label)));
+};
+
+/***/ }),
+
+/***/ "./src/ui/special-link/special-link.styles.ts":
+/*!****************************************************!*\
+  !*** ./src/ui/special-link/special-link.styles.ts ***!
+  \****************************************************/
+/*! exports provided: StyledLink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledLink", function() { return StyledLink; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _theme_theme_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../theme/theme.config */ "./src/theme/theme.config.ts");
+
+
+const linkColorMap = {
+  primary: _theme_theme_config__WEBPACK_IMPORTED_MODULE_1__["theme"].color.primary,
+  red: _theme_theme_config__WEBPACK_IMPORTED_MODULE_1__["theme"].color.red
+};
+const hoverLinkColorMap = {
+  primary: _theme_theme_config__WEBPACK_IMPORTED_MODULE_1__["theme"].color['dark-primary'],
+  red: _theme_theme_config__WEBPACK_IMPORTED_MODULE_1__["theme"].color['dark-red']
+};
+const StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.attrs(({
+  color = 'primary'
+}) => ({
+  color
+})).withConfig({
+  displayName: "special-linkstyles__StyledLink",
+  componentId: "rjluy4-0"
+})(["background-color:", ";color:", ";text-decoration:none;padding:10px 20px;font-size:", ";font-weight:500;border-radius:", ";transition:", ";&:hover{background-color:", ";}"], props => linkColorMap[props.color], ({
+  theme
+}) => theme.color.white, ({
+  theme
+}) => theme.fontSize.medium, ({
+  theme
+}) => theme.defaultRadius, ({
+  theme
+}) => theme.transitionValue('background-color'), props => hoverLinkColorMap[props.color]);
 
 /***/ }),
 
