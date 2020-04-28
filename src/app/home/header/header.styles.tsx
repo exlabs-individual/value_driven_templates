@@ -29,7 +29,7 @@ export const TextContainer = styled.div`
   }
 
   & > .title {
-    font-size: 61px;
+    font-size: 65px;
     margin: 0;
 
     @media (max-width: ${({ theme }: ThemeProps) =>
@@ -48,7 +48,7 @@ export const TextContainer = styled.div`
     margin: 0;
     margin-top: 5px;
     font-weight: 500;
-    font-size: 21px;
+    font-size: 30px;
 
     @media (max-width: ${({ theme }: ThemeProps) =>
         theme.deviceBreakpoint.desktop}) {
@@ -61,6 +61,15 @@ export const TextContainer = styled.div`
     margin: 60px 0 50px;
     font-weight: 500;
     max-width: 85%;
+    font-size: 26px;
+
+    @media (max-width: ${({ theme }: ThemeProps) =>
+        theme.deviceBreakpoint.mobile}) {
+      font-size: 19px;
+      text-align: center;
+
+      margin: 0 0 20px;
+    }
 
     @media (max-width: ${({ theme }: ThemeProps) =>
         theme.deviceBreakpoint.desktop}) {
