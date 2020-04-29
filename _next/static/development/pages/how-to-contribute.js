@@ -8271,7 +8271,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "information-sectionstyles__StyledSection",
   componentId: "xkgp05-0"
-})(["width:100%;display:flex;justify-content:space-between;align-items:center;min-height:100vh;@media (max-width:", "){flex-direction:row-reverse;align-items:flex-start;}"], ({
+})(["width:100%;display:flex;justify-content:space-between;align-items:center;min-height:100vh;@media (max-width:", "){flex-direction:row-reverse;align-items:flex-start;min-height:auto;padding-bottom:60px;}"], ({
   theme
 }) => theme.deviceBreakpoint.mobile);
 const TextContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
