@@ -12,7 +12,7 @@ import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-det
 interface InformationSectionProps {
   title: string;
   description: string;
-  image: 'workspace' | 'content';
+  image: 'workspace' | 'content' | 'author' | 'approve';
   sectionNumber: number;
   id?: string;
 }
