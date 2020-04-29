@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
   height: calc(100vh - 62px);
   color: ${({ theme }: ThemeProps) => theme.color.black};
   padding: 10px ${({ theme }: ThemeProps) => theme.padding.small};
+  padding-top: 30px;
 
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.tablet}) {

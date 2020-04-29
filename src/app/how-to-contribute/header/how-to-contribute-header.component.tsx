@@ -28,7 +28,7 @@ export const HowToContributeHeader = () => {
       </HeaderSubtitle>
       <AnchorLink
         offset="100"
-        href="#about-content"
+        href="#how-to-contribute-content"
         style={{ textDecoration: 'none' }}
       >
         <SpecialLink
