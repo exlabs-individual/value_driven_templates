@@ -8054,8 +8054,8 @@ const HowToContributeContainer = () => {
     }
   }, __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
     id: "how-to-contribute-content",
-    title: "Create your workspace",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero saepe quisquam porro sunt non nisi dolores voluptatum soluta aspernatur, nam et quo, corrupti, assumenda quia. Unde aperiam veniam illum. Corporis consequuntur molestias voluptates ratione recusandae dolores voluptatum illo, mollitia consequatur! Doloremque neque a aut doloribus expedita odit magnam assumenda laudantium, consequuntur molestias delectus sequi suscipit vitae sunt! Laboriosam quisquam quam est voluptatem placeat sunt repellat non nostrum, quidem id. Vitae veritatis minus at dolore, dolor minima eaque. Omnis, quasi libero. Placeat, ad tempora quae vel distinctio quia ratione quibusdam similique doloremque perferendis facere, praesentium voluptatibus hic vitae! Cupiditate, consequatur.",
+    title: "Create the content",
+    description: "Inside src/content/articles directory create a new markdown file with the selected filename. Inside markdown file, You can write the content of Your article, remember article title, description, and image, will be added in the next step.",
     image: "workspace",
     sectionNumber: 1,
     __self: undefined,
@@ -8065,25 +8065,36 @@ const HowToContributeContainer = () => {
       columnNumber: 9
     }
   }), __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
-    title: "Create your workspace",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero saepe quisquam porro sunt non nisi dolores voluptatum soluta aspernatur, nam et quo, corrupti, assumenda quia. Unde aperiam veniam illum. Corporis consequuntur molestias voluptates ratione recusandae dolores voluptatum illo, mollitia consequatur! Doloremque neque a aut doloribus expedita odit magnam assumenda laudantium, consequuntur molestias delectus sequi suscipit vitae sunt! Laboriosam quisquam quam est voluptatem placeat sunt repellat non nostrum, quidem id. Vitae veritatis minus at dolore, dolor minima eaque. Omnis, quasi libero. Placeat, ad tempora quae vel distinctio quia ratione quibusdam similique doloremque perferendis facere, praesentium voluptatibus hic vitae! Cupiditate, consequatur.",
+    title: "Add article metadata",
+    description: "Go to src/content/articles.json and add a new object with proper metadata for Your article, where fileName is just a plain name without extension of Your article content markdown file, imageUrl is a static file taken from the public directory or dynamic URL. Lastly, add Your nickname in the author field.",
     image: "content",
     sectionNumber: 2,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 18,
       columnNumber: 9
     }
   }), __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
-    title: "Create your workspace",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero saepe quisquam porro sunt non nisi dolores voluptatum soluta aspernatur, nam et quo, corrupti, assumenda quia. Unde aperiam veniam illum. Corporis consequuntur molestias voluptates ratione recusandae dolores voluptatum illo, mollitia consequatur! Doloremque neque a aut doloribus expedita odit magnam assumenda laudantium, consequuntur molestias delectus sequi suscipit vitae sunt! Laboriosam quisquam quam est voluptatem placeat sunt repellat non nostrum, quidem id. Vitae veritatis minus at dolore, dolor minima eaque. Omnis, quasi libero. Placeat, ad tempora quae vel distinctio quia ratione quibusdam similique doloremque perferendis facere, praesentium voluptatibus hic vitae! Cupiditate, consequatur.",
-    image: "content",
+    title: "Describe yourself",
+    description: "If it is Your first time adding content, please go to src/content/authors.json and add a new entry without Your username used in article metadata, Your full name, and URL to Your avatar image.",
+    image: "author",
     sectionNumber: 3,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 24,
+      columnNumber: 9
+    }
+  }), __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
+    title: "Pull Request",
+    description: "That's it! Well done, now You can create a new Pull Request and wait for approval!",
+    image: "approve",
+    sectionNumber: 4,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
       columnNumber: 9
     }
   })));
