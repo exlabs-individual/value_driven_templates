@@ -8569,7 +8569,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
   displayName: "headerstyles__StyledHeader",
   componentId: "sc-1pir9d-0"
-})(["height:calc(100vh - 62px);color:", ";padding:10px ", ";@media (max-width:", "){height:auto;}@media (max-width:", "){height:100vh;}"], ({
+})(["height:calc(100vh - 62px);color:", ";padding:10px ", ";padding-top:30px;@media (max-width:", "){height:auto;}@media (max-width:", "){height:100vh;}"], ({
   theme
 }) => theme.color.black, ({
   theme

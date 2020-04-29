@@ -7992,7 +7992,7 @@ const HowToContributeHeader = () => {
     }
   }, "Want to share your knowledge? You can learn here how."), __jsx(react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default.a, {
     offset: "100",
-    href: "#about-content",
+    href: "#how-to-contribute-content",
     style: {
       textDecoration: 'none'
     },
@@ -8029,8 +8029,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _header_how_to_contribute_header_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/how-to-contribute-header.component */ "./src/app/how-to-contribute/header/how-to-contribute-header.component.tsx");
+/* harmony import */ var _how_to_contribute_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./how-to-contribute-container.styles */ "./src/app/how-to-contribute/how-to-contribute-container.styles.ts");
+/* harmony import */ var _information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./information-section/information-section.component */ "./src/app/how-to-contribute/information-section/information-section.component.tsx");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/how-to-contribute/how-to-contribute-container.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 const HowToContributeContainer = () => {
@@ -8038,11 +8042,285 @@ const HowToContributeContainer = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 9,
       columnNumber: 7
+    }
+  }), __jsx(_how_to_contribute_container_styles__WEBPACK_IMPORTED_MODULE_2__["StyledContainer"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 7
+    }
+  }, __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
+    id: "how-to-contribute-content",
+    title: "Create your workspace",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero saepe quisquam porro sunt non nisi dolores voluptatum soluta aspernatur, nam et quo, corrupti, assumenda quia. Unde aperiam veniam illum. Corporis consequuntur molestias voluptates ratione recusandae dolores voluptatum illo, mollitia consequatur! Doloremque neque a aut doloribus expedita odit magnam assumenda laudantium, consequuntur molestias delectus sequi suscipit vitae sunt! Laboriosam quisquam quam est voluptatem placeat sunt repellat non nostrum, quidem id. Vitae veritatis minus at dolore, dolor minima eaque. Omnis, quasi libero. Placeat, ad tempora quae vel distinctio quia ratione quibusdam similique doloremque perferendis facere, praesentium voluptatibus hic vitae! Cupiditate, consequatur.",
+    image: "workspace",
+    sectionNumber: 1,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }), __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
+    title: "Create your workspace",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero saepe quisquam porro sunt non nisi dolores voluptatum soluta aspernatur, nam et quo, corrupti, assumenda quia. Unde aperiam veniam illum. Corporis consequuntur molestias voluptates ratione recusandae dolores voluptatum illo, mollitia consequatur! Doloremque neque a aut doloribus expedita odit magnam assumenda laudantium, consequuntur molestias delectus sequi suscipit vitae sunt! Laboriosam quisquam quam est voluptatem placeat sunt repellat non nostrum, quidem id. Vitae veritatis minus at dolore, dolor minima eaque. Omnis, quasi libero. Placeat, ad tempora quae vel distinctio quia ratione quibusdam similique doloremque perferendis facere, praesentium voluptatibus hic vitae! Cupiditate, consequatur.",
+    image: "content",
+    sectionNumber: 2,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 9
+    }
+  }), __jsx(_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_3__["InformationSection"], {
+    title: "Create your workspace",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero saepe quisquam porro sunt non nisi dolores voluptatum soluta aspernatur, nam et quo, corrupti, assumenda quia. Unde aperiam veniam illum. Corporis consequuntur molestias voluptates ratione recusandae dolores voluptatum illo, mollitia consequatur! Doloremque neque a aut doloribus expedita odit magnam assumenda laudantium, consequuntur molestias delectus sequi suscipit vitae sunt! Laboriosam quisquam quam est voluptatem placeat sunt repellat non nostrum, quidem id. Vitae veritatis minus at dolore, dolor minima eaque. Omnis, quasi libero. Placeat, ad tempora quae vel distinctio quia ratione quibusdam similique doloremque perferendis facere, praesentium voluptatibus hic vitae! Cupiditate, consequatur.",
+    image: "content",
+    sectionNumber: 3,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 9
+    }
+  })));
+};
+
+/***/ }),
+
+/***/ "./src/app/how-to-contribute/how-to-contribute-container.styles.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/how-to-contribute/how-to-contribute-container.styles.ts ***!
+  \*************************************************************************/
+/*! exports provided: PageTitle, StyledContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageTitle", function() { return PageTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledContainer", function() { return StyledContainer; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
+
+
+const PageTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
+  displayName: "how-to-contribute-containerstyles__PageTitle",
+  componentId: "xecm5c-0"
+})(["font-size:60px;margin-bottom:30px;"]);
+const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_1__["Container"]).withConfig({
+  displayName: "how-to-contribute-containerstyles__StyledContainer",
+  componentId: "xecm5c-1"
+})(["display:flex;flex-direction:column;padding:0 ", ";& > .styled-section:last-child{margin-bottom:20px;& > .section-number{&::after{display:none;}}}"], ({
+  theme
+}) => theme.padding.small);
+
+/***/ }),
+
+/***/ "./src/app/how-to-contribute/information-section/information-section.component.tsx":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/how-to-contribute/information-section/information-section.component.tsx ***!
+  \*****************************************************************************************/
+/*! exports provided: InformationSection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformationSection", function() { return InformationSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _information_section_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./information-section.styles */ "./src/app/how-to-contribute/information-section/information-section.styles.ts");
+/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/how-to-contribute/information-section/information-section.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const InformationSection = ({
+  title,
+  description,
+  image,
+  sectionNumber,
+  id
+}) => {
+  const {
+    isMobile
+  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_2__["useDeviceDetect"])();
+  const containerRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+  const [containerHeight, setContainerHeight] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(0);
+  const [isActive, setActive] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
+  const handleResize = react__WEBPACK_IMPORTED_MODULE_0___default.a.useCallback(() => {
+    var _containerRef$current;
+
+    setContainerHeight((_containerRef$current = containerRef.current) === null || _containerRef$current === void 0 ? void 0 : _containerRef$current.offsetHeight);
+  }, [containerRef]);
+  const handleScroll = react__WEBPACK_IMPORTED_MODULE_0___default.a.useCallback(() => {
+    var _containerRef$current2;
+
+    if (!isActive && window.pageYOffset - sectionNumber * (containerHeight / 2) > ((_containerRef$current2 = containerRef.current) === null || _containerRef$current2 === void 0 ? void 0 : _containerRef$current2.getBoundingClientRect().top)) {
+      setActive(true);
+    }
+  }, [containerRef, isActive, containerHeight, sectionNumber]);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    if (containerRef.current) {
+      setContainerHeight(containerRef.current.offsetHeight);
+    }
+  }, [containerRef]);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+  return __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["StyledSection"], {
+    ref: containerRef,
+    className: "styled-section",
+    id: id,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 5
+    }
+  }, __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["TextContainer"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 7
+    }
+  }, __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionTitle"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 9
+    }
+  }, title), isMobile && __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionImage"], {
+    alt: "Section",
+    src: "".concat("", "/how-to-contribute/").concat(image, ".svg"),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 11
+    }
+  }), __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionDescription"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 9
+    }
+  }, description)), __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionNumber"], {
+    active: isActive,
+    containerHeight: containerHeight,
+    className: "section-number",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 7
+    }
+  }, sectionNumber), !isMobile && __jsx(_information_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionImage"], {
+    alt: "Section",
+    src: "".concat("", "/how-to-contribute/").concat(image, ".svg"),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 9
     }
   }));
 };
+
+/***/ }),
+
+/***/ "./src/app/how-to-contribute/information-section/information-section.styles.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/app/how-to-contribute/information-section/information-section.styles.ts ***!
+  \*************************************************************************************/
+/*! exports provided: StyledSection, TextContainer, SectionTitle, SectionDescription, SectionImage, SectionNumber */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledSection", function() { return StyledSection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TextContainer", function() { return TextContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionTitle", function() { return SectionTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionDescription", function() { return SectionDescription; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionImage", function() { return SectionImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionNumber", function() { return SectionNumber; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
+  displayName: "information-sectionstyles__StyledSection",
+  componentId: "xkgp05-0"
+})(["width:100%;display:flex;justify-content:space-between;align-items:center;min-height:100vh;@media (max-width:", "){flex-direction:row-reverse;align-items:flex-start;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const TextContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "information-sectionstyles__TextContainer",
+  componentId: "xkgp05-1"
+})(["flex:1;display:flex;flex-direction:column;justify-content:center;color:", ";@media (max-width:", "){flex:3;}@media (max-width:", "){width:100%;justify-content:flex-start;}"], ({
+  theme
+}) => theme.color.black, ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.tablet);
+const SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
+  displayName: "information-sectionstyles__SectionTitle",
+  componentId: "xkgp05-2"
+})(["font-size:49px;margin-bottom:20px;@media (max-width:", "){font-size:34px;}@media (max-width:", "){font-size:23px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionDescription = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "information-sectionstyles__SectionDescription",
+  componentId: "xkgp05-3"
+})(["font-size:21px;@media (max-width:", "){font-size:18px;}@media (max-width:", "){font-size:15px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  displayName: "information-sectionstyles__SectionImage",
+  componentId: "xkgp05-4"
+})(["width:40%;@media (max-width:", "){margin-bottom:30px;width:60%;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.attrs(({
+  containerHeight,
+  active = false
+}) => ({
+  containerHeight,
+  active
+})).withConfig({
+  displayName: "information-sectionstyles__SectionNumber",
+  componentId: "xkgp05-5"
+})(["top:-300px;min-width:100px;min-height:100px;max-width:100px;max-height:100px;text-align:center;line-height:100px;color:", ";background-color:", ";border-radius:50%;margin:0 20px;position:relative;font-size:37px;@media (max-width:", "){min-width:70px;min-height:70px;max-width:70px;max-height:70px;font-size:30px;line-height:70px;}@media (max-width:", "){margin-left:0;top:0;min-width:50px;min-height:50px;max-width:50px;max-height:50px;font-size:23px;line-height:50px;}", " @keyframes setColor{0%{background:#ebebeb;}100%{background:#044aaf;}}&::after{content:'';display:block;width:6px;height:", ";background-color:", ";position:absolute;top:100px;left:50%;transform:translateX(-50%);transition:height 2s ease;@media (max-width:", "){top:70px;height:", ";}@media (max-width:", "){top:50px;width:3px;height:", ";}", "}"], ({
+  theme
+}) => theme.color.white, ({
+  theme,
+  active
+}) => active ? theme.color.primary : '#EBEBEB', ({
+  theme
+}) => theme.deviceBreakpoint.tablet, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, props => props.active && "\n  animation: setColor 1.5s 1 0s linear;\n  ", props => "".concat(props.active ? props.containerHeight - 100 : 0, "px"), ({
+  theme,
+  active
+}) => active ? theme.color.primary : '#EBEBEB', ({
+  theme
+}) => theme.deviceBreakpoint.tablet, props => "".concat(props.active ? props.containerHeight - 70 : 0, "px"), ({
+  theme
+}) => theme.deviceBreakpoint.tablet, props => "".concat(props.active ? props.containerHeight - 50 : 0, "px"), props => props.active && "\n  animation: setColor 1.5s 1 0s linear;\n  ");
 
 /***/ }),
 
@@ -8295,7 +8573,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
   displayName: "headerstyles__StyledHeader",
   componentId: "sc-1pir9d-0"
-})(["height:calc(100vh - 62px);color:", ";padding:10px ", ";@media (max-width:", "){height:auto;}@media (max-width:", "){height:100vh;}"], ({
+})(["height:calc(100vh - 62px);color:", ";padding:10px ", ";padding-top:30px;@media (max-width:", "){height:auto;}@media (max-width:", "){height:100vh;}"], ({
   theme
 }) => theme.color.black, ({
   theme
@@ -8443,7 +8721,7 @@ const StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.a
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!***************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhow-to-contribute&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fhow-to-contribute.tsx ***!
   \***************************************************************************************************************************************************************************************************/
@@ -8466,5 +8744,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=how-to-contribute.js.map
