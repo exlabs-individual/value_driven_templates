@@ -3,15 +3,8 @@ import { Container } from '../container/container.styles';
 import { ThemeProps } from '../../theme/theme.config';
 
 export const StyledHeader = styled.header`
-  height: calc(100vh - 62px);
   color: ${({ theme }: ThemeProps) => theme.color.black};
-  padding: 10px ${({ theme }: ThemeProps) => theme.padding.small};
-  padding-top: 30px;
-
-  @media (max-width: ${({ theme }: ThemeProps) =>
-      theme.deviceBreakpoint.tablet}) {
-    height: auto;
-  }
+  padding: 30px ${({ theme }: ThemeProps) => theme.padding.small} 50px;
 
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
