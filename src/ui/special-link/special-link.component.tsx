@@ -5,6 +5,7 @@ import { StyledLink } from './special-link.styles';
 interface SpecialLinkProps {
   color?: 'primary' | 'red';
   target?: 'self' | 'blank';
+  internal?: boolean;
   label: string;
   href: string;
 }
@@ -12,29 +13,30 @@ interface SpecialLinkProps {
 export const SpecialLink = ({
   color = 'primary',
   target = 'self',
+  internal = false,
   label,
   href,
 }: SpecialLinkProps) => {
-  return (
-    <Link href={href}>
-      <>
-        {target === 'self' && (
-          <StyledLink className="special-link" color={color} href={href}>
-            {label}
-          </StyledLink>
-        )}
-        {target === 'blank' && (
-          <StyledLink
-            className="special-link"
-            color={color}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {label}
-          </StyledLink>
-        )}
-      </>
-    </Link>
+  const link = (
+    <>
+      {target === 'self' && (
+        <StyledLink className="special-link" color={color} href={href}>
+          {label}
+        </StyledLink>
+      )}
+      {target === 'blank' && (
+        <StyledLink
+          className="special-link"
+          color={color}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {label}
+        </StyledLink>
+      )}
+    </>
   );
+
+  return <>{internal ? <Link href={href}>{link}</Link> : <>{link}</>}</>;
 };
