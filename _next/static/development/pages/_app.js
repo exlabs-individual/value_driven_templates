@@ -10334,26 +10334,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const SpecialLink = ({
   color = 'primary',
   target = 'self',
+  internal = false,
   label,
   href
 }) => {
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: href,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 5
-    }
-  }, __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, target === 'self' && __jsx(_special_link_styles__WEBPACK_IMPORTED_MODULE_2__["StyledLink"], {
+  const link = __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, target === 'self' && __jsx(_special_link_styles__WEBPACK_IMPORTED_MODULE_2__["StyledLink"], {
     className: "special-link",
     color: color,
     href: href,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 11
+      lineNumber: 23,
+      columnNumber: 9
     }
   }, label), target === 'blank' && __jsx(_special_link_styles__WEBPACK_IMPORTED_MODULE_2__["StyledLink"], {
     className: "special-link",
@@ -10364,10 +10357,20 @@ const SpecialLink = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 11
+      lineNumber: 28,
+      columnNumber: 9
     }
-  }, label)));
+  }, label));
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, internal ? __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: href,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 24
+    }
+  }, link) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, link));
 };
 
 /***/ }),
