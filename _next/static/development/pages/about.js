@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/about.js"],{
 
 /***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
 /*!***************************************************************!*\
@@ -99,123 +99,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutProperties; });
-/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutPropertiesLoose; });
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
 
 /***/ }),
 
@@ -1453,21 +1336,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx!./":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx ***!
-  \******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx!./":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./src/pages/index.tsx */ "./src/pages/index.tsx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/about", function() {
+      var mod = __webpack_require__(/*! ./src/pages/about.tsx */ "./src/pages/about.tsx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/index.tsx */ "./src/pages/index.tsx", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/index.tsx */ "./src/pages/index.tsx")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./src/pages/about.tsx */ "./src/pages/about.tsx", function() {
+          if(!next.router.components["/about"]) return
+          var updatedPage = __webpack_require__(/*! ./src/pages/about.tsx */ "./src/pages/about.tsx")
+          next.router.update("/about", updatedPage)
         })
       }
       return mod
@@ -8046,310 +7929,162 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/app/home/article-list/article-list.component.tsx":
-/*!**************************************************************!*\
-  !*** ./src/app/home/article-list/article-list.component.tsx ***!
-  \**************************************************************/
-/*! exports provided: ArticleList */
+/***/ "./src/app/about/about-container.component.tsx":
+/*!*****************************************************!*\
+  !*** ./src/app/about/about-container.component.tsx ***!
+  \*****************************************************/
+/*! exports provided: AboutContainer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleList", function() { return ArticleList; });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _article_thumbnail_article_thumbnail_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../article-thumbnail/article-thumbnail.component */ "./src/app/home/article-thumbnail/article-thumbnail.component.tsx");
-/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
-/* harmony import */ var _article_list_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./article-list.styles */ "./src/app/home/article-list/article-list.styles.ts");
-
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/home/article-list/article-list.component.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-const ArticleList = ({
-  articles
-}) => {
-  const articleList = __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 5
-    }
-  }, articles.map((article, index) => __jsx(_article_thumbnail_article_thumbnail_component__WEBPACK_IMPORTED_MODULE_2__["ArticleThumbnail"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    key: "article-".concat(index)
-  }, article, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 9
-    }
-  }))));
-
-  const {
-    isMobile
-  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_3__["useDeviceDetect"])();
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 5
-    }
-  }, isMobile ? __jsx(_article_list_styles__WEBPACK_IMPORTED_MODULE_4__["MobileList"], {
-    className: "article-list--small",
-    id: "articles",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 9
-    }
-  }, articleList) : __jsx(_article_list_styles__WEBPACK_IMPORTED_MODULE_4__["DesktopList"], {
-    className: "article-list--big",
-    id: "articles",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 9
-    }
-  }, articleList));
-};
-
-/***/ }),
-
-/***/ "./src/app/home/article-list/article-list.styles.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/home/article-list/article-list.styles.ts ***!
-  \**********************************************************/
-/*! exports provided: MobileList, DesktopList */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MobileList", function() { return MobileList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DesktopList", function() { return DesktopList; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-const MobileList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "article-liststyles__MobileList",
-  componentId: "sc-17o4md0-0"
-})(["display:flex;flex-direction:column;align-items:center;& > .article-thumbnail{max-width:90%;}& > .article-thumbnail{margin-bottom:20px;}& > .article-thumbnail:last-child{margin-bottom:0;}"]);
-const DesktopList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "article-liststyles__DesktopList",
-  componentId: "sc-17o4md0-1"
-})(["display:flex;flex-wrap:wrap;& > .article-thumbnail{min-width:32%;max-width:32%;margin:0 1% 1%;}"]);
-
-/***/ }),
-
-/***/ "./src/app/home/article-thumbnail/article-thumbnail.component.tsx":
-/*!************************************************************************!*\
-  !*** ./src/app/home/article-thumbnail/article-thumbnail.component.tsx ***!
-  \************************************************************************/
-/*! exports provided: ArticleThumbnail */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleThumbnail", function() { return ArticleThumbnail; });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-thumbnail.styles */ "./src/app/home/article-thumbnail/article-thumbnail.styles.ts");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _ui_author_author_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../ui/author/author.component */ "./src/ui/author/author.component.tsx");
-/* harmony import */ var _content_authors_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../content/authors.json */ "./src/content/authors.json");
-var _content_authors_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../../content/authors.json */ "./src/content/authors.json", 1);
-
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/home/article-thumbnail/article-thumbnail.component.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-
-
-const ArticleThumbnail = article => {
-  const author = _content_authors_json__WEBPACK_IMPORTED_MODULE_5__.find(author => author.username === article.author);
-  const {
-    title,
-    description,
-    category,
-    imageUrl,
-    publishDate,
-    url
-  } = article;
-  return __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["StyledArticleThumbnail"], {
-    className: "article-thumbnail",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 5
-    }
-  }, __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailImage"], {
-    style: {
-      backgroundImage: "url(\"".concat(imageUrl, "\")")
-    },
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 7
-    }
-  }, __jsx("div", {
-    className: "category",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 9
-    }
-  }, category)), __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailContent"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 7
-    }
-  }, __jsx("h3", {
-    className: "article-title",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 9
-    }
-  }, title), __jsx("div", {
-    className: "article-date",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 9
-    }
-  }, publishDate.toDateString()), __jsx("p", {
-    className: "article-description",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 9
-    }
-  }, description), __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailFooter"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 9
-    }
-  }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_4__["Author"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, author, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 11
-    }
-  })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "".concat("").concat(url),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 11
-    }
-  }, __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailButton"], {
-    href: "".concat("").concat(url),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 13
-    }
-  }, "See details")))));
-};
-
-/***/ }),
-
-/***/ "./src/app/home/article-thumbnail/article-thumbnail.styles.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/home/article-thumbnail/article-thumbnail.styles.ts ***!
-  \********************************************************************/
-/*! exports provided: StyledArticleThumbnail, ThumbnailContent, ThumbnailImage, ThumbnailFooter, ThumbnailButton */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledArticleThumbnail", function() { return StyledArticleThumbnail; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThumbnailContent", function() { return ThumbnailContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThumbnailImage", function() { return ThumbnailImage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThumbnailFooter", function() { return ThumbnailFooter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThumbnailButton", function() { return ThumbnailButton; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-const StyledArticleThumbnail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].article.withConfig({
-  displayName: "article-thumbnailstyles__StyledArticleThumbnail",
-  componentId: "sc-16swbc2-0"
-})(["display:flex;flex-direction:column;box-shadow:0px 3px 6px rgba(0,0,0,0.2);border-radius:4px;max-width:450px;"]);
-const ThumbnailContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "article-thumbnailstyles__ThumbnailContent",
-  componentId: "sc-16swbc2-1"
-})(["padding:30px 10px 20px;& > .article-title{margin:0 0 10px;font-size:21px;text-transform:uppercase;}& > .article-date{font-size:14px;font-weight:300;}& > .article-description{font-size:17px;padding:0;margin:10px 0 20px;}"]);
-const ThumbnailImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "article-thumbnailstyles__ThumbnailImage",
-  componentId: "sc-16swbc2-2"
-})(["background-size:cover;background-position:center;width:100%;min-height:200px;max-height:40%;border-top-left-radius:4px;border-top-right-radius:4px;position:relative;& > .category{position:absolute;left:50%;transform:translateX(-50%);bottom:-15px;background-color:rgba(4,74,175,0.9);color:", ";padding:5px 20px;border-radius:4px;font-size:16px;}"], ({
-  theme
-}) => theme.color.white);
-const ThumbnailFooter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "article-thumbnailstyles__ThumbnailFooter",
-  componentId: "sc-16swbc2-3"
-})(["display:flex;justify-content:space-between;align-items:center;"]);
-const ThumbnailButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
-  displayName: "article-thumbnailstyles__ThumbnailButton",
-  componentId: "sc-16swbc2-4"
-})(["background-color:", ";color:", ";text-decoration:none;padding:7px 30px;font-size:14px;font-weight:500;border-radius:4px;box-shadow:0px 3px 6px rgba(0,0,0,0.2);"], ({
-  theme
-}) => theme.color.red, ({
-  theme
-}) => theme.color.white);
-
-/***/ }),
-
-/***/ "./src/app/home/header/header.component.tsx":
-/*!**************************************************!*\
-  !*** ./src/app/home/header/header.component.tsx ***!
-  \**************************************************/
-/*! exports provided: Header */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutContainer", function() { return AboutContainer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
-/* harmony import */ var _ui_header_header_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../ui/header/header.component */ "./src/ui/header/header.component.tsx");
-/* harmony import */ var _ui_header_header_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../ui/header/header.styles */ "./src/ui/header/header.styles.ts");
-/* harmony import */ var _ui_scroll_to_button_scroll_to_button_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../ui/scroll-to-button/scroll-to-button.component */ "./src/ui/scroll-to-button/scroll-to-button.component.tsx");
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/home/header/header.component.tsx";
+/* harmony import */ var _section_section_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section/section.component */ "./src/app/about/section/section.component.tsx");
+/* harmony import */ var _about_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about-container.styles */ "./src/app/about/about-container.styles.ts");
+/* harmony import */ var _routing_app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../routing/app-routes */ "./src/routing/app-routes.tsx");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _header_about_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header/about-header.component */ "./src/app/about/header/about-header.component.tsx");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/about-container.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
 
-const Header = () => {
+
+const AboutContainer = () => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_header_about_header_component__WEBPACK_IMPORTED_MODULE_5__["AboutHeader"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 7
+    }
+  }), __jsx(_about_container_styles__WEBPACK_IMPORTED_MODULE_2__["StyledAbout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 7
+    }
+  }, __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    title: "About Value Driven Engineering",
+    image: "about",
+    id: "about-content",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, "In digital-first world, effectiveness in delivering software initiatives is what makes or brakes organisations. Yet many IT teams suffer from lack of true alignment with business goals, which results in software becoming a cost generator instead of an assets. There\u2019s now a handful number of resources and tools helping engineers improve software delivery performance, though most of them don\u2019t fill the gap when it comes to match IT strategy with delivery."), __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    textPosition: "left",
+    title: "Our values",
+    image: "values",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 9
+    }
+  }, "At Exlabs, we believe that the true alignment between management and engineers can only be achieved by helping both sides speak the same language. That\u2019s why we\u2019ve came up with a concept of Value Driven Engineering which manifests a need to focus on results rather than actions. In days of ubiquitous dependency on software, results are more multi-dimensional than ever before. It\u2019s not longer possible to measure business benefit simply by direct ROI from implemented change. Your enterprise\u2019s software ecosystem is most likely very complex and you need a great roadmap to navigate it. In order to help organisations reduce waste and guess work, we\u2019ve created a curated list of resources and frameworks we use in our day-to-day practice."), __jsx(_section_section_component__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+    textPosition: "right",
+    title: "Sharing",
+    image: "sharing",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 9
+    }
+  }, "\"We believe the knowledge we share here will help IT groups improve their planning, delivery and maintenance processes, which would result in delivering software assets better suited for unique business needs.\"", __jsx(_about_container_styles__WEBPACK_IMPORTED_MODULE_2__["ContributionText"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 11
+    }
+  }, "Interested in contribute?", __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOW_TO_CONTRIBUTE),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 13
+    }
+  }, __jsx("a", {
+    href: "".concat("").concat(_routing_app_routes__WEBPACK_IMPORTED_MODULE_3__["AppRoute"].HOW_TO_CONTRIBUTE),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 15
+    }
+  }, "Learn more here."))))));
+};
+
+/***/ }),
+
+/***/ "./src/app/about/about-container.styles.ts":
+/*!*************************************************!*\
+  !*** ./src/app/about/about-container.styles.ts ***!
+  \*************************************************/
+/*! exports provided: StyledAbout, ContributionText */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledAbout", function() { return StyledAbout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContributionText", function() { return ContributionText; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+const StyledAbout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "about-containerstyles__StyledAbout",
+  componentId: "sc-8x6ju8-0"
+})(["& > .about-section{&::before{content:'';display:block;width:100%;height:1px;background-color:#ebebeb;margin-bottom:30px;}}& > .about-section:first-child{&::before{content:'';display:none;}}"]);
+const ContributionText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "about-containerstyles__ContributionText",
+  componentId: "sc-8x6ju8-1"
+})(["margin-top:20px;font-weight:700;& > a{text-decoration:none;color:", ";transition:color 0.3s ease;&:hover{color:", ";}}"], ({
+  theme
+}) => theme.color.primary, ({
+  theme
+}) => theme.color['dark-primary']);
+
+/***/ }),
+
+/***/ "./src/app/about/header/about-header.component.tsx":
+/*!*********************************************************!*\
+  !*** ./src/app/about/header/about-header.component.tsx ***!
+  \*********************************************************/
+/*! exports provided: AboutHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutHeader", function() { return AboutHeader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
+/* harmony import */ var _ui_header_header_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../ui/header/header.component */ "./src/ui/header/header.component.tsx");
+/* harmony import */ var _ui_header_header_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../ui/header/header.styles */ "./src/ui/header/header.styles.ts");
+/* harmony import */ var _ui_scroll_to_button_scroll_to_button_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../ui/scroll-to-button/scroll-to-button.component */ "./src/ui/scroll-to-button/scroll-to-button.component.tsx");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/header/about-header.component.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const AboutHeader = () => {
   const {
     isMobile
   } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_1__["useDeviceDetect"])();
   return __jsx(_ui_header_header_component__WEBPACK_IMPORTED_MODULE_2__["Header"], {
-    imageUrl: "".concat("", "/header-img.svg"),
+    imageUrl: "".concat("", "/about/header.svg"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -8363,9 +8098,9 @@ const Header = () => {
       lineNumber: 16,
       columnNumber: 7
     }
-  }, "Value Driven Engineering"), isMobile && __jsx(_ui_header_header_styles__WEBPACK_IMPORTED_MODULE_3__["HeaderImage"], {
+  }, "Hello, We are Exlabs."), isMobile && __jsx(_ui_header_header_styles__WEBPACK_IMPORTED_MODULE_3__["HeaderImage"], {
     alt: "Header",
-    src: "".concat("", "/header-img.svg"),
+    src: "".concat("", "/about/header.svg"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -8379,9 +8114,9 @@ const Header = () => {
       lineNumber: 23,
       columnNumber: 7
     }
-  }, "Curated, community driven resources and frameworks for IT leaders and engineering managers."), __jsx(_ui_scroll_to_button_scroll_to_button_component__WEBPACK_IMPORTED_MODULE_4__["ScrollToButton"], {
-    href: "#articles",
-    label: "Explore Resources",
+  }, "We deliver high-level consultancy & flexible, complex data-driven software solutions for the companies of the future."), __jsx(_ui_scroll_to_button_scroll_to_button_component__WEBPACK_IMPORTED_MODULE_4__["ScrollToButton"], {
+    href: "#about-content",
+    label: "Read more about VDE",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -8393,106 +8128,139 @@ const Header = () => {
 
 /***/ }),
 
-/***/ "./src/app/home/home-container.component.tsx":
-/*!***************************************************!*\
-  !*** ./src/app/home/home-container.component.tsx ***!
-  \***************************************************/
-/*! exports provided: HomeContainer */
+/***/ "./src/app/about/section/section.component.tsx":
+/*!*****************************************************!*\
+  !*** ./src/app/about/section/section.component.tsx ***!
+  \*****************************************************/
+/*! exports provided: Section */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeContainer", function() { return HomeContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_container_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home-container.styles */ "./src/app/home/home-container.styles.ts");
-/* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
-/* harmony import */ var _article_list_article_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article-list/article-list.component */ "./src/app/home/article-list/article-list.component.tsx");
-/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header/header.component */ "./src/app/home/header/header.component.tsx");
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/home/home-container.component.tsx";
+/* harmony import */ var _section_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section.styles */ "./src/app/about/section/section.styles.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/about/section/section.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-
-
-
-const HomeContainer = ({
-  articles
+const Section = ({
+  title,
+  image,
+  children,
+  textPosition = 'right',
+  id
 }) => {
-  return __jsx(_home_container_styles__WEBPACK_IMPORTED_MODULE_1__["Home"], {
+  return __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["StyledSection"], {
+    className: "about-section",
+    id: id !== null && id !== void 0 ? id : '',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 26,
       columnNumber: 5
     }
-  }, __jsx(_header_header_component__WEBPACK_IMPORTED_MODULE_4__["Header"], {
+  }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionTitle"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 27,
       columnNumber: 7
     }
-  }), __jsx(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+  }, title), __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionContent"], {
+    textPosition: textPosition,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 28,
       columnNumber: 7
     }
-  }, __jsx(_article_list_article_list_component__WEBPACK_IMPORTED_MODULE_3__["ArticleList"], {
-    articles: articles,
+  }, __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionImage"], {
+    src: "".concat("", "/about/").concat(image, ".svg"),
+    alt: "".concat(image, " section"),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 29,
       columnNumber: 9
     }
-  })));
+  }), __jsx(_section_styles__WEBPACK_IMPORTED_MODULE_1__["SectionText"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 9
+    }
+  }, children)));
 };
 
 /***/ }),
 
-/***/ "./src/app/home/home-container.styles.ts":
-/*!***********************************************!*\
-  !*** ./src/app/home/home-container.styles.ts ***!
-  \***********************************************/
-/*! exports provided: Home */
+/***/ "./src/app/about/section/section.styles.ts":
+/*!*************************************************!*\
+  !*** ./src/app/about/section/section.styles.ts ***!
+  \*************************************************/
+/*! exports provided: StyledSection, SectionTitle, SectionContent, SectionImage, SectionText */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Home", function() { return Home; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledSection", function() { return StyledSection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionTitle", function() { return SectionTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionContent", function() { return SectionContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionImage", function() { return SectionImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionText", function() { return SectionText; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-const Home = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
-  displayName: "home-containerstyles__Home",
-  componentId: "sc-1nprwnm-0"
-})(["padding:10px ", ";& > .header-container{margin-top:40px;}& .article-list--big{margin-top:30px;}& .article-list--small{margin-top:70px;}"], ({
+const StyledSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
+  displayName: "sectionstyles__StyledSection",
+  componentId: "f3appt-0"
+})(["display:flex;flex-direction:column;color:", ";min-height:calc(100vh - 142px);padding:", ";@media (max-width:", "){padding:", ";min-height:calc(100vh - 104px);}"], ({
+  theme
+}) => theme.color.black, ({
+  theme
+}) => theme.padding.medium, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
   theme
 }) => theme.padding.small);
-
-/***/ }),
-
-/***/ "./src/content/articles.json":
-/*!***********************************!*\
-  !*** ./src/content/articles.json ***!
-  \***********************************/
-/*! exports provided: 0, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/value_driven_templates/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"john.doe\",\"createdAt\":\"2020-04-21T06:59:40.101Z\",\"updatedAt\":\"2020-04-21T06:59:40.101Z\"}]");
-
-/***/ }),
-
-/***/ "./src/content/authors.json":
-/*!**********************************!*\
-  !*** ./src/content/authors.json ***!
-  \**********************************/
-/*! exports provided: 0, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"username\":\"john.doe\",\"name\":\"John Doe\",\"img\":\"https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80\"}]");
+const SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
+  displayName: "sectionstyles__SectionTitle",
+  componentId: "f3appt-1"
+})(["max-width:40%;font-size:40px;margin-bottom:40px;@media (max-width:", "){font-size:30px;max-width:70%;margin-bottom:20px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.attrs(({
+  textPosition
+}) => ({
+  textPosition
+})).withConfig({
+  displayName: "sectionstyles__SectionContent",
+  componentId: "f3appt-2"
+})(["display:flex;align-items:center;justify-content:space-between;flex-direction:", ";width:100%;@media (max-width:", "){flex-direction:column;}"], props => props.textPosition === 'left' ? 'row-reverse' : 'row', ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+const SectionImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  displayName: "sectionstyles__SectionImage",
+  componentId: "f3appt-3"
+})(["width:40%;@media (max-width:", "){width:80%;}@media (min-width:", ") and (max-width:", "){width:60%;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.tablet);
+const SectionText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "sectionstyles__SectionText",
+  componentId: "f3appt-4"
+})(["width:55%;margin-left:20px;font-size:27px;font-weight:300;@media (max-width:", "){width:100%;margin-left:0;font-size:19px;}@media (min-width:", ") and (max-width:", "){width:40%;font-size:19px;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.mobile, ({
+  theme
+}) => theme.deviceBreakpoint.tablet);
 
 /***/ }),
 
@@ -8567,133 +8335,76 @@ const useDeviceDetect = () => {
 
 /***/ }),
 
-/***/ "./src/pages/index.tsx":
+/***/ "./src/pages/about.tsx":
 /*!*****************************!*\
-  !*** ./src/pages/index.tsx ***!
+  !*** ./src/pages/about.tsx ***!
   \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _content_articles_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../content/articles.json */ "./src/content/articles.json");
-var _content_articles_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../content/articles.json */ "./src/content/articles.json", 1);
-/* harmony import */ var _app_home_home_container_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../app/home/home-container.component */ "./src/app/home/home-container.component.tsx");
-
-
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/pages/index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-
-
-
-
-const Home = () => {
-  const allArticles = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => _content_articles_json__WEBPACK_IMPORTED_MODULE_3__.sort((a, b) => Number(new Date(b.updatedAt)) - Number(new Date(a.updatedAt))).map((_ref) => {
-    let {
-      updatedAt,
-      fileName
-    } = _ref,
-        data = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["updatedAt", "fileName"]);
-
-    return _objectSpread({}, data, {
-      publishDate: new Date(updatedAt),
-      url: "/articles/".concat(fileName)
-    });
-  }), []);
-  return __jsx(_app_home_home_container_component__WEBPACK_IMPORTED_MODULE_4__["HomeContainer"], {
-    articles: allArticles,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 10
-    }
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Home);
-
-/***/ }),
-
-/***/ "./src/ui/author/author.component.tsx":
-/*!********************************************!*\
-  !*** ./src/ui/author/author.component.tsx ***!
-  \********************************************/
-/*! exports provided: Author */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Author", function() { return Author; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _author_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./author.styles */ "./src/ui/author/author.styles.ts");
-var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/ui/author/author.component.tsx";
+/* harmony import */ var _app_about_about_container_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../app/about/about-container.component */ "./src/app/about/about-container.component.tsx");
+/* harmony import */ var _ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/container/container.styles */ "./src/ui/container/container.styles.ts");
+var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/pages/about.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Author = ({
-  name,
-  img
-}) => {
-  return __jsx(_author_styles__WEBPACK_IMPORTED_MODULE_1__["AuthorContainer"], {
+
+
+const About = () => {
+  return __jsx(_ui_container_container_styles__WEBPACK_IMPORTED_MODULE_2__["Container"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 7,
       columnNumber: 5
     }
-  }, __jsx("div", {
-    className: "author__img",
-    style: {
-      backgroundImage: "url(\"".concat(img, "\")")
-    },
+  }, __jsx(_app_about_about_container_component__WEBPACK_IMPORTED_MODULE_1__["AboutContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 8,
       columnNumber: 7
     }
-  }), __jsx("div", {
-    className: "author__name",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 7
-    }
-  }, name));
+  }));
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
-/***/ "./src/ui/author/author.styles.ts":
-/*!****************************************!*\
-  !*** ./src/ui/author/author.styles.ts ***!
-  \****************************************/
-/*! exports provided: AuthorContainer */
+/***/ "./src/routing/app-routes.tsx":
+/*!************************************!*\
+  !*** ./src/routing/app-routes.tsx ***!
+  \************************************/
+/*! exports provided: AppRoute, navigationData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthorContainer", function() { return AuthorContainer; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoute", function() { return AppRoute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navigationData", function() { return navigationData; });
+let AppRoute;
 
-const AuthorContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "authorstyles__AuthorContainer",
-  componentId: "sc-1f30oc4-0"
-})(["display:flex;align-items:center;& > .author__img{width:30px;height:30px;background-position:center;background-size:cover;border-radius:50%;background-color:", ";}& > .author__name{margin-left:10px;font-weight:500;font-size:14px;}"], ({
-  theme
-}) => theme.color.primary);
+(function (AppRoute) {
+  AppRoute["HOME"] = "/";
+  AppRoute["ABOUT"] = "/about";
+  AppRoute["HOW_TO_CONTRIBUTE"] = "/how-to-contribute";
+})(AppRoute || (AppRoute = {}));
+
+const navigationData = [{
+  link: AppRoute.HOME,
+  label: 'Home'
+}, {
+  link: AppRoute.ABOUT,
+  label: 'About'
+}, {
+  link: AppRoute.HOW_TO_CONTRIBUTE,
+  label: 'How to contribute?'
+}];
 
 /***/ }),
 
@@ -8917,14 +8628,14 @@ const StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].b
 
 /***/ }),
 
-/***/ 1:
-/*!**********************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx ***!
-  \**********************************************************************************************************************************************************************/
+/***/ 5:
+/*!***************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Findex.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx!./");
 
 
 /***/ }),
@@ -8940,5 +8651,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[5,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=about.js.map

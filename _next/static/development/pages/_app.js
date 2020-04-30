@@ -10354,9 +10354,11 @@ __webpack_require__.r(__webpack_exports__);
 const MenuContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "menustyles__MenuContainer",
   componentId: "sc-1amfo06-0"
-})(["width:100%;height:100vh;z-index:9999;background-color:", ";position:fixed;top:0;left:0;& > .menu-nav{border-top:1px solid #fff;}"], ({
+})(["width:100%;height:100vh;z-index:9999;background-color:", ";position:fixed;top:0;left:0;& > .menu-nav{border-top:1px solid ", ";}"], ({
   theme
-}) => theme.color.primary);
+}) => theme.color.primary, ({
+  theme
+}) => theme.color.white);
 
 /***/ }),
 
