@@ -1,6 +1,4 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { SpecialLink } from '../../../ui/special-link/special-link.component';
 import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
 import { Header } from '../../../ui/header/header.component';
 import {
@@ -8,6 +6,7 @@ import {
   HeaderTitle,
   HeaderSubtitle,
 } from '../../../ui/header/header.styles';
+import { ScrollToButton } from '../../../ui/scroll-to-button/scroll-to-button.component';
 
 export const AboutHeader = () => {
   const { isMobile } = useDeviceDetect();
@@ -25,16 +24,7 @@ export const AboutHeader = () => {
         We deliver high-level consultancy & flexible, complex data-driven
         software solutions for the companies of the future.
       </HeaderSubtitle>
-      <AnchorLink
-        offset="100"
-        href="#about-content"
-        style={{ textDecoration: 'none' }}
-      >
-        <SpecialLink
-          href="#about-content"
-          label="Read about Value Driven Engineering"
-        />
-      </AnchorLink>
+      <ScrollToButton href="#about-content" label="Read more about VDE" />
     </Header>
   );
 };

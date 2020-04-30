@@ -1,6 +1,4 @@
 import React from 'react';
-import { SpecialLink } from '../../../ui/special-link/special-link.component';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
 import { Header as HeaderContainer } from '../../../ui/header/header.component';
 import {
@@ -8,6 +6,7 @@ import {
   HeaderSubtitle,
   HeaderImage,
 } from '../../../ui/header/header.styles';
+import { ScrollToButton } from '../../../ui/scroll-to-button/scroll-to-button.component';
 
 export const Header = () => {
   const { isMobile } = useDeviceDetect();
@@ -25,13 +24,7 @@ export const Header = () => {
         Curated, community driven resources and frameworks for IT leaders and
         engineering managers.
       </HeaderSubtitle>
-      <AnchorLink
-        offset="100"
-        href="#articles"
-        style={{ textDecoration: 'none' }}
-      >
-        <SpecialLink href="#articles" label="Explore Resources" />
-      </AnchorLink>
+      <ScrollToButton href="#articles" label="Explore Resources" />
     </HeaderContainer>
   );
 };
