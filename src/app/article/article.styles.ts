@@ -4,6 +4,12 @@ import { ThemeProps } from '../../theme/theme.config';
 export const StyledArticle = styled.article`
   display: flex;
   flex-direction: column;
+
+  & > .article-aside {
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0p 3px 6px rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export const StyledHeader = styled.header`
@@ -83,10 +89,29 @@ export const InformationContainer = styled.div`
 export const StyledContent = styled.section`
   background-color: ${({ theme }: ThemeProps) => theme.color.white};
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
-  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: ${({ theme }: ThemeProps) => theme.padding.medium};
+
+  & > .article-aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 82px;
+  }
+`;
+
+export const MarkdownContainer = styled.div`
+  width: 70%;
+  margin-right: 20px;
+
+  & .article-aside {
+    position: sticky;
+    top: 82px;
+  }
 
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
-    padding: 20px;
+    width: 100%;
+    margin-right: 0;
   }
 `;
