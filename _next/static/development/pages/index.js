@@ -8799,19 +8799,17 @@ __webpack_require__.r(__webpack_exports__);
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
   displayName: "headerstyles__StyledHeader",
   componentId: "sc-1pir9d-0"
-})(["height:calc(100vh - 62px);color:", ";padding:10px ", ";padding-top:30px;@media (max-width:", "){height:auto;}@media (max-width:", "){height:100vh;}"], ({
+})(["color:", ";padding:30px ", " 50px;@media (max-width:", "){height:100vh;}"], ({
   theme
 }) => theme.color.black, ({
   theme
 }) => theme.padding.small, ({
   theme
-}) => theme.deviceBreakpoint.tablet, ({
-  theme
 }) => theme.deviceBreakpoint.mobile);
 const StyledContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_container_container_styles__WEBPACK_IMPORTED_MODULE_1__["Container"]).withConfig({
   displayName: "headerstyles__StyledContainer",
   componentId: "sc-1pir9d-1"
-})(["display:flex;justify-content:space-between;margin-top:20px;width:100%;@media (max-width:", "){flex-direction:column;margin-top:0px;}"], ({
+})(["display:flex;justify-content:space-between;margin-top:20px;width:100%;@media (max-width:", "){flex-direction:column;justify-content:center;align-items:center;margin-top:0px;}"], ({
   theme
 }) => theme.deviceBreakpoint.mobile);
 const HeaderTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
