@@ -964,6 +964,31 @@ module.exports = function extend() {
 
 /***/ }),
 
+/***/ "./node_modules/global/window.js":
+/*!***************************************!*\
+  !*** ./node_modules/global/window.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof global !== "undefined") {
+    win = global;
+} else if (typeof self !== "undefined"){
+    win = self;
+} else {
+    win = {};
+}
+
+module.exports = win;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
@@ -13253,6 +13278,37 @@ function info() {
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
 /***/ "./node_modules/x-is-string/index.js":
 /*!*******************************************!*\
   !*** ./node_modules/x-is-string/index.js ***!
@@ -13321,13 +13377,33 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const ArticleAside = () => {
   return __jsx(_article_aside_styles__WEBPACK_IMPORTED_MODULE_1__["StyledArticle"], {
     className: "article-aside",
+    style: {
+      backgroundImage: "url(\"".concat("", "/exlabs-photo.jpg\")")
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 10,
       columnNumber: 5
     }
-  }, "Some aside box");
+  }, __jsx(_article_aside_styles__WEBPACK_IMPORTED_MODULE_1__["InformationText"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 7
+    }
+  }, "Want to know more about us?"), __jsx(_article_aside_styles__WEBPACK_IMPORTED_MODULE_1__["LearnMoreLink"], {
+    href: "http://exlabs.com",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 7
+    }
+  }, "Check out our page!"));
 };
 
 /***/ }),
@@ -13336,18 +13412,34 @@ const ArticleAside = () => {
 /*!***************************************************************!*\
   !*** ./src/app/article/article-aside/article-aside.styles.ts ***!
   \***************************************************************/
-/*! exports provided: StyledArticle */
+/*! exports provided: StyledArticle, InformationText, LearnMoreLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledArticle", function() { return StyledArticle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformationText", function() { return InformationText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LearnMoreLink", function() { return LearnMoreLink; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 const StyledArticle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].article.withConfig({
   displayName: "article-asidestyles__StyledArticle",
   componentId: "sc-66hfug-0"
-})(["border:1px solid red;min-height:300px;"]);
+})(["height:300px;background-position:center;background-size:cover;box-shadow:inset 0px 300px 0px rgba(4,74,175,0.45);display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:4px;color:", ";"], ({
+  theme
+}) => theme.color.white);
+const InformationText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "article-asidestyles__InformationText",
+  componentId: "sc-66hfug-1"
+})(["font-weight:500;font-size:31px;text-align:center;text-shadow:0px 3px 6px rgba(0,0,0,0.3);"]);
+const LearnMoreLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
+  displayName: "article-asidestyles__LearnMoreLink",
+  componentId: "sc-66hfug-2"
+})(["color:", ";background-color:rgba(255,255,255,0.3);padding:10px 20px;text-decoration:none;margin-top:30px;border-radius:4px;transition:", ";&:hover{background-color:rgba(255,255,255,0.6);}"], ({
+  theme
+}) => theme.color.white, ({
+  theme
+}) => theme.transitionValue('background-color'));
 
 /***/ }),
 
@@ -13392,8 +13484,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _article_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article.styles */ "./src/app/article/article.styles.ts");
 /* harmony import */ var _ui_md_components_image_image_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../ui/md-components/image/image.component */ "./src/ui/md-components/image/image.component.tsx");
 /* harmony import */ var _article_aside_article_aside_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./article-aside/article-aside.component */ "./src/app/article/article-aside/article-aside.component.tsx");
+/* harmony import */ var _hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-device-detect/use-device-detect.hook */ "./src/hooks/use-device-detect/use-device-detect.hook.ts");
 var _jsxFileName = "/Users/mikolajwargowski/Documents/projects/value_driven_templates/src/app/article/article.component.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -13406,12 +13500,15 @@ const Article = ({
   publishDate,
   content
 }) => {
+  const {
+    isMobile
+  } = Object(_hooks_use_device_detect_use_device_detect_hook__WEBPACK_IMPORTED_MODULE_6__["useDeviceDetect"])();
   return __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["StyledArticle"], {
     className: "article",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 32,
       columnNumber: 5
     }
   }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["StyledHeader"], {
@@ -13421,7 +13518,7 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 33,
       columnNumber: 7
     }
   }, __jsx("p", {
@@ -13429,7 +13526,7 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 34,
       columnNumber: 9
     }
   }, "Development"), __jsx("h2", {
@@ -13437,14 +13534,14 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 35,
       columnNumber: 9
     }
   }, title), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["InformationContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 36,
       columnNumber: 9
     }
   }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_2__["Author"], {
@@ -13453,7 +13550,7 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 37,
       columnNumber: 11
     }
   }), __jsx("p", {
@@ -13461,21 +13558,21 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 38,
       columnNumber: 11
     }
   }, new Date().toDateString()))), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["StyledContent"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 41,
       columnNumber: 7
     }
   }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_3__["MarkdownContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 42,
       columnNumber: 9
     }
   }, __jsx(react_markdown__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -13486,17 +13583,24 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 43,
       columnNumber: 11
     }
-  })), __jsx(_article_aside_article_aside_component__WEBPACK_IMPORTED_MODULE_5__["ArticleAside"], {
+  })), !isMobile && __jsx(_article_aside_article_aside_component__WEBPACK_IMPORTED_MODULE_5__["ArticleAside"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
-      columnNumber: 9
+      lineNumber: 50,
+      columnNumber: 23
     }
-  })));
+  })), isMobile && __jsx(_article_aside_article_aside_component__WEBPACK_IMPORTED_MODULE_5__["ArticleAside"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 20
+    }
+  }));
 };
 
 /***/ }),
@@ -13520,7 +13624,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledArticle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].article.withConfig({
   displayName: "articlestyles__StyledArticle",
   componentId: "sc-1tz3zm3-0"
-})(["display:flex;flex-direction:column;"]);
+})(["display:flex;flex-direction:column;& > .article-aside{width:90%;margin:20px auto;box-shadow:0p 3px 6px rgba(0,0,0,0.3);}"]);
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].header.withConfig({
   displayName: "articlestyles__StyledHeader",
   componentId: "sc-1tz3zm3-1"
@@ -13550,7 +13654,7 @@ const InformationContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["def
 const StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "articlestyles__StyledContent",
   componentId: "sc-1tz3zm3-3"
-})(["background-color:", ";box-shadow:0px 3px 6px rgba(0,0,0,0.3);display:flex;justify-content:space-between;padding:", ";& > .article-aside{width:30%;}"], ({
+})(["background-color:", ";box-shadow:0px 3px 6px rgba(0,0,0,0.3);display:flex;justify-content:space-between;padding:", ";& > .article-aside{position:-webkit-sticky;position:sticky;top:82px;}"], ({
   theme
 }) => theme.color.white, ({
   theme
@@ -13558,7 +13662,80 @@ const StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const MarkdownContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "articlestyles__MarkdownContainer",
   componentId: "sc-1tz3zm3-4"
-})(["width:70%;margin-right:20px;"]);
+})(["width:70%;margin-right:20px;& .article-aside{position:sticky;top:82px;}@media (max-width:", "){width:100%;margin-right:0;}"], ({
+  theme
+}) => theme.deviceBreakpoint.mobile);
+
+/***/ }),
+
+/***/ "./src/hooks/use-device-detect/use-device-detect.hook.ts":
+/*!***************************************************************!*\
+  !*** ./src/hooks/use-device-detect/use-device-detect.hook.ts ***!
+  \***************************************************************/
+/*! exports provided: useDeviceDetect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDeviceDetect", function() { return useDeviceDetect; });
+/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! global */ "./node_modules/global/window.js");
+/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(global__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const useDeviceDetect = () => {
+  const isClient = true;
+
+  const getSize = () => {
+    return {
+      width: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerWidth : undefined,
+      height: isClient ? global__WEBPACK_IMPORTED_MODULE_0___default.a.innerHeight : undefined
+    };
+  };
+
+  const [windowSize, setWindowSize] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(getSize);
+  const [deviceData, setDeviceData] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
+    isMobile: false,
+    isDesktop: false,
+    isTablet: false
+  });
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+
+    function handleResize() {
+      setWindowSize(getSize());
+    }
+
+    global__WEBPACK_IMPORTED_MODULE_0___default.a.addEventListener('resize', handleResize);
+    return () => global__WEBPACK_IMPORTED_MODULE_0___default.a.removeEventListener('resize', handleResize);
+  }, // eslint-disable-next-line react-hooks/exhaustive-deps
+  []);
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
+    if (windowSize.width <= 768) {
+      setDeviceData({
+        isMobile: true,
+        isDesktop: false,
+        isTablet: false
+      });
+    } else if (windowSize.width >= 768 && windowSize.width <= 1100) {
+      setDeviceData({
+        isMobile: false,
+        isDesktop: false,
+        isTablet: true
+      });
+    } else {
+      setDeviceData({
+        isMobile: false,
+        isDesktop: true,
+        isTablet: false
+      });
+    }
+  }, [windowSize.width]);
+  return deviceData;
+};
 
 /***/ }),
 
@@ -13754,7 +13931,7 @@ const StyledImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].im
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Farticles%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Farticles%2F%5Bid%5D.tsx ***!
   \*******************************************************************************************************************************************************************************************************/
@@ -13777,5 +13954,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
