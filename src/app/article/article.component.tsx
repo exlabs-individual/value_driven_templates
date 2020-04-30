@@ -7,8 +7,11 @@ import {
   StyledHeader,
   InformationContainer,
   StyledContent,
+  MarkdownContainer,
 } from './article.styles';
 import { Image } from '../../ui/md-components/image/image.component';
+import { ArticleAside } from './article-aside/article-aside.component';
+import { useDeviceDetect } from '../../hooks/use-device-detect/use-device-detect.hook';
 
 interface ArticleProps {
   title: string;
@@ -23,6 +26,8 @@ export const Article = ({
   publishDate,
   content,
 }: ArticleProps) => {
+  const { isMobile } = useDeviceDetect();
+
   return (
     <StyledArticle className="article">
       <StyledHeader style={{ backgroundImage: `url("${imageUrl}")` }}>
@@ -34,13 +39,17 @@ export const Article = ({
         </InformationContainer>
       </StyledHeader>
       <StyledContent>
-        <ReactMarkdown
-          source={content}
-          renderers={{
-            image: Image,
-          }}
-        />
+        <MarkdownContainer>
+          <ReactMarkdown
+            source={content}
+            renderers={{
+              image: Image,
+            }}
+          />
+        </MarkdownContainer>
+        {!isMobile && <ArticleAside />}
       </StyledContent>
+      {isMobile && <ArticleAside />}
     </StyledArticle>
   );
 };

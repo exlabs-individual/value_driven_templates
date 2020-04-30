@@ -12,6 +12,8 @@ export const StyledSection = styled.section`
       theme.deviceBreakpoint.mobile}) {
     flex-direction: row-reverse;
     align-items: flex-start;
+    min-height: auto;
+    padding-bottom: 60px;
   }
 `;
 
@@ -148,7 +150,7 @@ export const SectionNumber = styled.h3.attrs(
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    transition: height 2s ease;
+    transition: height 1s ease;
 
     @media (max-width: ${({ theme }: ThemeProps) =>
         theme.deviceBreakpoint.tablet}) {
