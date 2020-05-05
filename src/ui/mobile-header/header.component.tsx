@@ -4,12 +4,17 @@ import { useMobileMenuState } from '../../hooks/use-mobile-menu/use-mobile-menu.
 import { toggleMenu } from '../../context/mobile-menu/mobile-menu.action-creators';
 import { Logo } from '../logo/logo.component';
 import { Hambuerger } from '../hamburger/hamburger.component';
+import { ThemeType } from '../../../types';
 
 interface HeaderProps {
   isSticky?: boolean;
+  theme?: ThemeType;
 }
 
-export const Header = ({ isSticky = false }: HeaderProps) => {
+export const Header = ({
+  isSticky = false,
+  theme = 'primary',
+}: HeaderProps) => {
   const {
     state: { isVisible: isMenuVisible },
     dispatch,
@@ -19,12 +24,12 @@ export const Header = ({ isSticky = false }: HeaderProps) => {
 
   return (
     <HeaderContainer isSticky={isSticky}>
-      <Logo theme={isSticky ? 'primary' : 'secondary'} />
+      <Logo theme={theme} />
       <MenuContainer>
         <Hambuerger
           isOpen={isMenuVisible}
           onClick={onMenuClick}
-          theme={isSticky ? 'primary' : 'secondary'}
+          theme={theme}
         />
       </MenuContainer>
     </HeaderContainer>

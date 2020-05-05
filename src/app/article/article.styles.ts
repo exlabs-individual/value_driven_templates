@@ -109,6 +109,38 @@ export const MarkdownContainer = styled.div`
     top: 82px;
   }
 
+  color: ${({ theme }: ThemeProps) => theme.color.black};
+  font-size: 16px;
+
+  & > h1 {
+    font-size: 41px;
+  }
+
+  & > h2 {
+    font-size: 37px;
+  }
+
+  & > h3 {
+    font-size: 31px;
+  }
+
+  & > h4 {
+    font-size: 27px;
+  }
+
+  & > h5 {
+    font-size: 23px;
+  }
+
+  & > h6 {
+    font-size: 19px;
+  }
+
+  & > p {
+    padding: 10px 0;
+    font-size: 19px;
+  }
+
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
     width: 100%;

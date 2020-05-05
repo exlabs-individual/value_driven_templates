@@ -19,7 +19,7 @@ export const HowToContributeHeader = () => {
       {isMobile && (
         <HeaderImage
           alt="Header"
-          src={`${process.env.ASSET_PREFIX}/about/header.svg`}
+          src={`${process.env.ASSET_PREFIX}/how-to-contribute/header.svg`}
         />
       )}
       <HeaderSubtitle>
