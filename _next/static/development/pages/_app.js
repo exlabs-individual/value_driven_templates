@@ -9439,7 +9439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  const data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  @font-face {\n\tfont-family: 'Calibre';\n\tsrc: url('/static/fonts/Calibre/CalibreBold.otf');\n  src: url('/static/fonts/Calibre/CalibreLight.otf');\n  src: url('/static/fonts/Calibre/CalibreMedium.otf');\n  src: url('/static/fonts/Calibre/CalibreRegular.otf');\n  src: url('/static/fonts/Calibre/CalibreSemiBold.otf');\n}\n\nhtml, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed,\n  figure, figcaption, footer, header, hgroup,\n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video, button {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    outline: none;\n  }\n"]);
+  const data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  @font-face {\n\tfont-family: 'Calibre';\n  font-weight: 300;\n  src: url('/fonts/Calibre/CalibreLight.otf');\n}\n\n@font-face {\n\tfont-family: 'Calibre';\n  font-weight: 400;\n  src: url('/fonts/Calibre/CalibreRegular.otf');\n}\n\n@font-face {\n\tfont-family: 'Calibre';\n  font-weight: 500;\n  src: url('/fonts/Calibre/CalibreMedium.otf');\n}\n\n@font-face {\n\tfont-family: 'Calibre';\n  font-weight: 700;\n\tsrc: url('/fonts/Calibre/CalibreBold.otf');\n}\n\nhtml, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed,\n  figure, figcaption, footer, header, hgroup,\n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video, button {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    outline: none;\n  }\n"]);
 
   _templateObject = function () {
     return data;
@@ -9483,8 +9483,8 @@ const theme = {
   },
   fontSize: {
     big: '31px',
-    medium: '17px',
-    small: '14px'
+    medium: '19px',
+    small: '16px'
   },
   deviceBreakpoint: {
     mobile: '768px',

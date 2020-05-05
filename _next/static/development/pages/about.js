@@ -8628,7 +8628,7 @@ const StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].b
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!***************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmikolajwargowski%2FDocuments%2Fprojects%2Fvalue_driven_templates%2Fsrc%2Fpages%2Fabout.tsx ***!
   \***************************************************************************************************************************************************************************/
@@ -8651,5 +8651,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map
