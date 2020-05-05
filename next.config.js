@@ -4,7 +4,9 @@ const isProd = (process.env.NODE_ENV || 'production') === 'production';
 
 const assetPrefix = isProd ? '/value_driven_templates' : '';
 
-module.exports = {
+const withFonts = require('next-fonts');
+
+module.exports = withFonts({
   assetPrefix: assetPrefix,
   webpack: (config) => {
     config.plugins.push(
@@ -15,4 +17,4 @@ module.exports = {
 
     return config;
   },
-};
+});

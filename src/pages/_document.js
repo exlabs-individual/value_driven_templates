@@ -51,10 +51,6 @@ export default class MyDocument extends Document {
           />
           <meta name="description" content="Value Driven Engineering" />
           <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,700&display=swap"
-            rel="stylesheet"
-          ></link>
-          <link
             rel="icon"
             href={`${process.env.ASSET_PREFIX}/favicon-32x32.png`}
           ></link>

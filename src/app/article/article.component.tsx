@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-
+import { Image } from '../../ui/md-components/image/image.component';
+import { ArticleAside } from './article-aside/article-aside.component';
+import { useDeviceDetect } from '../../hooks/use-device-detect/use-device-detect.hook';
 import { Author } from '../../ui/author/author.component';
 import {
   StyledArticle,
@@ -9,9 +11,6 @@ import {
   StyledContent,
   MarkdownContainer,
 } from './article.styles';
-import { Image } from '../../ui/md-components/image/image.component';
-import { ArticleAside } from './article-aside/article-aside.component';
-import { useDeviceDetect } from '../../hooks/use-device-detect/use-device-detect.hook';
 
 interface ArticleProps {
   title: string;

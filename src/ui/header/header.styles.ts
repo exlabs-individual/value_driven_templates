@@ -5,11 +5,6 @@ import { ThemeProps } from '../../theme/theme.config';
 export const StyledHeader = styled.header`
   color: ${({ theme }: ThemeProps) => theme.color.black};
   padding: 30px ${({ theme }: ThemeProps) => theme.padding.small} 50px;
-
-  @media (max-width: ${({ theme }: ThemeProps) =>
-      theme.deviceBreakpoint.mobile}) {
-    height: 100vh;
-  }
 `;
 
 export const StyledContainer = styled(Container)`
@@ -22,6 +17,8 @@ export const StyledContainer = styled(Container)`
   @media (max-width: ${({ theme }: ThemeProps) =>
       theme.deviceBreakpoint.mobile}) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
   }
 `;

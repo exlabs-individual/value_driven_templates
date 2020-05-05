@@ -20,6 +20,7 @@ export const InformationText = styled.p`
   font-size: 31px;
   text-align: center;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  max-width: 95%;
 `;
 
 export const LearnMoreLink = styled.a`

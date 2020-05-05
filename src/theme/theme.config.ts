@@ -48,8 +48,8 @@ export const theme: Theme = {
   },
   fontSize: {
     big: '31px',
-    medium: '17px',
-    small: '14px',
+    medium: '19px',
+    small: '16px',
   },
   deviceBreakpoint: {
     mobile: '768px',

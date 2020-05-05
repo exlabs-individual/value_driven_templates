@@ -28,9 +28,10 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
           body {
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', 'Open Sans', sans-serif;
+            font-family: 'Calibre', 'Open Sans', sans-serif;
             background-color: #f9f9f9;
             -webkit-overflow-scrolling: touch;
+            ${isVisible && 'overflow: hidden;'}
           }
         `}
       </style>
@@ -43,7 +44,10 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
                 {isStickyNav && (
                   <div style={{ width: '100%', height: '62px' }}></div>
                 )}
-                <MobileHeader isSticky={isVisible ? true : isStickyNav} />
+                <MobileHeader
+                  isSticky={isVisible ? true : isStickyNav}
+                  theme={isStickyNav ? 'primary' : 'secondary'}
+                />
                 <div ref={stickyRef}>
                   {isVisible && <Menu />}
                   <div>{children}</div>
