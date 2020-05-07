@@ -1,30 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const ResetStyles = createGlobalStyle`
-  @font-face {
-	font-family: 'Calibre';
-  font-weight: 300;
-  src: url('${process.env.ASSET_PREFIX}/fonts/Calibre/CalibreLight.otf');
-}
-
-@font-face {
-	font-family: 'Calibre';
-  font-weight: 400;
-  src: url('${process.env.ASSET_PREFIX}/fonts/Calibre/CalibreRegular.otf');
-}
-
-@font-face {
-	font-family: 'Calibre';
-  font-weight: 500;
-  src: url('${process.env.ASSET_PREFIX}//fonts/Calibre/CalibreMedium.otf');
-}
-
-@font-face {
-	font-family: 'Calibre';
-  font-weight: 700;
-	src: url('${process.env.ASSET_PREFIX}/fonts/Calibre/CalibreBold.otf');
-}
-
 html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,

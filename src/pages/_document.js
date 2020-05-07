@@ -54,6 +54,10 @@ export default class MyDocument extends Document {
             rel="icon"
             href={`${process.env.ASSET_PREFIX}/favicon-32x32.png`}
           ></link>
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />

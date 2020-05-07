@@ -28,7 +28,7 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
           body {
             margin: 0;
             padding: 0;
-            font-family: 'Calibre', 'Open Sans', sans-serif;
+            font-family: 'Montserrat', 'Calibre', sans-serif;
             background-color: #f9f9f9;
             -webkit-overflow-scrolling: touch;
             ${isVisible && 'overflow: hidden;'}
