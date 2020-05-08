@@ -4,11 +4,10 @@ import {
   ThumbnailImage,
   ThumbnailContent,
   ThumbnailFooter,
-  ThumbnailButton,
 } from './article-thumbnail.styles';
-import Link from 'next/link';
 import { Author } from '../../../ui/author/author.component';
 import authors from '../../../content/authors.json';
+import Router from 'next/router';
 
 export interface ArticleThumbnailProps {
   title: string;
@@ -20,12 +19,32 @@ export interface ArticleThumbnailProps {
   url: string;
 }
 
+const articleVariants = {
+  whileHover: {
+    scale: 1.03,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  whileTap: {
+    scale: 0.95,
+  },
+};
+
 export const ArticleThumbnail = (article: ArticleThumbnailProps) => {
   const author = authors.find((author) => author.username === article.author);
   const { title, description, category, imageUrl, publishDate, url } = article;
 
+  const onClick = () => Router.push(`${process.env.ASSET_PREFIX}${url}`);
+
   return (
-    <StyledArticleThumbnail className="article-thumbnail">
+    <StyledArticleThumbnail
+      variants={articleVariants}
+      whileHover="whileHover"
+      whileTap="whileTap"
+      className="article-thumbnail"
+      onClick={onClick}
+    >
       <ThumbnailImage
         style={{
           backgroundImage: `url("${imageUrl}")`,
@@ -39,11 +58,6 @@ export const ArticleThumbnail = (article: ArticleThumbnailProps) => {
         <p className="article-description">{description}</p>
         <ThumbnailFooter>
           <Author {...author} />
-          <Link href={`${process.env.ASSET_PREFIX}${url}`}>
-            <ThumbnailButton href={`${process.env.ASSET_PREFIX}${url}`}>
-              See details
-            </ThumbnailButton>
-          </Link>
         </ThumbnailFooter>
       </ThumbnailContent>
     </StyledArticleThumbnail>
