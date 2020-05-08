@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { ThemeProps } from '../../../theme/theme.config';
+import { motion } from 'framer-motion';
 
-export const StyledArticleThumbnail = styled.article`
+export const StyledArticleThumbnail = styled(motion.article)`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   max-width: 450px;
+  cursor: pointer;
 `;
 
 export const ThumbnailContent = styled.div`
