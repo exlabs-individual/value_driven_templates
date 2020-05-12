@@ -17,6 +17,10 @@ interface ArticleProps {
   imageUrl: string;
   publishDate: Date;
   content: string;
+  author: {
+    name: string;
+    img: string;
+  };
 }
 
 export const Article = ({
@@ -24,6 +28,7 @@ export const Article = ({
   imageUrl,
   publishDate,
   content,
+  author,
 }: ArticleProps) => {
   const { isMobile } = useDeviceDetect();
 
@@ -33,7 +38,7 @@ export const Article = ({
         <p className="category">Development</p>
         <h2 className="title">{title}</h2>
         <InformationContainer>
-          <Author img="" name="By John Doe" />
+          <Author img={author.img} name={`By ${author.name}`} />
           <p className="publish-date">{new Date().toDateString()}</p>
         </InformationContainer>
       </StyledHeader>
