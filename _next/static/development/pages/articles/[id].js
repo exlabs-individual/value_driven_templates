@@ -13498,7 +13498,8 @@ const Article = ({
   title,
   imageUrl,
   publishDate,
-  content
+  content,
+  author
 }) => {
   const {
     isMobile
@@ -13508,7 +13509,7 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 36,
       columnNumber: 5
     }
   }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_6__["StyledHeader"], {
@@ -13518,7 +13519,7 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 37,
       columnNumber: 7
     }
   }, __jsx("p", {
@@ -13526,7 +13527,7 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 38,
       columnNumber: 9
     }
   }, "Development"), __jsx("h2", {
@@ -13534,23 +13535,23 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 39,
       columnNumber: 9
     }
   }, title), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_6__["InformationContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 40,
       columnNumber: 9
     }
   }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_5__["Author"], {
-    img: "",
-    name: "By John Doe",
+    img: author.img,
+    name: "By ".concat(author.name),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 41,
       columnNumber: 11
     }
   }), __jsx("p", {
@@ -13558,21 +13559,21 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 42,
       columnNumber: 11
     }
   }, new Date().toDateString()))), __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_6__["StyledContent"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 45,
       columnNumber: 7
     }
   }, __jsx(_article_styles__WEBPACK_IMPORTED_MODULE_6__["MarkdownContainer"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 46,
       columnNumber: 9
     }
   }, __jsx(react_markdown__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -13583,21 +13584,21 @@ const Article = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 47,
       columnNumber: 11
     }
   })), !isMobile && __jsx(_article_aside_article_aside_component__WEBPACK_IMPORTED_MODULE_3__["ArticleAside"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 54,
       columnNumber: 23
     }
   })), isMobile && __jsx(_article_aside_article_aside_component__WEBPACK_IMPORTED_MODULE_3__["ArticleAside"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 56,
       columnNumber: 20
     }
   }));

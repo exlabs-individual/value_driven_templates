@@ -15494,7 +15494,7 @@ const ArticleThumbnail = article => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 41,
       columnNumber: 5
     }
   }, __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailImage"], {
@@ -15504,7 +15504,7 @@ const ArticleThumbnail = article => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 48,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -15512,14 +15512,14 @@ const ArticleThumbnail = article => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 53,
       columnNumber: 9
     }
   }, category)), __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailContent"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 55,
       columnNumber: 7
     }
   }, __jsx("h3", {
@@ -15527,7 +15527,7 @@ const ArticleThumbnail = article => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 56,
       columnNumber: 9
     }
   }, title), __jsx("div", {
@@ -15535,7 +15535,7 @@ const ArticleThumbnail = article => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 57,
       columnNumber: 9
     }
   }, publishDate.toDateString()), __jsx("p", {
@@ -15543,21 +15543,21 @@ const ArticleThumbnail = article => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, description), __jsx(_article_thumbnail_styles__WEBPACK_IMPORTED_MODULE_2__["ThumbnailFooter"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 59,
       columnNumber: 9
     }
   }, __jsx(_ui_author_author_component__WEBPACK_IMPORTED_MODULE_3__["Author"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, author, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 60,
       columnNumber: 11
     }
   })))));
@@ -15772,7 +15772,7 @@ const Home = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.w
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/value_driven_templates/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"john.doe\",\"createdAt\":\"2020-04-21T06:59:40.101Z\",\"updatedAt\":\"2020-04-21T06:59:40.101Z\"}]");
+module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"title\":\"Architecture Decision Record\",\"description\":\"Learn how to document important architectural decisions in your development team.\",\"category\":\"Architecture\",\"imageUrl\":\"/value_driven_templates/articles/architecture-decision-record/adr-img.jpeg\",\"author\":\"m.wargowski\",\"createdAt\":\"2020-05-12T11:49:16.466Z\",\"updatedAt\":\"2020-05-12T11:49:16.466Z\"}]");
 
 /***/ }),
 
@@ -15783,7 +15783,7 @@ module.exports = JSON.parse("[{\"fileName\":\"architecture-decision-record\",\"t
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"username\":\"john.doe\",\"name\":\"John Doe\",\"img\":\"https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80\"}]");
+module.exports = JSON.parse("[{\"username\":\"m.wargowski\",\"name\":\"Mikołaj Wargowski\",\"img\":\"/value_driven_templates/author/m.wargowski.jpeg\"}]");
 
 /***/ }),
 
