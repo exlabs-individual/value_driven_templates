@@ -1,15 +1,33 @@
-# Heading
+Can you recall the situation when you and your team had a meeting regarding some new functionality or choice of technology?
 
----
+Usually after such meetings, everyone comes out with new knowledge, e.g. from now on we will be using a relational database using Postgresql.
 
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at nisl porta, consectetur tellus a, vehicula sem. Morbi venenatis tristique interdum. Morbi vel elit vitae ante mollis tempus. Suspendisse dictum efficitur risus, eu tempus nunc maximus at. Nulla tincidunt nisl luctus dignissim viverra. Phasellus maximus, mauris quis sollicitudin ullamcorper, nisl mi rutrum lectus, vitae iaculis mauris diam ac turpis. Vestibulum sed elit eros. Aenean nisi neque, hendrerit non sapien vel, ultrices varius dolor. Sed vel diam scelerisque, auctor mi ac, pharetra massa. Cras non augue scelerisque nibh finibus lobortis sed auctor arcu.**
+In other words, everyone is properly informed about the selected architecture and technology.
 
-_Aliquam sed ligula sagittis, fringilla ante quis, fermentum urna. Nulla pellentesque maximus nisi nec accumsan. Aenean eget ex augue. Donec molestie dapibus sem. Nulla orci ante, semper et lobortis ut, semper id nisi. Nam sollicitudin vestibulum porta. Quisque velit erat, aliquam eget ipsum maximus, mollis dignissim magna. Sed gravida facilisis elementum. Nunc vitae arcu a dolor hendrerit mollis et id libero._
+And now let's imagine the situation that after 3-4 months a new developer joins our team. And this developer starts asking questions about architecture and technology, e.g. _why we use the repository pattern?_ or _why we chose a relational database?_
 
-![](https://miro.medium.com/max/1554/1*bA1YGWM5DK4MeS9gx4urfw.png)
+There will probably be a problem remembering the answers to such questions, because nowhere have we written down the answers to these questions and what we have established some time ago simply disappeared in the world.
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed laoreet vitae odio a pharetra. Suspendisse dapibus vulputate enim, eget egestas nisi maximus et. Donec et tincidunt nunc. Aliquam consectetur sodales commodo. Aliquam lobortis libero non metus tincidunt condimentum. Donec eu massa metus. Sed non urna justo. Fusce nec placerat lorem. Mauris et malesuada neque.
+## And here comes Architecture Decision Record (ADR)
 
-Phasellus mattis, orci quis pulvinar hendrerit, arcu augue iaculis dolor, sollicitudin egestas arcu ipsum et neque. Morbi eget ex ornare, suscipit mi in, rutrum lorem. Pellentesque ac tortor vitae nulla aliquet vestibulum quis at augue. Praesent ullamcorper, sapien semper mollis lacinia, sem justo sodales lectus, non viverra nisl metus a risus. Aenean porta, turpis sit amet commodo vestibulum, massa urna pellentesque felis, non vestibulum arcu leo vitae neque. In convallis purus at elit convallis, ut auctor nulla laoreet. Duis aliquam dui tellus, sit amet pretium massa tristique ut. Praesent a varius metus, vitae consectetur ex. Mauris faucibus nisi non turpis consequat dictum. Praesent faucibus elit varius nisi tincidunt, quis aliquet eros fringilla. Nam porta ut nulla vitae dapibus.
+So what is ADR? Which ADR we can answer on such questions we mention before about why we using such software, why are we creating our architecture in such shape, and many more. We can split drivers into five different classes. The first is is a **business use case**, it is a list of functions that defines our software.
 
-Donec tincidunt mi luctus est mattis, eu gravida metus pretium. Fusce ullamcorper cursus ante, at ultrices urna accumsan nec. Aliquam erat volutpat. Aliquam aliquam tellus sapien, non vulputate ipsum auctor non. Fusce gravida imperdiet nisl sed lobortis. Morbi scelerisque at ligula at lobortis. Curabitur condimentum et risus a tincidunt. Donec vitae condimentum eros. Nam viverra pulvinar eros vel egestas. Aenean orci justo, semper sed lacinia vitae, venenatis quis neque. Nunc diam massa, pellentesque facilisis tellus eu, ullamcorper sagittis ipsum. Etiam varius, tellus et faucibus porta, nisl augue ornare neque, at tempus dolor nunc non neque. Nunc feugiat, risus at ullamcorper porttitor, mauris tortor vehicula eros, at lobortis massa massa eu mi.
+Another class is - **qualitative attributes**, for example our system should be scalable and secure. Next we have **design restrictions** - We will not choose technology, we don't know, because we know that it takes too much time.
+
+Another class of controllers are **conventions** - here we bound technologies we are pretty good at, so relational database? Use PostgreSQL, non-relational database? Use MongoDB. And when we need to make a decision that we are going to use relational database, we know that we use PostgreSQL.
+
+The last driver is **design goals** - if we creating a prototype there is no need to use all the fancy stuff like elasticsearch, relational database and many more. Design goals guide us to choose tool combinations.
+
+## How to write ADR?
+
+ADR is a simple text document. There is no one formula. ADR should include a **title** that presents the decision, the **context** of the decision, **consequences** of theses of the decisions, which we agree to this. And the **decision** by itself. Those are the minimum values ​​for ADR.
+
+![ADR example](https://structurizr.com/static/img/help/decision-log-2.png)
+
+## How we can store ADR?
+
+ADR can be kept anywhere, what is most important is that ADR was in one place and that every member had access to all ADRs - this is the place we call ADL or **Architecture Decision Log**. We can keep this ADL directly in the repository or in another place, e.g. Google Drive, Miro, Confluence and many others.
+
+## The formula of Exlabs team
+
+In exlabs we have a tested pattern, which we use most often, what it looks like, you can check out [here](https://exlabs.github.io/value_driven_templates/articles/architecture-decision-record/adr-template.md)

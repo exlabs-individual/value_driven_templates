@@ -16,5 +16,11 @@ export default {
 };
 
 export const Default = () => (
-  <Article content="" imageUrl="" publishDate={new Date()} title="" />
+  <Article
+    author={{ img: '', name: '' }}
+    content=""
+    imageUrl=""
+    publishDate={new Date()}
+    title=""
+  />
 );
